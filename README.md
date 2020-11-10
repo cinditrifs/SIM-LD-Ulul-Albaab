@@ -1,9 +1,9 @@
 <p align="center"> 
-    <img src="images/masterportfolio-banner-light.png" align="center" height="150"></img>
+    <img src="http://salimunj.org/wp-content/uploads/2020/07/Draft-logo-LD-UA-1-230x230.png" align="center" height="150"></img>
 </p>
 
-<h1 align="center"> Software Developer Master Portfolio 🔥 </h1> 
-<h3 align="center"> A clean, beautiful, responsive and 100% customizable portfolio <br /> template for Software Developers! </h3>
+<h1 align="center"> Sistem Informasi Manajemen Lembaga Dakwah Ulul Albaab FMIPA UNJ  🔥 </h1> 
+<h3 align="center"> Dibuat untuk memenuhi tugas matakuliah Interaksi manusia dan komputer </h3>
 
 <p align="center">
   <a href="http://hits.dwyl.com/ashutosh1919/masterPortfolio"><img alt="HitCounts" src="http://hits.dwyl.com/ashutosh1919/masterPortfolio.svg" /></a>
