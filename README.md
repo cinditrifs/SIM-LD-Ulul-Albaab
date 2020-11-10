@@ -2,7 +2,7 @@
     <img src="http://salimunj.org/wp-content/uploads/2020/07/Draft-logo-LD-UA-1-230x230.png" align="center" height="150"></img>
 </p>
 
-<h1 align="center"> Sistem Informasi Manajemen Lembaga Dakwah Ulul Albaab FMIPA UNJ  🔥 </h1> 
+<h1 align="center"> Sistem Informasi Manajemen </br> Lembaga Dakwah Ulul Albaab FMIPA UNJ  </h1> 
 <h3 align="center"> Dibuat untuk memenuhi tugas matakuliah Interaksi manusia dan komputer </h3>
 
 <p align="center">
