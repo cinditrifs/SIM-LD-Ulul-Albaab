@@ -25,54 +25,44 @@ Tingkat kebutuhan dari pembuatan website ini cukup tinggi, hal ini dikarenakan p
 # Spesifikasi Kebutuhan Sistem  ✏️
 
 ### User
-**Home dan About Us**
+- **Home dan About Us**
 
-<p align="justify">
-    Pada halaman ini user di beri informasi sekilas tentang Lembaga Dakwah Ulul Albaab, anggota aktif LDUA serta informasi mengenai donasi untuk mendukung LDUA.
-</p>
+  Pada halaman ini user di beri informasi sekilas tentang Lembaga Dakwah Ulul Albaab, anggota aktif LDUA serta informasi mengenai donasi untuk mendukung LDUA.
 
-**Artikel**
 
-<p align="justify">
-User dapat mengetahui update dan berita kegiatan dakwah yang akan dilaksanakan dan yang sudah dilaksanakan oleh Lembaga Dakwah Ulul Albab. Informasi ini, berupa foto dan juga tulisan. Program Dakwah Pada halaman ini dirancang dinamis yang dikelola melalui admin, user dapat melihat semua program dakwah yang direncanakan oleh Lembaga Dakwah Ulul
+- **Artikel**
+
+  User dapat mengetahui update dan berita kegiatan dakwah yang akan dilaksanakan dan yang sudah dilaksanakan oleh Lembaga Dakwah Ulul Albab. Informasi ini, berupa foto dan juga tulisan. Program Dakwah Pada halaman ini dirancang dinamis yang dikelola melalui admin, user dapat melihat semua program dakwah yang direncanakan oleh Lembaga Dakwah Ulul
 Albaab. 
-</p>
 
-**Kesekretariatan**
+- **Kesekretariatan**
 
-<p align="justify">
-    User yang berposisi sebagai pengurus Lembaga Dakwah Ulul Albaab yakni sekretaris departemen dapat melakukan login untuk melakukan input data seperti surat keluar, presensi kajian, syuro dan lpj. 
-</p>
+  User yang berposisi sebagai pengurus Lembaga Dakwah Ulul Albaab yakni sekretaris departemen dapat melakukan login untuk melakukan input data seperti surat keluar, presensi kajian, syuro dan lpj. 
+
 
 ### Admin
-**Posting Artikel**
+- **Posting Artikel**
 
-<p align="justify">
-    Pada menu Posting Artikel, admin dapat melakukan action create, read, update dan delete postingan yang mencakup informasi gambar, judul dan konten artikel yang akan ditampilan pada menu artikel di user.
+  Pada menu Posting Artikel, admin dapat melakukan action create, read, update dan delete postingan yang mencakup informasi gambar, judul dan konten artikel yang akan ditampilan pada menu artikel di user.
 </p>
 
-**Kesekretariatan**
+- **Kesekretariatan**
 
-<p align="justify">
-   Pada menu Sekretariatan, terdapat sub menu Surat Keluar, Laporan Syuro, Presensi Kajian dan Laporan Pertanggung Jawaban, dimana admin dapat melakukan action read, delete dan download file yang dipilih, yang telah di input oleh sekretaris departemen pada menu kesekretariatan di user.
-</p>
+  Pada menu Sekretariatan, terdapat sub menu Surat Keluar, Laporan Syuro, Presensi Kajian dan Laporan Pertanggung Jawaban, dimana admin dapat melakukan action read, delete dan download file yang dipilih, yang telah di input oleh sekretaris departemen pada menu kesekretariatan di user.
 
-**Highlight**
+-**Highlight**
 
-<p align="justify">
-   Pada menu Highlight, admin dapat melakukan action create, read, dan delete highlight berupa gambar, yang akan ditampilan pada slider di home user.
-</p>
+  Pada menu Highlight, admin dapat melakukan action create, read, dan delete highlight berupa gambar, yang akan ditampilan pada slider di home user.
 
-**Program Dakwah**
+-**Program Dakwah**
 
-<p align="justify">
-   Pada menu Program Dakwah, admin dapat melakukan action create, read, update dan delete program dakwah berupa gambar dan nama program, yang akan ditampilan pada menu program dakwah di user.
-</p>
+  Pada menu Program Dakwah, admin dapat melakukan action create, read, update dan delete program dakwah berupa gambar dan nama program, yang akan ditampilan pada menu program dakwah di user.
 
-**Program Dakwah**
-<p align="justify">
-Pada menu Punggawa, admin dapat melakukan action create, read, update dan delete anggota, yang mencakup informasi berupa nama, prodi dan divisi yang akan ditampilan pada menu about us di user.
-</p>
+
+-**Program Dakwah**
+
+  Pada menu Punggawa, admin dapat melakukan action create, read, update dan delete anggota, yang mencakup informasi berupa nama, prodi dan divisi yang akan ditampilan pada menu about us di user.
+
     
 # Proses Sebelumnya 📦    
 Proses sebelumnya pada pengarsipan masih menggunakan secara manual di pindahkan kedalam proses secara maya dan pada website yang sebelumnya dianggap kurang menarik juga masih menggunakan wordprees maka dari itu kami perbarui tampilannya agar lebih menarik.
