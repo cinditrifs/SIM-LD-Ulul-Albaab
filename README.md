@@ -81,13 +81,13 @@ Diharapkan untuk project ini adalah memberikan informasi tentang organisasi dan 
 ![flowchart-admin](https://user-images.githubusercontent.com/55974755/99150288-fa055b80-26c5-11eb-87f1-3b66009fd7f0.jpeg)
 
 # Activity Diagram ✨
-Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest dapat melihat menu home, program dakwah atikel juga menu kesekretariatan. Di menu home terdapat pilihan untuk melakukan donasi.
+Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest dapat melihat menu home, program dakwah atikel juga menu kesekretariatan. Di menu home terdapat pilihan untuk melakukan donasi. [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/diagram/activity-diagram)
 ![User Guesst](https://user-images.githubusercontent.com/55974755/99150298-0c7f9500-26c6-11eb-8f9e-7dc64d2faf04.png)
 ![Donasi](https://user-images.githubusercontent.com/55974755/99150351-8ca5fa80-26c6-11eb-9428-bb759b64b8e9.png)
 
-### [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/diagram/activity-diagram)
 
 # Mockup Design 👏🏻
+   Setelah melakukan analisis requirement, kami mencoba untuk membuat mockup design. [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/mockup%20website)
    ![1  Home dan About Us](https://user-images.githubusercontent.com/55974755/99150139-089f4300-26c5-11eb-90c4-214d09c10e61.png)
    
-### [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/mockup%20website)
+
