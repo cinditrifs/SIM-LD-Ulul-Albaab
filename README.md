@@ -50,16 +50,16 @@ Albaab.
 
   Pada menu Sekretariatan, terdapat sub menu Surat Keluar, Laporan Syuro, Presensi Kajian dan Laporan Pertanggung Jawaban, dimana admin dapat melakukan action read, delete dan download file yang dipilih, yang telah di input oleh sekretaris departemen pada menu kesekretariatan di user.
 
--**Highlight**
+- **Highlight**
 
   Pada menu Highlight, admin dapat melakukan action create, read, dan delete highlight berupa gambar, yang akan ditampilan pada slider di home user.
 
--**Program Dakwah**
+- **Program Dakwah**
 
   Pada menu Program Dakwah, admin dapat melakukan action create, read, update dan delete program dakwah berupa gambar dan nama program, yang akan ditampilan pada menu program dakwah di user.
 
 
--**Program Dakwah**
+- **Program Dakwah**
 
   Pada menu Punggawa, admin dapat melakukan action create, read, update dan delete anggota, yang mencakup informasi berupa nama, prodi dan divisi yang akan ditampilan pada menu about us di user.
 
@@ -70,14 +70,24 @@ Proses sebelumnya pada pengarsipan masih menggunakan secara manual di pindahkan 
 # Proses yang Diharapkan 🌈
 Diharapkan untuk project ini adalah memberikan informasi tentang organisasi dan kegiatan Lembaga Dakwah Ulul Albaab kepada masyarakat serta sebagai media penyimpanan atau arsip surat masuk, surat keluar, laporan pertanggungjawaban, dan surat pertanggungjawaban.
 
-# Technologies used 🛠️
+# Use Case Diagram 🛠️
+![usecase](https://user-images.githubusercontent.com/55974755/99150260-cd514400-26c5-11eb-92ec-2ed3c191b5bc.jpeg)
 
-# illustrations 🍥
+# ERD 🍥
+![erd system LDUA](https://user-images.githubusercontent.com/55974755/99150279-e954e580-26c5-11eb-9e8e-5a4078b996a6.png)
 
-# License 📄
+# Flowchart 📄
+![flowchart-guest](https://user-images.githubusercontent.com/55974755/99150285-f7a30180-26c5-11eb-9360-faa9f77d83df.jpeg)
+![flowchart-admin](https://user-images.githubusercontent.com/55974755/99150288-fa055b80-26c5-11eb-87f1-3b66009fd7f0.jpeg)
 
-# Contributing 💡
+# Activity Diagram ✨
+Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest dapat melihat menu home, program dakwah atikel juga menu kesekretariatan. Di menu home terdapat pilihan untuk melakukan donasi.
+![User Guesst](https://user-images.githubusercontent.com/55974755/99150298-0c7f9500-26c6-11eb-8f9e-7dc64d2faf04.png)
+![Donasi](https://user-images.githubusercontent.com/55974755/99150351-8ca5fa80-26c6-11eb-9428-bb759b64b8e9.png)
 
-# Contributors ✨
+### [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/diagram/activity-diagram)
 
-# References 👏🏻
+# Mockup Design 👏🏻
+   ![1  Home dan About Us](https://user-images.githubusercontent.com/55974755/99150139-089f4300-26c5-11eb-90c4-214d09c10e61.png)
+   
+### [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/mockup%20website)
