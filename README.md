@@ -29,10 +29,13 @@ Tingkat kebutuhan dari pembuatan website ini cukup tinggi, hal ini dikarenakan p
 
   Pada halaman ini user di beri informasi sekilas tentang Lembaga Dakwah Ulul Albaab, anggota aktif LDUA serta informasi mengenai donasi untuk mendukung LDUA.
 
-
 - **Artikel**
 
-  User dapat mengetahui update dan berita kegiatan dakwah yang akan dilaksanakan dan yang sudah dilaksanakan oleh Lembaga Dakwah Ulul Albab. Informasi ini, berupa foto dan juga tulisan. Program Dakwah Pada halaman ini dirancang dinamis yang dikelola melalui admin, user dapat melihat semua program dakwah yang direncanakan oleh Lembaga Dakwah Ulul
+  User dapat mengetahui update dan berita kegiatan dakwah yang akan dilaksanakan dan yang sudah dilaksanakan oleh Lembaga Dakwah Ulul Albab. Informasi ini, berupa foto dan juga tulisan.
+
+- **Program Dakwah**
+
+  Pada halaman ini dirancang dinamis yang dikelola melalui admin, user dapat melihat semua program dakwah yang direncanakan oleh Lembaga Dakwah Ulul
 Albaab. 
 
 - **Kesekretariatan**
@@ -58,8 +61,7 @@ Albaab.
 
   Pada menu Program Dakwah, admin dapat melakukan action create, read, update dan delete program dakwah berupa gambar dan nama program, yang akan ditampilan pada menu program dakwah di user.
 
-
-- **Program Dakwah**
+- **Punggawa**
 
   Pada menu Punggawa, admin dapat melakukan action create, read, update dan delete anggota, yang mencakup informasi berupa nama, prodi dan divisi yang akan ditampilan pada menu about us di user.
 
