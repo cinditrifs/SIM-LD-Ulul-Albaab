@@ -16,7 +16,7 @@
 -	Isi yang ada diwebsite kira-kira pengenalan lembaga dakwah, program dakwah, artikel Ulul Albaab, sosial media, budaya muslim, donasi, perpustakaan dan store. Ada fitur chat yang mengarahkan langsung ke admin.
 
 **proof :**
-- [text wawancara]()
+- [text wawancara](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/requirement%20gathering%20phase-1/wawancara%20huda.md)
 - [video wawancara](https://youtu.be/u4RdAFlT9R0)
 
 ## Rangkuman Hasil Wawancara dengan Kak Trisha (Via Whatsapp, 10 November 2020)
@@ -26,4 +26,4 @@
 -	Kalo bisa, sekretaris juga dapat melihat semua file yang sekdept-sekdept upload. 
 
 **proof :**
-- [text wawancara]()
+- [text wawancara](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/requirement%20gathering%20phase-1/wawancara%20sekretaris.md)
