@@ -25,5 +25,5 @@ Untuk melihat keseluruhan pertanyaan yang diajukan di kuesioner serta jawabannya
 Mockup dan juga prototipe yang kami tunjukkan kepada Kak Gilang, Kak Trisha dan juga Shabrina, mendapatkan tanggapan positif. Menurut kak GIlang dan Shabrina, hal ini sudah sesuai dengan ekspetasi dan kriteria. Dan mengenai perpustakaan dan store yang memang sebelumnya tidak kami tambahkan, ternyata ditanggapi, karena LDUA sendiri memiliki rencara untuk membuat program tersebut. Juga ada masukan dari Kak Gilang, untuk bagian Budaya Muslim UNJ sebaiknya disertai dengan detailnya. Dan ternyata ada beberapa request tambahan seperti fitur perpustakaan dan juga fitur kirim proposal pada bagian kesekretariatan yang memang sebelumnya belum disinggung oleh kak Trisha selaku sekretaris umum pada saat analisis kebutuhan. 
 
 
-### Prof Presentasi di Hadapan User
-Pada hari Minggu, 15 November 2020, kami melakukan presentasi via Zoom Meeting. Hasil rekaman dapat dilihat [di sini] (https://youtu.be/2g6CFQLqnGc)
+### Proof Presentasi di Hadapan User
+Pada hari Minggu, 15 November 2020, kami melakukan presentasi via Zoom Meeting. Hasil rekaman dapat dilihat [di sini](https://youtu.be/2g6CFQLqnGc)
