@@ -2,7 +2,7 @@
 
 ### Informasi Profile 
 - **Gilang Muh. Iqbal** : selaku Kadept Humas dan Media Ulul Albaab
-- **Shabrina Nur** : selaku Wakadept Humas dan Media Ulul Albaab
+- **Shabrina Syifa** : selaku Wakadept Humas dan Media Ulul Albaab
 
 ## Text Wawancara
 ::::::::::::::::: | Text
