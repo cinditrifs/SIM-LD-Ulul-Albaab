@@ -67,7 +67,7 @@ Albaab.
 
     
 # Proses Sebelumnya 📦    
-Proses sebelumnya pada pengarsipan masih menggunakan secara manual di pindahkan kedalam proses secara maya dan pada website yang sebelumnya dianggap kurang menarik juga masih menggunakan wordprees maka dari itu kami perbarui tampilannya agar lebih menarik.
+Proses sebelumnya, pada pengarsipan masih menggunakan secara manual di pindahkan kedalam proses secara maya dan pada website yang sebelumnya dianggap kurang menarik juga masih menggunakan wordprees maka dari itu, kami perbarui tampilannya agar lebih menarik.
 
 # Proses yang Diharapkan 🌈
 Diharapkan untuk project ini adalah memberikan informasi tentang organisasi dan kegiatan Lembaga Dakwah Ulul Albaab kepada masyarakat serta sebagai media penyimpanan atau arsip surat masuk, surat keluar, laporan pertanggungjawaban, dan surat pertanggungjawaban.
