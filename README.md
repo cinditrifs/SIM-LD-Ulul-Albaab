@@ -5,6 +5,11 @@
 <h1 align="center"> Sistem Informasi Manajemen </br> Lembaga Dakwah Ulul Albaab FMIPA UNJ  </h1> 
 <h3 align="center"> Dibuat untuk memenuhi tugas matakuliah Interaksi manusia dan komputer </h3>
 
+# Nama Anggota Kelompok 📋
+- Afny (1313618001)
+- Nilatil Moena (1313618002)
+- Cindi Tri Fitikasari (1313618025)
+
 <p align="center"> 
     <img src="https://lh3.googleusercontent.com/-4qN8pQI9YS0/X6_pYgIPgyI/AAAAAAAAAyc/VVllxpXBXCM3nBzxohxDEqPBigXZTsHwQCNcBGAsYHQ/2.%2BProgram%2BDakwah.png"></img>
 </p>
@@ -90,6 +95,7 @@ Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest
 
 # Mockup Design 👏🏻
    Setelah melakukan analisis requirement, kami mencoba untuk membuat mockup design. [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/mockup%20website)
+   Link Presentasi Mockup (https://youtu.be/775psolU3Gg)
    ![1  Home dan About Us](https://user-images.githubusercontent.com/55974755/99150139-089f4300-26c5-11eb-90c4-214d09c10e61.png)
   
 # Interaction Control
