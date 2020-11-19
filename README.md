@@ -5,7 +5,7 @@
 <h1 align="center"> Sistem Informasi Manajemen </br> Lembaga Dakwah Ulul Albaab FMIPA UNJ  </h1> 
 <h3 align="center"> Dibuat untuk memenuhi tugas matakuliah Interaksi manusia dan komputer </h3>
 
-# Nama Anggota Kelompok 📋
+# Team F IMK Assignment 3 
 - Afny (1313618001)
 - Nilatil Moena (1313618002)
 - Cindi Tri Fitikasari (1313618025)
