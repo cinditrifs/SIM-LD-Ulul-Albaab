@@ -93,7 +93,7 @@ Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest
    ![1  Home dan About Us](https://user-images.githubusercontent.com/55974755/99150139-089f4300-26c5-11eb-90c4-214d09c10e61.png)
   
 # Interaction Control
-- [Figma] (https://www.figma.com/file/LEhskIjhPXArkULqbj00M6/LD-Ulul-Albaab)
+- [Figma](https://www.figma.com/file/LEhskIjhPXArkULqbj00M6/LD-Ulul-Albaab)
 - [Website Ulul Albaab](https://nilamoena.github.io/)
 - [Website Admin Ulul Albaab](https://houwdai.github.io/)
 
