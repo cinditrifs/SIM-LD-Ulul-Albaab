@@ -1,104 +1,64 @@
-<p align="center"> 
-    <img src="http://salimunj.org/wp-content/uploads/2020/07/Draft-logo-LD-UA-1-230x230.png" align="center" height="150"></img>
-</p>
+# CodeIgniter 4 Application Starter
 
-<h1 align="center"> Sistem Informasi Manajemen </br> Lembaga Dakwah Ulul Albaab FMIPA UNJ  </h1> 
-<h3 align="center"> Dibuat untuk memenuhi tugas matakuliah Interaksi manusia dan komputer </h3>
+## What is CodeIgniter?
 
-# Team F IMK Assignment 3 
-- Afny (1313618001)
-- Nilatil Moena (1313618002)
-- Cindi Tri Fitikasari (1313618025)
+CodeIgniter is a PHP full-stack web framework that is light, fast, flexible, and secure. 
+More information can be found at the [official site](http://codeigniter.com).
 
-<p align="center"> 
-    <img src="https://lh3.googleusercontent.com/-4qN8pQI9YS0/X6_pYgIPgyI/AAAAAAAAAyc/VVllxpXBXCM3nBzxohxDEqPBigXZTsHwQCNcBGAsYHQ/2.%2BProgram%2BDakwah.png"></img>
-</p>
+This repository holds a composer-installable app starter.
+It has been built from the 
+[development repository](https://github.com/codeigniter4/CodeIgniter4).
 
+More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
 
-# Permasalahan 📚
-<p align="justify"> 
-Sehubung dengan pesatnya kemajuan di bidang teknologi informasi dalam era globalisasi ini memberikan pengaruh yang sangat besar terhadap berbagai aspek kehidupan manusia. Salah satu yang mendukung kemajuan teknologi informasi pada saat ini yaitu peningkatan kualitas pelayanan informasi dalam menyajikan informasi dan komunikasi secara luas. Banyak investasi waktu dan ruang dalam pengembangan website sebagai salah satu penyajian informasi yang paling berkembang. Oleh karena itu, tidak dipungkiri jika penggunaan website untuk menyajikan informasi sering digunakan. Multimedia merupakan gabungan dari teks, suara, gambar, video, dan animasi. Multimedia banyak diterapkan pada berbagai bidang, misalnya bidang pendidikan ataupun pada bidang bisnis. Pada bidang pendidikan, multimedia banyak digunakan sebagai media belajar mengajar dengan tujuan untuk mempermudah menyampaian informasi dengan tampilan yang lebih menarik. Sedangkan pada bidang bisnis, multimedia digunakan sebagai media untuk memberikan informasi tentang perusahaan (profil perusahaan), menyampaikan produk – produk yang ditawarkan perusahaan, bahkan sebagai kios informasi. Penggunaan website sebagai kios informasi dianggap memberi pengaruh besar dalam pengembangan sebuah perusahaan atau organisasi yang biasa lebih dikenal dengan company profile. Dengan adanya company profile ini, maka pelanggan, investor, bahkan konsumen (visitor) dapat mengetahui sebuah perusahaan atau organisasi dengan lebih efektif dan efisien. Sebagai sebuah organisasi yang diharapkan mampu meningkatkan
-pengelolaan pembangunan makin produktif, makin unggul dan makin berdaya saing khususnya dalam bidang pengetahuan dan teknologi, Lembaga Dakwah Ulul Albaab membutuhkan sebuah wadah untuk memberikan informasi kepada khalayak ramai. Oleh karena itu, website ini dianggap sebagai media demi terealisasikannya tujuan tersebut. Website yang sekarang digunakan dianggap kurang menarik dan tidak dapat berguna seperti yang diharapkan.
-</p>
+The user guide corresponding to this version of the framework can be found
+[here](https://codeigniter4.github.io/userguide/). 
 
-# Kebutuhan Global Sistem 📋
-Pembuatan aplikasi berbasis website Lembaga Dakwah Ulul Albaab berguna untuk memberikan informasi dan juga menyampaikan dahwan dan website ini disusun dengan tampilan yang interaktif dan tersistem.
+## Installation & updates
 
-# Tingkat Kebutuhan Sistem 📋
-Tingkat kebutuhan dari pembuatan website ini cukup tinggi, hal ini dikarenakan pengurus Lembaga Dakwah Ulul Albaab membutuhkan suatu wadah untuk menyampaikan informasi dakwah dan transparansi kegiatan pada satu tempat agar memudahkan/ menarik user untuk mendapatkan informasi, serta dapat membantu pengurus untuk memiliki media penyimpanan untuk arsip berkas yang terstruktur.
+`composer create-project codeigniter4/appstarter` then `composer update` whenever
+there is a new release of the framework.
 
-# Spesifikasi Kebutuhan Sistem  ✏️
+When updating, check the release notes to see if there are any changes you might need to apply
+to your `app` folder. The affected files can be copied or merged from
+`vendor/codeigniter4/framework/app`.
 
-### User
-- **Home dan About Us**
+## Setup
 
-  Pada halaman ini user di beri informasi sekilas tentang Lembaga Dakwah Ulul Albaab, anggota aktif LDUA serta informasi mengenai donasi untuk mendukung LDUA.
+Copy `env` to `.env` and tailor for your app, specifically the baseURL
+and any database settings.
 
-- **Artikel**
+## Important Change with index.php
 
-  User dapat mengetahui update dan berita kegiatan dakwah yang akan dilaksanakan dan yang sudah dilaksanakan oleh Lembaga Dakwah Ulul Albab. Informasi ini, berupa foto dan juga tulisan.
+`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
+for better security and separation of components.
 
-- **Program Dakwah**
+This means that you should configure your web server to "point" to your project's *public* folder, and
+not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
+framework are exposed.
 
-  Pada halaman ini dirancang dinamis yang dikelola melalui admin, user dapat melihat semua program dakwah yang direncanakan oleh Lembaga Dakwah Ulul
-Albaab. 
+**Please** read the user guide for a better explanation of how CI4 works!
+The user guide updating and deployment is a bit awkward at the moment, but we are working on it!
 
-- **Kesekretariatan**
+## Repository Management
 
-  User yang berposisi sebagai pengurus Lembaga Dakwah Ulul Albaab yakni sekretaris departemen dapat melakukan login untuk melakukan input data seperti surat keluar, presensi kajian, syuro dan lpj. 
+We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
+We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
+FEATURE REQUESTS.
 
+This repository is a "distribution" one, built by our release preparation script. 
+Problems with it can be raised on our forum, or as issues in the main repository.
 
-### Admin
-- **Posting Artikel**
+## Server Requirements
 
-  Pada menu Posting Artikel, admin dapat melakukan action create, read, update dan delete postingan yang mencakup informasi gambar, judul dan konten artikel yang akan ditampilan pada menu artikel di user.
-</p>
+PHP version 7.2 or higher is required, with the following extensions installed: 
 
-- **Kesekretariatan**
+- [intl](http://php.net/manual/en/intl.requirements.php)
+- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
-  Pada menu Sekretariatan, terdapat sub menu Surat Keluar, Laporan Syuro, Presensi Kajian dan Laporan Pertanggung Jawaban, dimana admin dapat melakukan action read, delete dan download file yang dipilih, yang telah di input oleh sekretaris departemen pada menu kesekretariatan di user.
+Additionally, make sure that the following extensions are enabled in your PHP:
 
-- **Highlight**
-
-  Pada menu Highlight, admin dapat melakukan action create, read, dan delete highlight berupa gambar, yang akan ditampilan pada slider di home user.
-
-- **Program Dakwah**
-
-  Pada menu Program Dakwah, admin dapat melakukan action create, read, update dan delete program dakwah berupa gambar dan nama program, yang akan ditampilan pada menu program dakwah di user.
-
-- **Punggawa**
-
-  Pada menu Punggawa, admin dapat melakukan action create, read, update dan delete anggota, yang mencakup informasi berupa nama, prodi dan divisi yang akan ditampilan pada menu about us di user.
-
-    
-# Proses Sebelumnya 📦    
-Proses sebelumnya, pada pengarsipan masih menggunakan secara manual di pindahkan kedalam proses secara maya dan pada website yang sebelumnya dianggap kurang menarik juga masih menggunakan wordprees maka dari itu, kami perbarui tampilannya agar lebih menarik.
-
-# Proses yang Diharapkan 🌈
-Diharapkan untuk project ini adalah memberikan informasi tentang organisasi dan kegiatan Lembaga Dakwah Ulul Albaab kepada masyarakat serta sebagai media penyimpanan atau arsip surat masuk, surat keluar, laporan pertanggungjawaban, dan surat pertanggungjawaban.
-
-# Use Case Diagram 🛠️
-![usecase](https://user-images.githubusercontent.com/55974755/99150260-cd514400-26c5-11eb-92ec-2ed3c191b5bc.jpeg)
-
-# ERD 🍥
-![erd system LDUA](https://user-images.githubusercontent.com/55974755/99150279-e954e580-26c5-11eb-9e8e-5a4078b996a6.png)
-
-# Flowchart 📄
-![flowchart-guest](https://user-images.githubusercontent.com/55974755/99150285-f7a30180-26c5-11eb-9360-faa9f77d83df.jpeg)
-![flowchart-admin](https://user-images.githubusercontent.com/55974755/99150288-fa055b80-26c5-11eb-87f1-3b66009fd7f0.jpeg)
-
-# Activity Diagram ✨
-Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest dapat melihat menu home, program dakwah atikel juga menu kesekretariatan. Di menu home terdapat pilihan untuk melakukan donasi. [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/diagram/activity-diagram)
-![User Guesst](https://user-images.githubusercontent.com/55974755/99150298-0c7f9500-26c6-11eb-8f9e-7dc64d2faf04.png)
-![Donasi](https://user-images.githubusercontent.com/55974755/99150351-8ca5fa80-26c6-11eb-9428-bb759b64b8e9.png)
-
-
-# Mockup Design 👏🏻
-   Setelah melakukan analisis requirement, kami mencoba untuk membuat mockup design. [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/mockup%20website)
-  
-   ![1  Home dan About Us](https://user-images.githubusercontent.com/55974755/99150139-089f4300-26c5-11eb-90c4-214d09c10e61.png)
-  
-# Interaction Control
-- [Figma](https://www.figma.com/file/LEhskIjhPXArkULqbj00M6/LD-Ulul-Albaab)
-- [Website Ulul Albaab](https://nilamoena.github.io/)
-- [Website Admin Ulul Albaab](https://houwdai.github.io/)
+- json (enabled by default - don't turn it off)
+- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
+- xml (enabled by default - don't turn it off)
