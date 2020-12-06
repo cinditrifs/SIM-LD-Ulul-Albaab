@@ -8,17 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <base href="<?php echo base_url(); ?>">
 
     <title> Admin | Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="<?php echo base_url('vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?php echo base_url('css/sb-admin-2.min.css'); ?> " rel="stylesheet">
-
+    <link href="<?php echo base_url('/css/sb-admin-2.min.css') ?> " rel="stylesheet">
 
 </head>
 
@@ -43,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="../admin/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -60,8 +58,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Semua Artikel</a>
-                        <a class="collapse-item" href="#">Tambah Artikel</a>
+                        <a class="collapse-item" href="../artikel/artikel">Semua Artikel</a>
+                        <a class="collapse-item" href="../artikel/tambah_artikel">Tambah Artikel</a>
                     </div>
                 </div>
             </li>
@@ -77,11 +75,11 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Surat Keluar</a>
-                        <a class="collapse-item" href="#">Laporan Syuro</a>
-                        <a class="collapse-item" href="#">Presensi Kajian</a>
-                        <a class="collapse-item" href="#">LPJ</a>
-                        <a class="collapse-item" href="#">Proposal Kegiatan</a>
+                        <a class="collapse-item" href="../sekre/surat_keluar">Surat Keluar</a>
+                        <a class="collapse-item" href="../sekre/syuro">Laporan Syuro</a>
+                        <a class="collapse-item" href="../sekre/presensi_kajian">Presensi Kajian</a>
+                        <a class="collapse-item" href="../sekre/lpj">LPJ</a>
+                        <a class="collapse-item" href="../sekre/proposal">Proposal Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -91,7 +89,7 @@
 
             <!-- Nav Item - Punggawa -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="../admin/punggawa">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Punggawa</span></a>
             </li>
@@ -101,7 +99,7 @@
 
             <!-- Nav Item - Highlight -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="../admin/highlight">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Highlight</span></a>
             </li>
@@ -117,11 +115,11 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Learning Center</a>
-                        <a class="collapse-item" href="#">Kaderisasi</a>
-                        <a class="collapse-item" href="#">Syiar</a>
-                        <a class="collapse-item" href="#">Humas dan Media</a>
-                        <a class="collapse-item" href="#">Keputrian</a>
+                        <a class="collapse-item" href="../prodak/lc">Learning Center</a>
+                        <a class="collapse-item" href="../prodak/kader">Kaderisasi</a>
+                        <a class="collapse-item" href="../prodak/syiar">Syiar</a>
+                        <a class="collapse-item" href="../prodak/huda">Humas dan Media</a>
+                        <a class="collapse-item" href="../prodak/keputrian">Keputrian</a>
                     </div>
                 </div>
             </li>
@@ -180,7 +178,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="<?php echo base_url('img/undraw_profile.svg') ?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -332,22 +330,21 @@
         </div>
 
         <!-- Bootstrap core JavaScript-->
-        <script src="<?php echo base_url('vendor / jquery / jquery . min . js'); ?>"></script>
+        <script src="<?php echo base_url('/vendor/jquery/jquery.min.js'); ?>"></script>
         <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
         <!-- Core plugin JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js"'); ?>"></script>
+        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
 
         <!-- Custom scripts for all pages-->
-        <script src=" <?php echo base_url('/js/sb-admin-2.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/js/sb-admin-2.min.js'); ?>"></script>
 
         <!-- Page level plugins -->
-        <script src=" <?php echo base_url('/vendor/chart.js/Chart.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js'); ?>"></script>
 
         <!-- Page level custom scripts -->
         <script src="<?php echo base_url('/js/demo/chart-area-demo.js'); ?>"></script>
-
-        <script src="<?php echo base_url('js/demo/chart-pie-demo.js'); ?>"></script>
+        <script src="<?php echo base_url('/js/demo/chart-pie-demo.js'); ?>"></script>
 
 </body>
 

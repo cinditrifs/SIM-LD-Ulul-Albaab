@@ -33,7 +33,7 @@
                 <div class="card" style="border-radius:15px">
                     <div class="card-content">
                         <img class="vertical-middle" src="img/logo.png" alt="Logo" width="50%">
-                        <form action="/admin/dashboard/" method="POST">
+                        <form action="/admin/dashboard" method="POST">
                             <div class="input-field">
                                 <i class="material-icons prefix">account_circle</i>
                                 <input id="username" name="username" type="text" class="validate" value="" required>

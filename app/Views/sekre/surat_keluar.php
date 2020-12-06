@@ -9,42 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Admin | Artikel</title>
+    <title> Admin | Sekretariatan</title>
 
     <!-- Custom fonts for this template-->
-    <link href="<?php echo base_url('/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?php echo base_url('css/sb-admin-2.min.css') ?>" rel="stylesheet">
-
-    <style>
-        ul li a {
-            color: white;
-        }
-
-        td img {
-            width: 190px;
-        }
-
-        tr td {
-            vertical-align: middle;
-        }
-
-        tr th {
-            vertical-align: middle;
-        }
-
-        .tanggal {
-            font-size: 13px
-        }
-
-        thead tr th {
-            font-size: 15px;
-
-            text-align: center;
-        }
-    </style>
+    <link href="<?php echo base_url('/css/sb-admin-2.min.css') ?> " rel="stylesheet">
 
 </head>
 
@@ -68,10 +40,10 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item ">
-                <a class="nav-link" href="../admin/dashboard">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Surat Keluar</span></a>
             </li>
 
             <!-- Divider -->
@@ -79,7 +51,7 @@
 
 
             <!-- Nav Item - Pages Artikel Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Artikel</span>
@@ -87,7 +59,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="../artikel/artikel">Semua Artikel</a>
-                        <a class="collapse-item" href="../artikel/tambah_artikel">Tambah Artikel</a>
+                        <a class="collapse-item" href="../artikel/tambah">Tambah Artikel</a>
                     </div>
                 </div>
             </li>
@@ -103,11 +75,11 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../sekre/surat_keluar">Surat Keluar</a>
-                        <a class="collapse-item" href="../sekre/syuro">Laporan Syuro</a>
-                        <a class="collapse-item" href="../sekre/presensi_kajian">Presensi Kajian</a>
-                        <a class="collapse-item" href="../sekre/lpj">LPJ</a>
-                        <a class="collapse-item" href="../sekre/proposal">Proposal Kegiatan</a>
+                        <a class="collapse-item" href="sekretariatan/surat_keluar">Surat Keluar</a>
+                        <a class="collapse-item" href="sekretariatan/syuro">Laporan Syuro</a>
+                        <a class="collapse-item" href="#">Presensi Kajian</a>
+                        <a class="collapse-item" href="#">LPJ</a>
+                        <a class="collapse-item" href="#">Proposal Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -117,7 +89,7 @@
 
             <!-- Nav Item - Punggawa -->
             <li class="nav-item">
-                <a class="nav-link" href="../admin/punggawa">
+                <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Punggawa</span></a>
             </li>
@@ -127,7 +99,7 @@
 
             <!-- Nav Item - Highlight -->
             <li class="nav-item">
-                <a class="nav-link" href="../admin/highlight">
+                <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Highlight</span></a>
             </li>
@@ -143,11 +115,11 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../prodak/lc">Learning Center</a>
-                        <a class="collapse-item" href="../prodak/kader">Kaderisasi</a>
-                        <a class="collapse-item" href="../prodak/syiar">Syiar</a>
-                        <a class="collapse-item" href="../prodak/huda">Humas dan Media</a>
-                        <a class="collapse-item" href="../prodak/keputrian">Keputrian</a>
+                        <a class="collapse-item" href="#">Learning Center</a>
+                        <a class="collapse-item" href="#">Kaderisasi</a>
+                        <a class="collapse-item" href="#">Syiar</a>
+                        <a class="collapse-item" href="#">Humas dan Media</a>
+                        <a class="collapse-item" href="#">Keputrian</a>
                     </div>
                 </div>
             </li>
@@ -228,67 +200,90 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Artikel</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
-                    <!-- Table of all artikel  -->
+                    <!-- Content Row Card-->
+                    <div class="row">
 
-                    <table class="table table-bordered mt-3">
-                        <thead class="">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Cover</th>
-                                <th scope="col">Judul Artikel</th>
-                                <th scope="col">Penulis</th>
-                                <th scope="col">Created at</th>
-                                <th scope="col">Update at</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><img src="" alt=""></td>
-                                <td>Benarkah Isra Miraj itu terjadi hanya 1 Malam?</td>
-                                <td>Huda-Admin</td>
-                                <td class="tanggal">2018-09-28</td>
-                                <td class="tanggal">2018-09-28</td>
-                                <td>
-                                    <a href=""><button type="button text-center" class="btn btn-info">See Detail</button></a>
-                                    <a href=""><button type="button text-center" class="btn btn-warning">Edit</button></a>
-                                    <a href=""><button type="button text-center" class="btn btn-danger">Delete</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td><img src="" alt=""></td>
-                                <td>Judul Artikel</td>
-                                <td>Penulis</td>
-                                <td class="tanggal">Created at</td>
-                                <td class="tanggal">Update at</td>
-                                <td>
-                                    <a href=""><button type="button text-center" class="btn btn-info">See Detail</button></a>
-                                    <a href=""><button type="button text-center" class="btn btn-warning">Edit</button></a>
-                                    <a href=""><button type="button text-center" class="btn btn-danger">Delete</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td><img src="" alt=""></td>
-                                <td>Judul Artikel</td>
-                                <td>Penulis</td>
-                                <td class="tanggal">Created at</td>
-                                <td class="tanggal">Update at</td>
-                                <td>
-                                    <a href=""><button type="button text-center" class="btn btn-info">See Detail</button></a>
-                                    <a href=""><button type="button text-center" class="btn btn-warning">Edit</button></a>
-                                    <a href=""><button type="button text-center" class="btn btn-danger">Delete</button></a>
-                                </td>
-                            </tr>
+                        <!-- Punggawa  Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Total Punggawa</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">89</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-users mr-3 2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                        </tbody>
-                    </table>
+                        <!-- Artike Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Jumlah Artikel</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Followers IG Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Followers IG
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">1500</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fa fa-instagram fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Pending Requests</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
                 <!-- End of Main Content -->
@@ -335,21 +330,21 @@
         </div>
 
         <!-- Bootstrap core JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
-        <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+        <script src="<?php echo base_url('/vendor/jquery/jquery.min.js'); ?>"></script>
+        <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
         <!-- Core plugin JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
 
         <!-- Custom scripts for all pages-->
-        <script src="<?php echo base_url() ?>/js/sb-admin-2.min.js"></script>
+        <script src="<?php echo base_url('/js/sb-admin-2.min.js'); ?>"></script>
 
         <!-- Page level plugins -->
-        <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
+        <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js'); ?>"></script>
 
         <!-- Page level custom scripts -->
-        <script src="<?php echo base_url('/js/demo/chart-area-demo.js') ?>"></script>
-        <script src="<?php echo base_url('/js/demo/chart-pie-demo.js') ?>"></script>
+        <script src="<?php echo base_url('/js/demo/chart-area-demo.js'); ?>"></script>
+        <script src="<?php echo base_url('/js/demo/chart-pie-demo.js'); ?>"></script>
 
 </body>
 

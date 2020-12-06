@@ -7,12 +7,6 @@ namespace App\Controllers;
 
 class Admin extends BaseController
 {
-    // protected $punggawaModel;
-    // public function __construct()
-    // {
-    //     $this->punggawaModel = new PunggawaModel();
-    // }
-
     public function dashboard()
     {
         return view('admin/dashboard');
@@ -31,7 +25,17 @@ class Admin extends BaseController
 
     public function tambah_punggawa()
     {
-        return view('admin/addpunggawa');
+        return view('admin/tambah_punggawa');
+    }
+
+    public function highlight()
+    {
+        return view('admin/highlight');
+    }
+
+    public function tambah_highlight()
+    {
+        return view('admin/tambah_highlight');
     }
 
     //--------------------------------------------------------------------
