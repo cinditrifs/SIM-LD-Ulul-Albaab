@@ -20,4 +20,9 @@ class Artikel extends BaseController
     {
         return view("admin/edit_artikel");
     }
+
+    public function artikel_ke()
+    {
+        return view("admin/view_artikel");
+    }
 }

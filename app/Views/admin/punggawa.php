@@ -210,7 +210,10 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"></h6>
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                <a><button type="button" data-toggle="modal" data-target="#addModal" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Tambah Punggawa</button></a>
+                            </h6>
+
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -744,6 +747,76 @@
             </div>
         </div>
     </div>
+
+    <!-- modal add -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Punggawa </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="container">
+                    <form class="ml-3 mt-3">
+
+                        <div class="form-group row">
+                            <label for="inputnama" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputprodi" class="col-sm-2 col-form-label">Prodi</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="inputdivisi" aria-placeholder="Pilih">
+                                    <option>Pendidikan Matematika</option>
+                                    <option>Matematika</option>
+                                    <option>Ilmu Komputer</option>
+                                    <option>Statistika</option>
+                                    <option>Pendidikan Fisika</option>
+                                    <option>Fisika</option>
+                                    <option>Pendidikan Kimia</option>
+                                    <option>Kimia</option>
+                                    <option>Pendidikan Biologi</option>
+                                    <option>Biologi</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputdivisi" class="col-sm-2 col-form-label">Divisi</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="inputdivisi" aria-placeholder="Pilih">
+                                    <option>Mas'ul</option>
+                                    <option>Mas'ulah</option>
+                                    <option>Sekretaris</option>
+                                    <option>Bendahara</option>
+                                    <option>Ketua Departemen Kaderisasi</option>
+                                    <option>Kaderisasi</option>
+                                    <option>Ketua Departemen Huda</option>
+                                    <option>Huda</option>
+                                    <option>Ketua Departemen Syi'ar</option>
+                                    <option>Syi'ar</option>
+                                    <option>Ketua Departemen Learning Center</option>
+                                    <option>Learning Center</option>
+                                    <option>Keputrian</option>
+                                    <option>Ketua Departemen Keputrian</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" data-toggle="modal" data-target="#saveModal" class="btn  btn-success btn-block">Save</button>
+                        </div>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal add -->
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>

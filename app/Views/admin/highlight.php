@@ -208,7 +208,10 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Highlight</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+
                     </div>
+                    <button type="button" data-toggle="modal" data-target="#addModal" class=" btn btn-primary btn-sm mt-3"><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Tambah Highlight</button>
+
 
                     <!-- Table of highlight  -->
                     <table class="table table-bordered mt-3">
@@ -266,6 +269,40 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- modal add -->
+
+                <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tambah Highlight </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="container">
+                                <form class="ml-3 mt-3">
+                                    <div class="form-group row">
+                                        <label for="inputcover" class="col-sm-2 col-form-label">Gambar</label>
+                                        <div class="col-sm-10">
+                                            <div class="custom-file">
+                                                <input type="file" id="imgInp" class="custom-file-input">
+                                                <label class="custom-file-label" for="imgInp">Upload Highlight</label>
+                                            </div>
+                                            <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image" />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal add -->
 
 
             </div>

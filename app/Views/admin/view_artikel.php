@@ -232,36 +232,74 @@
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
-                    <!-- Table of all artikel  -->
+                    <!-- View Artikel -->
+                    <div class="card">
+                        <img class="card-img-top rounded mx-auto d-block" src="../asset/artikel1.jpg" style="width: 300px" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Benarkah Isra Miraj itu terjadi hanya 1 Malam?</h5>
+                            <p class="card-text text-justify">
+                                Isra Mikraj (bahasa Arab: الإسراء والمعراج, al-’Isrā’ wal-Mi‘rāj) tanggal 27 Rajab tahun ke-10 kenabian, adalah bagian kedua dari perjalanan yang dilakukan oleh Nabi Muhammad Shallallahu Alaihi wa Sallam dalam waktu satu malam saja. Kejadian ini merupakan salah satu peristiwa penting bagi umat Islam, karena pada peristiwa inilah beliau mendapat perintah untuk menunaikan salat lima waktu sehari semalam. Beberapa penggambaran tentang kejadian ini dapat dilihat di surah ke-17 di Al-Quran, yaitu Surah Al-Isra. (wikipedia.org)
 
-                    <table class="table table-bordered mt-3">
-                        <thead class="">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Cover</th>
-                                <th scope="col">Judul Artikel</th>
-                                <th scope="col">Penulis</th>
-                                <th scope="col">Created at</th>
-                                <th scope="col">Update at</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><img src="" alt=""></td>
-                                <td>Benarkah Isra Miraj itu terjadi hanya 1 Malam?</td>
-                                <td>Huda-Admin</td>
-                                <td class="tanggal">2018-09-28</td>
-                                <td class="tanggal">2018-09-28</td>
-                                <td>
-                                    <a href="../artikel/artikel_ke"><button type="button text-center" class="btn btn-info">See Detail</button></a>
-                                    <a href="../artikel/edit_artikel"><button type="button text-center" class="btn btn-warning">Edit</button></a>
-                                    <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                Lalu masuk logikakah perjalanan isra miraj itu terjadi satu malam saja? Mungkin ada yang percaya tapi juga ada yang tidak. tapi saya pikir isra miraj itu memang benar terjadi.. kenapa?
+
+
+                                Teori Relativitas telah dapat membuktikan kebenarannya. Menyingkap kebenaran-kebenaran yang selama ini tersembunyi di balik keruwetan dan arogansi ilmu pengetahuan. Termasuk, kebenaran Isra` Mi`raj.
+                                Dan, inilah yang telah direfleksikan buraq, hewan sejenis kuda bersayap sebagai kendaraan Nabi saat melakukan perjalanan Isra`. Ketika memulai perjalanan yaitu dari Masjid Al haram (Mekkah), dengan daya kecepatan buraq, Nabi tidaklah mengarah ke masa depan. Namun kembali ke masa lalu, melalui masa lalu itulah Nabi memberangkatkan perjalanannya. Hingga seiring berjalanya waktu, perjalananpun melaju ke suatu titik dimana beliau baru memulainya. Sehingga, kesan yang ada pun seolah-olah Nabi melakukan perjalanan Isra` Mi`raj hanyalah sesaat. Padahal pada hakikatnya tidak. Berdasarkan `perhitungan` waktu pribadinya beliau pun menjalani Isra` Mi`raj, lazimnya perjalanan-perjalanan sejenis lainnya dengan menghabiskan waktu berjam-jam atau berhari-hari atau bahkan lebih.
+
+                                Demikianlah, Allah memang senantiasa memfirmankan kebenaran. Dan, firman-firman Allah memang senantiasa benar adanya. Meski terkadang akal & logika kita sangat sulit untuk menjangkaunya…..
+
+                                Atau lebih singkat nya seperti Ini :
+
+                                Manusia diibaratkan seekor semut.
+
+                                Dimana terdapat 2 semut (keduanya sedang berada di Jakarta)
+
+                                semut 1 cerita kepada temannya si semut 2 yang diibaratkan sebagai berikut :
+
+                                Semut 1 : Aku barusan ke Bandung pulang pergi dalam waktu 10 jam.
+                                Semut 2 : Wah lo gila ya. Mana mungkin lo ke bandung PP 10 jam, udah gila lo.
+                                Semut 1 : Saya ngga boong, 2 jam yang lalu saya baru sampai di jakarta.
+                                Semut 2 : Mana mungkin ke bandung yang jaraknya beberapa juta kilometer ? (menurut ukuran jarak semut).
+                                Semut 1 : Saya tadi masuk ke dalam tas Pak Haji yang mau kondangan ke bandung bro.
+                                Terus pak hajinya dibandung hanya beberapa jam. Setelah selesai kondangan pak hajinya langsung kembali ke Jakarta.
+
+                                Nah, dari percakapan si semut 2 yang tidak mengakui kebenaran bahwa PP Jakarta – Bandung dalam 10 jam adalah hal yang Mustahil.
+
+                                Tapi bagi manusia, perjalanan Jakarta – bandung dalam waktu 10 jam itu masuk akal. Itulah perumpamaan manusia dengan teknologinya Allah Tuhan semesta alam.
+
+                                Seperti contoh manusia melihat semut, menilai seekor semut. Sepandai-pandainya semut atau bahkan sejenius apapun semut itu. Semut tidak akan bisa membuat pesawat terbang. Tapi bagi manusia membuat pesawat terbang itu mudah dan masuk akal.
+
+                                Hal ini sama seperti Allah SWT melihat manusia, tetapi perbandingan ini lebih jauh dari perbandingan manusia dan semut.
+
+                                ALLAHU AKBAR…semua itu Hanya Kuasa ALLAH SWT…
+                            </p>
+
+                            <a href="../artikel/edit_artikel"><button type="button" class="btn btn-primary">Edit</button></a>
+                            <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Apakah anda yakin ingin menghapus artikel ini?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Yes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End View -->
 
                 </div>
                 <!-- End of Main Content -->

@@ -232,36 +232,51 @@
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
-                    <!-- Table of add artikel  -->
-                    <form class="ml-3 mt-3">
-                        <div class="form-group row">
-                            <label for="inputcover" class="col-sm-2 col-form-label">Cover</label>
-                            <div class="col-sm-10">
-                                <div class="custom-file">
-                                    <input type="file" id="imgInp" class="custom-file-input">
-                                    <label class="custom-file-label" for="imgInp">Pilih sampul</label>
+                    <!-- Form  -->
+                    <!--Start Forms-->
+                    <form action="">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="form-group row mb-4">
+                                        <label class=" inputcover col-form-label text-md-right col-12 col-md-3 col-lg-3">Cover</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="custom-file">
+                                                <input type="file" id="imgInp" class="custom-file-input">
+                                                <label class="custom-file-label" for="imgInp">Pilih sampul</label>
+                                            </div>
+                                            <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image" />
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="inputjudul col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul">
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <textarea name="konten" id="konten" class="form-control summernote" cols="60" rows="60"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                        <div>
+                                            <button type="button" data-toggle="modal" data-target="#saveModal" class="btn  btn-success btn-block">Save</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image" />
                             </div>
-
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputjudul" class="col-sm-2 col-form-label">Judul</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputartikel" class="col-sm-2 col-form-label" value>Konten</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Masukkan text" style="height: 500px;"></textarea>
-
-                            </div>
-                        </div>
-                        <div>
-                            <button type="button" data-toggle="modal" data-target="#saveModal" class="btn  btn-success btn-block">Save</button>
                         </div>
                     </form>
+
+                    <!-- end form -->
+
+
+
 
                     <!-- Modal -->
                     <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
