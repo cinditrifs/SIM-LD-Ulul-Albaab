@@ -9,14 +9,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Admin | Sekretariatan</title>
+    <title> Sekretariatan | Surat Keluar</title>
 
     <!-- Custom fonts for this template-->
-    <link href="<?php echo base_url('/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?php echo base_url('/css/sb-admin-2.min.css') ?> " rel="stylesheet">
+    <link href="<?php echo base_url('css/sb-admin-2.min.css') ?>" rel="stylesheet">
+
+    <style>
+        tr * {
+            color: black;
+        }
+    </style>
 
 </head>
 
@@ -40,10 +46,10 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item ">
+                <a class="nav-link" href="../admin/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Surat Keluar</span></a>
+                    <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -51,7 +57,7 @@
 
 
             <!-- Nav Item - Pages Artikel Menu -->
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Artikel</span>
@@ -59,7 +65,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="../artikel/artikel">Semua Artikel</a>
-                        <a class="collapse-item" href="../artikel/tambah">Tambah Artikel</a>
+                        <a class="collapse-item" href="../artikel/tambah_artikel">Tambah Artikel</a>
                     </div>
                 </div>
             </li>
@@ -68,18 +74,18 @@
             <hr class="sidebar-divider">
 
             <!-- Nav Item - Sekretariatan Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Kesekretariatan</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="sekretariatan/surat_keluar">Surat Keluar</a>
-                        <a class="collapse-item" href="sekretariatan/syuro">Laporan Syuro</a>
-                        <a class="collapse-item" href="#">Presensi Kajian</a>
-                        <a class="collapse-item" href="#">LPJ</a>
-                        <a class="collapse-item" href="#">Proposal Kegiatan</a>
+                        <a class="collapse-item" href="../sekre/surat_keluar">Surat Keluar</a>
+                        <a class="collapse-item" href="../sekre/syuro">Laporan Syuro</a>
+                        <a class="collapse-item" href="../sekre/presensi_kajian">Presensi Kajian</a>
+                        <a class="collapse-item" href="../sekre/lpj">LPJ</a>
+                        <a class="collapse-item" href="../sekre/proposal">Proposal Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -89,7 +95,7 @@
 
             <!-- Nav Item - Punggawa -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="../admin/punggawa">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Punggawa</span></a>
             </li>
@@ -99,7 +105,7 @@
 
             <!-- Nav Item - Highlight -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="../admin/highlight">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Highlight</span></a>
             </li>
@@ -115,11 +121,11 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Learning Center</a>
-                        <a class="collapse-item" href="#">Kaderisasi</a>
-                        <a class="collapse-item" href="#">Syiar</a>
-                        <a class="collapse-item" href="#">Humas dan Media</a>
-                        <a class="collapse-item" href="#">Keputrian</a>
+                        <a class="collapse-item" href="../prodak/lc">Learning Center</a>
+                        <a class="collapse-item" href="../prodak/kader">Kaderisasi</a>
+                        <a class="collapse-item" href="../prodak/syiar">Syiar</a>
+                        <a class="collapse-item" href="../prodak/huda">Humas dan Media</a>
+                        <a class="collapse-item" href="../prodak/keputrian">Keputrian</a>
                     </div>
                 </div>
             </li>
@@ -200,151 +206,162 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Rekapan Surat Keluar</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
-                    <!-- Content Row Card-->
-                    <div class="row">
-
-                        <!-- Punggawa  Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Punggawa</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">89</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fa fa-users mr-3 2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Artike Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Jumlah Artikel</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Followers IG Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Followers IG
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">1500</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fa fa-instagram fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    <!-- Table of surat keluar  -->
+                    <table class="table table-bordered mt-3">
+                        <thead class="bg-success">
+                            <tr class="text-center" style="font-size:  14px; vertical-align: middle; background-color:grey">
+                                <th scope="col">Nomor Surat</th>
+                                <th scope="col">Tanggal Pembuatan</th>
+                                <th scope="col">Tanggal Acara</th>
+                                <th scope="col">Diajukan untuk</th>
+                                <th scope="col">Keterangan Surat</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="font-size: 13px;">
+                                <th scope="row">001/LDUA.a/Pyt/II/2020</th>
+                                <td>20 Februari 2020</td>
+                                <td>3 April 2020</td>
+                                <td>WD III FMIPA UNJ</td>
+                                <td>Pernyataan bahwa bersedia menghadiri undangan dari Himpunan Mahasiswa Muslim Pasca Sarajana</td>
+                                <td>
+                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 13px;">
+                                <th scope="row">089/LDUA.e/SISKOM/Und/IX/2020</th>
+                                <td>20 September 2020</td>
+                                <td>3 Oktober 2020</td>
+                                <td>Kak Vicky Ardilla</td>
+                                <td>Undangan dala rangka mengisi taujih di agenda SISKOM pada tanggal 3 Oktober 2020</td>
+                                <td>
+                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 13px;">
+                                <th scope="row">Nomor Surat</th>
+                                <td>Tanggal Surat</td>
+                                <td>Tanggal Acara</td>
+                                <td>Tujuan Surat</td>
+                                <td>Keterangan Surat</td>
+                                <td>
+                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 13px;">
+                                <th scope="row">Nomor Surat</th>
+                                <td>Tanggal Surat</td>
+                                <td>Tanggal Acara</td>
+                                <td>Tujuan Surat</td>
+                                <td>Keterangan Surat</td>
+                                <td>
+                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 13px;">
+                                <th scope="row">Nomor Surat</th>
+                                <td>Tanggal Surat</td>
+                                <td>Tanggal Acara</td>
+                                <td>Tujuan Surat</td>
+                                <td>Keterangan Surat</td>
+                                <td>
+                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End of table surat keluar -->
                 </div>
-                <!-- End of Main Content -->
 
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Ulul Albaab 2020</span>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Apakah anda yakin ingin menghapus surat keluar ini?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Yes</button>
+                            </div>
                         </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
-
-            </div>
-            <!-- End of Content Wrapper -->
-
-        </div>
-        <!-- End of Page Wrapper -->
-
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
+
+            </div>
+            <!-- End of Main Content -->
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Ulul Albaab 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery/jquery.min.js'); ?>"></script>
-        <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
+    <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="<?php echo base_url('/js/sb-admin-2.min.js'); ?>"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="<?php echo base_url('/js/sb-admin-2.min.js') ?>"></script>
 
-        <!-- Page level plugins -->
-        <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js'); ?>"></script>
+    <!-- Page level plugins -->
+    <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="<?php echo base_url('/js/demo/chart-area-demo.js'); ?>"></script>
-        <script src="<?php echo base_url('/js/demo/chart-pie-demo.js'); ?>"></script>
+    <!-- Page level custom scripts -->
+    <script src="<?php echo base_url('/js/demo/chart-area-demo.js') ?>"></script>
+    <script src="<?php echo base_url('/js/demo/chart-pie-demo.js') ?>"></script>
+
+    <!-- Admin Js -->
+    <script src="<?php echo base_url('/js/admin.js') ?>"></script>
 
 </body>
 

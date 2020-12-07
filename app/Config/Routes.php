@@ -44,6 +44,7 @@ $routes->get('/lpj', 'Home::lpj');
 $routes->get('/ad-punggawa', 'Admin::punggawa');
 $routes->get('/ad-artikel', 'Artikel::showAll');
 $routes->get('/ad-artikel-tambah', 'Artikel::tambah');
+$routes->get('/admin', 'Admin::login');
 
 /**
  * --------------------------------------------------------------------

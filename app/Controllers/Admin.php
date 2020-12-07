@@ -7,6 +7,10 @@ namespace App\Controllers;
 
 class Admin extends BaseController
 {
+    public function login()
+    {
+        return view('login_admin');
+    }
     public function dashboard()
     {
         return view('admin/dashboard');
