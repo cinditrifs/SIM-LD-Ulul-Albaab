@@ -59,17 +59,19 @@
                 <div class="card" style="border-radius:15px">
                     <div class="card-content">
                         <img class="vertical-middle" src="<?php echo base_url('materialize/img/logo.png') ?>" alt="Logo" width="50%">
-                        <div class="input-field">
-                            <i class="material-icons prefix">account_circle</i>
-                            <input id="username" type="text" class="validate" required>
-                            <label for="username">Username</label>
-                        </div>
-                        <div class="input-field">
-                            <i class="material-icons prefix">lock</i>
-                            <input id="password" type="password" class="validate" required>
-                            <label for="password">Password</label>
-                        </div>
-                        <a href="/surat" class="waves-effect waves-light btn" style="border-radius:15px;">Login</a>
+                        <form id="form_id" method="post" name="myform">
+                            <div class="input-field">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="username" name="username" type="text" class="validate" required>
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="password" name="password" type="password" class="validate" required>
+                                <label for="password">Password</label>
+                            </div>
+                            <input type="button" class="waves-effect waves-light btn" style="border-radius:15px;" value="Login" id="submit" onclick="validate()" />
+                        </form>
                     </div>
                 </div>
             </div>
@@ -114,6 +116,29 @@
     <script>
         const sideNav = document.querySelectorAll('.sidenav');
         M.Sidenav.init(sideNav)
+    </script>
+    <script>
+        var attempt = 3; // Variable to count number of attempts.
+        // Below function Executes on click of login button.
+        function validate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "sekreldua" && password == "sekreldua") {
+                alert("Login successfully");
+                window.location = "/surat"; // Redirecting to other page.
+                return false;
+            } else {
+                attempt--; // Decrementing by one.
+                alert("Harap isi dengan benar");
+                // Disabling fields after 3 attempts.
+                if (attempt == 0) {
+                    document.getElementById("username").disabled = true;
+                    document.getElementById("password").disabled = true;
+                    document.getElementById("submit").disabled = true;
+                    return false;
+                }
+            }
+        }
     </script>
 </body>
 

@@ -1,12 +1,25 @@
 <?php
 
+use App\Models\HighlightModel;
+
 namespace App\Controllers;
 
 class Home extends BaseController
 {
+	protected $highlightModel;
+	public function __construct()
+	{
+		$this->highlightModel = new \App\Models\HighlightModel(); //bisa di taro di base controller
+	}
+
 	public function index()
 	{
-		return view('main/index');
+		#variable gambar namanya slider
+		$slider = $this->highlightModel->findAll();
+		$data = [
+			'slider' => $slider
+		];
+		return view('main/index', $data);
 	}
 	public function prodak()
 	{

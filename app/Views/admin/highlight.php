@@ -19,8 +19,18 @@
     <link href="<?php echo base_url('css/sb-admin-2.min.css') ?>" rel="stylesheet">
 
     <style>
-        tr * {
+        tr td {
             color: black;
+            vertical-align: middle;
+        }
+
+        tr th {
+            color: black;
+            vertical-align: middle;
+        }
+
+        .slider {
+            height: 120px;
         }
     </style>
 
@@ -223,27 +233,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><img class="rounded mx-auto d-block" src="asset/slider.jpg" alt=""></td>
-                                <td class="text-center text-middle">
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button></td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td><img class="rounded mx-auto d-block" src="asset/slider2.jpg" alt=""></td>
-                                <td class="text-center text-middle">
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button></td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td><img class="rounded mx-auto d-block" src="asset/slider3.jpg" alt=""></td>
-                                <td class="text-center text-middle">
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button></td>
-                                </td>
-                            </tr>
+                            <?php $i = 1; ?>
+                            <?php foreach ($slider as $slider) : ?>
+                                <tr>
+                                    <th scope="row"><?= $i++; ?></th>
+                                    <td><img class="rounded mx-auto d-block slider" src="/img/<?php echo $slider['gambar'] ?>" alt=""></td>
+                                    <td class="text-center text-middle">
+                                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button></td>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                     <!-- End of highlight -->

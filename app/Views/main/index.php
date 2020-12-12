@@ -67,15 +67,11 @@
     <!--Slider-->
     <div id="slider" class="slider">
         <ul class="slides">
-            <li>
-                <img src="<?php echo base_url('materialize/img/slider.jpg') ?>">
-            </li>
-            <li>
-                <img src="<?php echo base_url('materialize/img/slider2.jpg') ?>">
-            </li>
-            <li>
-                <img src="<?php echo base_url('materialize/img/slider3.jpg') ?>">
-            </li>
+            <?php foreach ($slider as $slider) : ?>
+                <li>
+                    <img src="/img/<?php echo $slider['gambar'] ?>">
+                </li>
+            <?php endforeach; ?>
     </div>
 
     <!--About Us-->
