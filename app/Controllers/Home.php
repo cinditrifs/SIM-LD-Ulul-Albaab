@@ -1,15 +1,18 @@
 <?php
 
 use App\Models\HighlightModel;
+use App\Models\ArtikelModel;
 
 namespace App\Controllers;
 
 class Home extends BaseController
 {
 	protected $highlightModel;
+	protected $artikel;
 	public function __construct()
 	{
 		$this->highlightModel = new \App\Models\HighlightModel(); //bisa di taro di base controller
+		$this->artikel = new \App\Models\ArtikelModel(); //bisa di taro di base controller
 	}
 
 	public function index()
@@ -25,13 +28,21 @@ class Home extends BaseController
 	{
 		return view('main/prodak');
 	}
+
 	public function artikel()
 	{
-		return view('main/artikel');
+		$artikel = $this->artikel->getArtikel();
+		$data = [
+			'artikel' => $artikel
+		];
+		return view('main/artikel', $data);
 	}
-	public function isiartikel()
+	public function isiartikel($slug)
 	{
-		return view('main/isiartikel');
+		$data = [
+			'artikel' => $this->artikel->getArtikel($slug)
+		];
+		return view('main/isiartikel', $data);
 	}
 	public function sekret()
 	{

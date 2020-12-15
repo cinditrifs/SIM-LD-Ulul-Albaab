@@ -14,9 +14,15 @@
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
 
         body {
             background-color: #e0f2f1;
+        }
+
+        p {
+            text-align: justify;
+            font-family: "Quicksand";
         }
     </style>
 </head>
@@ -51,16 +57,16 @@
     <!--Artikel-->
     <div class="container">
         <div class="row">
-            <div class="col s12 m3">
-                <img src="<?php echo base_url('materialize/img/logo.png') ?>" style="width: 100%">
+            <div class="col s12 ">
+                <h3 class="center-align" style="font-family: 'Kaushan Script'"><?= $artikel['judul'] ?></h3>
             </div>
-            <div class="col s12 m9">
-                <h3 class="center-align" style="font-family: 'Kaushan Script'">Allah Menangguhkan Hukuman Manusia</h3>
-                <p class="right-align" style="font-size: 15px;">Posted on 2020-11-11 22:48:27</p>
+            <div class="col s12 center-align">
+                <img sty src="/img/<?php echo $artikel['gambar'] ?>" style="width: 20%">
             </div>
         </div>
         <div>
-            <p style="text-align: justify; text-indent: 50px;">Salah satu bentuk makar Allah termuat dalam firman-Nya, "Dan janganlah sekali-kali orang-orang kafir menyangka bahwa penangguhan Kami pada mereka adalah baik bagi mereka. Sesungguhnya Kami menangguhkan mereka agar bertambah-tambah dosa mereka; dan bagi mereka azab yang menghinakan." (QS 3: 178). Ayat ini jelas menunjukkan bahwa mengulur waktu dan menangguhkan azab yang disertai dengan penambahan karunia bagi seseorang adalah bentuk makar Allah. Dalam sebuah hadis disebutkan, "Bila Allah menginginkan kebaikan bagi hamba-Nya yang berdosa, maka Dia akan membalas dosanya dan mengingatkannya untuk meminta ampun. Dan bila Allah menginginkan keburukan hamba-Nya yang berdosa, maka Dia akan memberinya (tambahan) kenikmatan guna melalaikannya dari meminta ampun." Allah berfirman, "Orang-orang kafir itu (mencoba) membuat tipu daya, dan Allah membalas tipu daya mereka. Dan sesungguhnya Allah sebaik-baik pembalas tipu daya." (QS 3: 54). Salah satu bentuk tipuan Allah pada pendosa adalah menimbulkan ujub dalam dirinya, sehingga dia membesar-besarkan perbuatan baiknya, merasa puas dan senang dengannya, tersipu (seperti orang yang sedang dirayu) dan terkesima oleh dirinya sendiri dan merasa dirinya terbebas dari seluruh kekurangan dalam perbuatan tersebut, sambil merasa bahwa dia sendirilah yang telah melakukan kebaikan itu tanpa bantuan Allah. "Dan bagaimana dengan orang yang diperhiaskan perbuatan buruknya sehingga ia melihatnya sebagai kebaikan?" (QS 35: 8). Sebelum membangkang kepada Allah, iblis adalah makhluk yang rajin beribadah dan pandai. Tapi lantaran lupa pada pemberian Allah, timbul rasa ujub di dalam dirinya. Dia merasa bahwa api lebih baik daripada tanah. Padahal, tak ada satu pun bukti yang membenarkan klaim iblis bahwa api lebih baik daripada tanah. Di sinilah letak tipuan Allah. Rasulullah Saw. bersabda bahwa Allah berkata kepada Nabi Daud. Hai Daud, sampaikan kabar gembira kepada para pelaku dosa dan peringatkanlah para pelaku kesalehan. Daud berkata, Bagaimana aku menyampaikan kabar gembira kepada para pelaku dosa dan memperingatkan para pelaku kesalehan?</p>
+            <p class="right-align" style="font-size: 15px;">Posted on <?= $artikel['created_at'] ?></p>
+            <p style="text-align: justify; font-family: 'quicksand' text-indent: 50px;"><?= $artikel['konten'] ?></p>
         </div>
     </div>
 

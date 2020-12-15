@@ -34,17 +34,14 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/prodak', 'Home::prodak');
 $routes->get('/artikel', 'Home::artikel');
-$routes->get('/isiartikel', 'Home::isiartikel');
+$routes->get('/isiartikel/(:segment)', 'Home::isiartikel/$1');
 $routes->get('/sekret', 'Home::sekret');
 $routes->get('/surat', 'Home::surat');
 $routes->get('/presensi', 'Home::presensi');
 $routes->get('/syuro', 'Home::syuro');
 $routes->get('/lpj', 'Home::lpj');
 // $routes->get('/ad-dashboard', 'Admin::dashboard');
-$routes->get('/ad-punggawa', 'Admin::punggawa');
-$routes->get('/ad-artikel', 'Artikel::showAll');
-$routes->get('/ad-artikel-tambah', 'Artikel::tambah');
-$routes->get('/admin', 'Admin::login');
+$routes->get('/artikel/detail/(:any)', 'Artikel::detail/$1');
 
 /**
  * --------------------------------------------------------------------

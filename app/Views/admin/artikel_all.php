@@ -240,26 +240,27 @@
                                 <th scope="col">No</th>
                                 <th scope="col">Cover</th>
                                 <th scope="col">Judul Artikel</th>
-                                <th scope="col">Penulis</th>
+                                <th scope="col">Konten</th>
                                 <th scope="col">Created at</th>
-                                <th scope="col">Update at</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><img src="" alt=""></td>
-                                <td>Benarkah Isra Miraj itu terjadi hanya 1 Malam?</td>
-                                <td>Huda-Admin</td>
-                                <td class="tanggal">2018-09-28</td>
-                                <td class="tanggal">2018-09-28</td>
-                                <td>
-                                    <a href="../artikel/artikel_ke"><button type="button text-center" class="btn btn-info">See Detail</button></a>
-                                    <a href="../artikel/edit_artikel"><button type="button text-center" class="btn btn-warning">Edit</button></a>
-                                    <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
+                            <?php $i = 1; ?>
+                            <?php foreach ($artikel as $ar) : ?>
+                                <tr>
+                                    <th scope="row"><?= $i++; ?></th>
+                                    <td><img src="/img/<?php echo $ar['gambar'] ?>" alt=""></td>
+                                    <td><?= $ar['judul'] ?></td>
+                                    <td style="text-align: justify;"><?= substr($ar['konten'], 0, 500), "........" ?></td>
+                                    <td class="tanggal"><?= $ar['created_at'] ?></td>
+                                    <td>
+                                        <a href="../artikel/detail/<?= $ar['slug'] ?>"><button type="button text-center" class="btn btn-info btn-sm">See Detail</button></a>
+                                        <a href=""><button type="button text-center" class="btn btn-warning btn-sm">Edit</button></a>
+                                        <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
 

@@ -17,6 +17,44 @@
         body {
             background-color: #e0f2f1;
         }
+
+        @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+
+        .slider .slides {
+            background-color: transparent;
+            margin: 0;
+            height: 400px;
+        }
+
+        .slider .slides li img {
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+
+        .white {
+            box-shadow: none;
+        }
+
+
+        .side-left {
+            border: solid 1px black;
+            border-radius: 15px;
+        }
+
+        p {
+            text-align: justify;
+            font-family: "Quicksand";
+        }
+
+        .card-title {
+            font-family: "Bebas Neue";
+        }
     </style>
 </head>
 
@@ -52,17 +90,37 @@
         <h3 style="font-family: 'Bebas Neue'; margin-bottom: 0px;">Artikel Terbaru</h3>
         <hr color="teal" width="50%" style="margin-bottom:35px">
     </div>
-    <div class="collection container" style="margin-bottom: 30px;">
-        <a href="/isiartikel" class="row collection-item center-align title" style="font-size: 24px; text-align: left"><img class="col s12 m2" src="<?php echo base_url('materialize/img/logo.png') ?>">Allah Menangguhkan Hukuman Manusia
-            <p style="font-size: 15px;">Posted on 2020-11-11 22:48:27</p>
-        </a>
-        <a href="/isiartikel" class="row collection-item center-align title" style="font-size: 24px; text-align: left"><img class="col s12 m2" src="<?php echo base_url('materialize/img/logo.png') ?>">Berikhtiar dalam Mencari Rezeki
-            <p style="font-size: 15px;">Posted on 2020-11-11 22:48:27</p></a>
-        <a href="/isiartikel" class="row collection-item center-align title" style="font-size: 24px; text-align: left"><img class="col s12 m2" src="<?php echo base_url('materialize/img/logo.png') ?>">Janganlah Memelihara Sikap Lemah Mental dan Bersedih Hati
-            <p style="font-size: 15px;">Posted on 2020-11-11 22:48:27</p></a>
-        <a href="/isiartikel" class="row collection-item center-align title" style="font-size: 24px; text-align: left"><img class="col s12 m2" src="<?php echo base_url('materialize/img/logo.png') ?>">Andai Al Qur'an Punya Fitur Last Seen
-            <p style="font-size: 15px;">Posted on 2020-11-11 22:48:27</p></a>
+
+
+    <div class="container">
+        <?php foreach ($artikel as $ar) : ?>
+            <div class="card artikel" style="margin-left: 20px; box-shadow: none; border-bottom:1px solid black;">
+                <div class="row">
+
+                    <div class="col s4 m4 vertical-align">
+                        <div class="card-image">
+                            <img style="vertical-align: middle; margin-top:50px " src="/img/<?php echo $ar['gambar'] ?>">
+                        </div>
+                    </div>
+                    <div class="col s8 m8 ">
+                        <div class="card-title">
+                            <h5><?= $ar['judul'] ?></h5>
+                        </div>
+                        <div class="card-detail">
+                            <p> POSTED BY LD Ulul Albaab FMIPA UNJ POSTED ON <?= $ar['created_at'] ?> </p>
+                        </div>
+                        <div class="card-content">
+                            <p><?= substr($ar['konten'], 0, 500), "........" ?></p>
+                        </div>
+                        <div class="container action" style="text-align: right;">
+                            <a href="../isiartikel/<?= $ar['slug'] ?>" class="waves-effect waves-light btn">See detail</a>
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
+
 
 
     <!--Footer-->

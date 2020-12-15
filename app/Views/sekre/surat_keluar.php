@@ -223,56 +223,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style="font-size: 13px;">
-                                <th scope="row">001/LDUA.a/Pyt/II/2020</th>
-                                <td>20 Februari 2020</td>
-                                <td>3 April 2020</td>
-                                <td>WD III FMIPA UNJ</td>
-                                <td>Pernyataan bahwa bersedia menghadiri undangan dari Himpunan Mahasiswa Muslim Pasca Sarajana</td>
-                                <td>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr style="font-size: 13px;">
-                                <th scope="row">089/LDUA.e/SISKOM/Und/IX/2020</th>
-                                <td>20 September 2020</td>
-                                <td>3 Oktober 2020</td>
-                                <td>Kak Vicky Ardilla</td>
-                                <td>Undangan dala rangka mengisi taujih di agenda SISKOM pada tanggal 3 Oktober 2020</td>
-                                <td>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr style="font-size: 13px;">
-                                <th scope="row">Nomor Surat</th>
-                                <td>Tanggal Surat</td>
-                                <td>Tanggal Acara</td>
-                                <td>Tujuan Surat</td>
-                                <td>Keterangan Surat</td>
-                                <td>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr style="font-size: 13px;">
-                                <th scope="row">Nomor Surat</th>
-                                <td>Tanggal Surat</td>
-                                <td>Tanggal Acara</td>
-                                <td>Tujuan Surat</td>
-                                <td>Keterangan Surat</td>
-                                <td>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr style="font-size: 13px;">
-                                <th scope="row">Nomor Surat</th>
-                                <td>Tanggal Surat</td>
-                                <td>Tanggal Acara</td>
-                                <td>Tujuan Surat</td>
-                                <td>Keterangan Surat</td>
-                                <td>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
+                            <?php $i = 1; ?>
+                            <?php foreach ($suratkeluar as $sk) : ?>
+                                <tr style="font-size: 13px;">
+                                    <th scope="row"><?= $sk['nomor'] ?></th>
+                                    <td><?= date("d-F-Y", strtotime($sk['tanggal_buat'])) ?></td>
+                                    <td><?= date("d-F-Y", strtotime($sk['tanggal_acara'])) ?></td>
+                                    <td><?= $sk['untuk'] ?></td>
+                                    <td><?= $sk['keterangan'] ?></td>
+                                    <td>
+                                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                     <!-- End of table surat keluar -->

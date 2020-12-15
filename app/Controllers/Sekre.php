@@ -1,19 +1,41 @@
 <?php
 
 use CodeIgniter\codeIgniter;
+use App\Models\SuratkeluarModel;
+use App\Models\SyuroModel;
+
 
 namespace App\Controllers;
 
 class Sekre extends BaseController
 {
-    public function surat_keluar()
+    // surat keluar yeaaa
+    protected $suratkeluar;
+    protected $syuro;
+    public function __construct()
     {
-        return view('sekre/surat_keluar');
+        $this->suratkeluar = new \App\Models\SuratkeluarModel(); //bisa di taro di base controller
+        $this->syuro = new \App\Models\SyuroModel(); //bisa di taro di base controller
+
     }
 
+    public function surat_keluar()
+    {
+        $suratkeluar = $this->suratkeluar->findAll();
+        $data = [
+            'suratkeluar' => $suratkeluar
+        ];
+        return view('sekre/surat_keluar', $data);
+    }
+
+    // untuk syuro yeaaaa
     public function syuro()
     {
-        return view("sekre/syuro");
+        $syuro = $this->syuro->findAll();
+        $data = [
+            'syuro' => $syuro
+        ];
+        return view("sekre/syuro", $data);
     }
 
     public function proposal()

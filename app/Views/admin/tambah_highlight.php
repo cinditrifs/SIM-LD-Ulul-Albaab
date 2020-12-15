@@ -223,6 +223,24 @@
 
                     <!-- Add of highlight  -->
                     <div class="container">
+                        <?php if (!empty(session()->getFlashdata('success'))) { ?>
+                            <div class="alert alert-success">
+                                <?php echo session()->getFlashdata('success'); ?>
+                            </div>
+
+                        <?php } ?>
+                        <?php if (!empty(session()->getFlashdata('info'))) { ?>
+                            <div class="alert alert-info">
+                                <?php echo session()->getFlashdata('info'); ?>
+                            </div>
+
+                        <?php } ?>
+                        <?php if (!empty(session()->getFlashdata('warning'))) { ?>
+                            <div class="alert alert-warning">
+                                <?php echo session()->getFlashdata('warning'); ?>
+                            </div>
+                        <?php } ?>
+
                         <form action="/admin/save_highlight" action="post" class="ml-3 mt-3" enctype="form">
                             <?= csrf_field(); ?>
                             <div class="form-group row">

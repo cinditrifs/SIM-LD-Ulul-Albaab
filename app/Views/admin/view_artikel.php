@@ -69,7 +69,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item ">
-                <a class="nav-link" href="../admin/dashboard">
+                <a class="nav-link" href="../../admin/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -86,8 +86,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../artikel/artikel">Semua Artikel</a>
-                        <a class="collapse-item" href="../artikel/tambah_artikel">Tambah Artikel</a>
+                        <a class="collapse-item" href="../../artikel/artikel">Semua Artikel</a>
+                        <a class="collapse-item" href="../../artikel/tambah_artikel">Tambah Artikel</a>
                     </div>
                 </div>
             </li>
@@ -103,11 +103,11 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../sekre/surat_keluar">Surat Keluar</a>
-                        <a class="collapse-item" href="../sekre/syuro">Laporan Syuro</a>
-                        <a class="collapse-item" href="../sekre/presensi_kajian">Presensi Kajian</a>
-                        <a class="collapse-item" href="../sekre/lpj">LPJ</a>
-                        <a class="collapse-item" href="../sekre/proposal">Proposal Kegiatan</a>
+                        <a class="collapse-item" href="../../sekre/surat_keluar">Surat Keluar</a>
+                        <a class="collapse-item" href="../../sekre/syuro">Laporan Syuro</a>
+                        <a class="collapse-item" href="../../sekre/presensi_kajian">Presensi Kajian</a>
+                        <a class="collapse-item" href="../../sekre/lpj">LPJ</a>
+                        <a class="collapse-item" href="../../sekre/proposal">Proposal Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -117,7 +117,7 @@
 
             <!-- Nav Item - Punggawa -->
             <li class="nav-item">
-                <a class="nav-link" href="../admin/punggawa">
+                <a class="nav-link" href="../../admin/punggawa">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Punggawa</span></a>
             </li>
@@ -127,7 +127,7 @@
 
             <!-- Nav Item - Highlight -->
             <li class="nav-item">
-                <a class="nav-link" href="../admin/highlight">
+                <a class="nav-link" href="../../admin/highlight">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Highlight</span></a>
             </li>
@@ -138,27 +138,27 @@
             <!-- Nav Item - Program Dakwah Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Program Dakwah</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../prodak/lc">Learning Center</a>
-                        <a class="collapse-item" href="../prodak/kader">Kaderisasi</a>
-                        <a class="collapse-item" href="../prodak/syiar">Syiar</a>
-                        <a class="collapse-item" href="../prodak/huda">Humas dan Media</a>
-                        <a class="collapse-item" href="../prodak/keputrian">Keputrian</a>
-                    </div>
-                </div>
-            </li>
+                    <i class="fas fa-fw fa-folder"></i>erisasi</a>
+                <a class="collapse-item" href="../../prodak/syiar">Syiar</a>
+                <a class="collapse-item" href="../../prodak/huda">Humas dan Media</a>
+                <a class="collapse-item" href="../../prodak/keputrian">Keputrian</a>
+    </div>
+    <span>Program Dakwah</span>
+    </a>
+    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="../../prodak/lc">Learning Center</a>
+            <a class="collapse-item" href="../../prodak/kader">Kad
+        </div>
+        </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -234,46 +234,11 @@
 
                     <!-- View Artikel -->
                     <div class="card">
-                        <img class="card-img-top rounded mx-auto d-block" src="../asset/artikel1.jpg" style="width: 300px" alt="Card image cap">
+                        <img class="card-img-top rounded mx-auto d-block" src="/img/<?php echo $artikel['gambar'] ?>" style=" width: 300px" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Benarkah Isra Miraj itu terjadi hanya 1 Malam?</h5>
-                            <p class="card-text text-justify">
-                                Isra Mikraj (bahasa Arab: الإسراء والمعراج, al-’Isrā’ wal-Mi‘rāj) tanggal 27 Rajab tahun ke-10 kenabian, adalah bagian kedua dari perjalanan yang dilakukan oleh Nabi Muhammad Shallallahu Alaihi wa Sallam dalam waktu satu malam saja. Kejadian ini merupakan salah satu peristiwa penting bagi umat Islam, karena pada peristiwa inilah beliau mendapat perintah untuk menunaikan salat lima waktu sehari semalam. Beberapa penggambaran tentang kejadian ini dapat dilihat di surah ke-17 di Al-Quran, yaitu Surah Al-Isra. (wikipedia.org)
-
-                                Lalu masuk logikakah perjalanan isra miraj itu terjadi satu malam saja? Mungkin ada yang percaya tapi juga ada yang tidak. tapi saya pikir isra miraj itu memang benar terjadi.. kenapa?
-
-
-                                Teori Relativitas telah dapat membuktikan kebenarannya. Menyingkap kebenaran-kebenaran yang selama ini tersembunyi di balik keruwetan dan arogansi ilmu pengetahuan. Termasuk, kebenaran Isra` Mi`raj.
-                                Dan, inilah yang telah direfleksikan buraq, hewan sejenis kuda bersayap sebagai kendaraan Nabi saat melakukan perjalanan Isra`. Ketika memulai perjalanan yaitu dari Masjid Al haram (Mekkah), dengan daya kecepatan buraq, Nabi tidaklah mengarah ke masa depan. Namun kembali ke masa lalu, melalui masa lalu itulah Nabi memberangkatkan perjalanannya. Hingga seiring berjalanya waktu, perjalananpun melaju ke suatu titik dimana beliau baru memulainya. Sehingga, kesan yang ada pun seolah-olah Nabi melakukan perjalanan Isra` Mi`raj hanyalah sesaat. Padahal pada hakikatnya tidak. Berdasarkan `perhitungan` waktu pribadinya beliau pun menjalani Isra` Mi`raj, lazimnya perjalanan-perjalanan sejenis lainnya dengan menghabiskan waktu berjam-jam atau berhari-hari atau bahkan lebih.
-
-                                Demikianlah, Allah memang senantiasa memfirmankan kebenaran. Dan, firman-firman Allah memang senantiasa benar adanya. Meski terkadang akal & logika kita sangat sulit untuk menjangkaunya…..
-
-                                Atau lebih singkat nya seperti Ini :
-
-                                Manusia diibaratkan seekor semut.
-
-                                Dimana terdapat 2 semut (keduanya sedang berada di Jakarta)
-
-                                semut 1 cerita kepada temannya si semut 2 yang diibaratkan sebagai berikut :
-
-                                Semut 1 : Aku barusan ke Bandung pulang pergi dalam waktu 10 jam.
-                                Semut 2 : Wah lo gila ya. Mana mungkin lo ke bandung PP 10 jam, udah gila lo.
-                                Semut 1 : Saya ngga boong, 2 jam yang lalu saya baru sampai di jakarta.
-                                Semut 2 : Mana mungkin ke bandung yang jaraknya beberapa juta kilometer ? (menurut ukuran jarak semut).
-                                Semut 1 : Saya tadi masuk ke dalam tas Pak Haji yang mau kondangan ke bandung bro.
-                                Terus pak hajinya dibandung hanya beberapa jam. Setelah selesai kondangan pak hajinya langsung kembali ke Jakarta.
-
-                                Nah, dari percakapan si semut 2 yang tidak mengakui kebenaran bahwa PP Jakarta – Bandung dalam 10 jam adalah hal yang Mustahil.
-
-                                Tapi bagi manusia, perjalanan Jakarta – bandung dalam waktu 10 jam itu masuk akal. Itulah perumpamaan manusia dengan teknologinya Allah Tuhan semesta alam.
-
-                                Seperti contoh manusia melihat semut, menilai seekor semut. Sepandai-pandainya semut atau bahkan sejenius apapun semut itu. Semut tidak akan bisa membuat pesawat terbang. Tapi bagi manusia membuat pesawat terbang itu mudah dan masuk akal.
-
-                                Hal ini sama seperti Allah SWT melihat manusia, tetapi perbandingan ini lebih jauh dari perbandingan manusia dan semut.
-
-                                ALLAHU AKBAR…semua itu Hanya Kuasa ALLAH SWT…
+                            <h5 class="card-title"><?= $artikel['judul'] ?></h5>
+                            <p class="card-text text-justify"><?= $artikel['konten'] ?>
                             </p>
-
                             <a href="../artikel/edit_artikel"><button type="button" class="btn btn-primary">Edit</button></a>
                             <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
                         </div>

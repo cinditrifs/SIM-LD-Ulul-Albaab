@@ -216,65 +216,23 @@
                             <tr class="text-center" vertical-align: middle;">
                                 <th scope="col">No</th>
                                 <th scope="col">Departemen</th>
-                                <th scope="col">Bulan-Tahun</th>
+                                <th scope="col">Tanggal</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="text-center">
-                                <th scope="row">1</th>
-                                <td>Kaderisasi</td>
-                                <td>April 2020</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger ">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">2</th>
-                                <td>Kaderisasi</td>
-                                <td>Juni 2020</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger ">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">3</th>
-                                <td>Departemen</td>
-                                <td>Bulan Tahun</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">4</th>
-                                <td>Departemen</td>
-                                <td>Bulan Tahun</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">5</th>
-                                <td>Departemen</td>
-                                <td>Bulan Tahun</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger ">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">6</th>
-                                <td>Departemen</td>
-                                <td>Bulan Tahun</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger ">Delete</button>
-                                </td>
-                            </tr>
+                            <?php $i = 1; ?>
+                            <?php foreach ($syuro as $syuro) : ?>
+                                <tr class="text-center">
+                                    <th scope="row"><?= $i++ ?></th>
+                                    <td><?= $syuro['departemen'] ?></td>
+                                    <td><?= date("d-F-Y", strtotime($syuro['tanggal'])) ?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Download</button>
+                                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger ">Delete</button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                     <!-- End of table Rekap Syuro -->
