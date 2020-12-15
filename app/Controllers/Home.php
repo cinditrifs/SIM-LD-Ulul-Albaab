@@ -65,6 +65,11 @@ class Home extends BaseController
 		return view('main/lpj');
 	}
 
+	public function proposal()
+	{
+		return view('main/proposal');
+	}
+
 	//--------------------------------------------------------------------
 
 }

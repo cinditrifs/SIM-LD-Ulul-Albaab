@@ -224,90 +224,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="">
-                                <th scope="row">1</th>
-                                <td>Kajon MIPA #3</td>
-                                <td>Sabtu, 13 Juli 2020</td>
-                                <td>Kisah Dibalik Hagia Sophia</td>
-                                <td>Ustad Amar Arrisalah</td>
-                                <td>120</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-sm">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="">
-                                <th scope="row">2</th>
-                                <td>Kajon With Pengantar Bio-C</td>
-                                <td>Sabtu, 10 Oktober 2020</td>
-                                <td>Gaul Sehat Ala Milenial</td>
-                                <td>Fajar Yuliato, S.Si</td>
-                                <td>100</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-sm">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="">
-                                <th scope="row">3</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Waktu</td>
-                                <td>Tema</td>
-                                <td>Pemateri</td>
-                                <td>Peserta</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-sm">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="">
-                                <th scope="row">4</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Waktu</td>
-                                <td>Tema</td>
-                                <td>Pemateri</td>
-                                <td>Peserta</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-sm">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="">
-                                <th scope="row">5</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Waktu</td>
-                                <td>Tema</td>
-                                <td>Pemateri</td>
-                                <td>Peserta</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-sm">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="">
-                                <th scope="row">6</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Waktu</td>
-                                <td>Tema</td>
-                                <td>Pemateri</td>
-                                <td>Peserta</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-sm">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="">
-                                <th scope="row">7</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Waktu</td>
-                                <td>Tema</td>
-                                <td>Pemateri</td>
-                                <td>Peserta</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-sm">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
-                                </td>
-                            </tr>
+                            <?php $i = 1; ?>
+                            <?php foreach ($kajian as $kajian) : ?>
+                                <tr class="">
+                                    <th scope="row"><?= $i++ ?></th>
+                                    <td><?= $kajian['kegiatan'] ?></td>
+                                    <td><?= $kajian['tanggal_kegiatan'] ?></td>
+                                    <td><?= $kajian['tema'] ?></td>
+                                    <td><?= $kajian['pemateri'] ?></td>
+                                    <td><?= $kajian['peserta_ttl'] ?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-sm">Download</button>
+                                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
 
 
                         </tbody>

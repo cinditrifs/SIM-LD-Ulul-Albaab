@@ -32,6 +32,7 @@
                     <li><a href="/presensi" style="font-family: 'Bebas Neue'; font-size: 20px;">Presensi Kajian</a></li>
                     <li><a href="/syuro" style="font-family: 'Bebas Neue'; font-size: 20px;">Syuro</a></li>
                     <li><a href="/lpj" style="font-family: 'Bebas Neue'; font-size: 20px;">LPJ</a></li>
+                    <li><a href="/proposal" style="font-family: 'Bebas Neue'; font-size: 20px;">Proposal</a></li>
                     <li><a href="/" style="font-family: 'Bebas Neue'; font-size: 20px; margin-right: 50px">| Logout</a></li>
                 </ul>
             </div>
@@ -44,6 +45,7 @@
         <li><a href="/presensi" style="font-family: 'Bebas Neue'; font-size: 20px;">Presensi Kajian</a></li>
         <li><a href="/syuro" style="font-family: 'Bebas Neue'; font-size: 20px;">Syuro</a></li>
         <li><a href="/lpj" style="font-family: 'Bebas Neue'; font-size: 20px;">LPJ</a></li>
+        <li><a href="/proposal" style="font-family: 'Bebas Neue'; font-size: 20px;">Prpoposal</a></li>
         <li><a href="/" style="font-family: 'Bebas Neue'; font-size: 20px;">Logout</a></li>
     </ul>
 

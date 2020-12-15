@@ -3,22 +3,32 @@
 use CodeIgniter\codeIgniter;
 use App\Models\SuratkeluarModel;
 use App\Models\SyuroModel;
+use App\Models\KajianModel;
+use App\Models\LpjModel;
+use App\Models\ProposalModel;
 
 
 namespace App\Controllers;
 
+use Config\App;
+
 class Sekre extends BaseController
 {
-    // surat keluar yeaaa
     protected $suratkeluar;
     protected $syuro;
+    protected $kajian;
+    protected $lpj;
+    protected $proposal;
+
     public function __construct()
     {
         $this->suratkeluar = new \App\Models\SuratkeluarModel(); //bisa di taro di base controller
         $this->syuro = new \App\Models\SyuroModel(); //bisa di taro di base controller
-
+        $this->kajian = new \App\Models\KajianModel();
+        $this->lpj = new \App\Models\LpjModel();
+        $this->proposal = new \App\Models\ProposalModel();
     }
-
+    // surat keluar yeaaa
     public function surat_keluar()
     {
         $suratkeluar = $this->suratkeluar->findAll();
@@ -40,16 +50,29 @@ class Sekre extends BaseController
 
     public function proposal()
     {
-        return view("sekre/proposal");
+        $proposal = $this->proposal->findAll();
+        $data = [
+            'proposal' => $proposal
+        ];
+        return view("sekre/proposal", $data);
     }
 
+    // untuk lpj yaa
     public function lpj()
     {
-        return view("sekre/lpj");
+        $lpj = $this->lpj->findAll();
+        $data = [
+            'lpj' => $lpj
+        ];
+        return view("sekre/lpj", $data);
     }
-
+    // untuk kajian yeaa
     public function presensi_kajian()
     {
-        return view("sekre/presensi_kajian");
+        $kajian = $this->kajian->findAll();
+        $data = [
+            'kajian' => $kajian
+        ];
+        return view("sekre/presensi_kajian", $data);
     }
 }

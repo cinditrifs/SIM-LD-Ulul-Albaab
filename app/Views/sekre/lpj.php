@@ -221,62 +221,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="text-center">
-                                <th scope="row">1</th>
-                                <td>SISKOM</td>
-                                <td>1 April 2020</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">2</th>
-                                <td>Open House Ulul Albaab</td>
-                                <td>2 Juni 2020</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">3</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Tanggal Kegiatan</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">4</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Tanggal Kegiatan</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">5</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Tanggal Kegiatan</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr class="text-center">
-                                <th scope="row">6</th>
-                                <td>Nama Kegiatan</td>
-                                <td>Tanggal Kegiatan</td>
-                                <td>
-                                    <button type="button" class="btn btn-success">Download</button>
-                                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-
-
+                            <?php $i = 1; ?>
+                            <?php foreach ($lpj as $lpj) : ?>
+                                <tr class="text-center">
+                                    <th scope="row"><?= $i++ ?></th>
+                                    <td><?= $lpj['kegiatan'] ?></td>
+                                    <td><?= $lpj['tanggal_kegiatan'] ?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Download</button>
+                                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                     <!-- End of table Rekap LPJ-->

@@ -40,6 +40,8 @@ $routes->get('/surat', 'Home::surat');
 $routes->get('/presensi', 'Home::presensi');
 $routes->get('/syuro', 'Home::syuro');
 $routes->get('/lpj', 'Home::lpj');
+$routes->get('/proposal', 'Home::proposal');
+$routes->get('/admin', 'Admin::login');
 // $routes->get('/ad-dashboard', 'Admin::dashboard');
 $routes->get('/artikel/detail/(:any)', 'Artikel::detail/$1');
 
