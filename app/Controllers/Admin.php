@@ -10,6 +10,14 @@ use CodeIgniter\Validation\Rules;
 
 class Admin extends BaseController
 {
+    protected $highlightModel;
+    protected $punggawa;
+    public function __construct()
+    {
+        $this->highlightModel = new \App\Models\HighlightModel(); //bisa di taro di base controller
+        $this->punggawa = new \App\Models\PunggawaModel();
+    }
+
     public function login()
     {
         return view('login_admin');
@@ -21,13 +29,11 @@ class Admin extends BaseController
 
     public function punggawa()
     {
-        // $Allpunggawa = $this->punggawaModel->findAll();
-        // $data = [
-        //     'Allpunggawa' => $Allpunggawa
-        // ];
-        // // dd($Allflim);
-
-        return view('admin/punggawa');
+        $punggawa = $this->punggawa->findAll();
+        $data = [
+            'punggawa' => $punggawa
+        ];
+        return view('admin/punggawa', $data);
     }
 
     public function tambah_punggawa()
@@ -37,11 +43,6 @@ class Admin extends BaseController
 
 
     // controller buat highlight 
-    protected $highlightModel;
-    public function __construct()
-    {
-        $this->highlightModel = new \App\Models\HighlightModel(); //bisa di taro di base controller
-    }
     public function highlight()
     {
         #variable gambar namanya slider

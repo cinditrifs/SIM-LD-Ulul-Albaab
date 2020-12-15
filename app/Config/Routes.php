@@ -43,6 +43,7 @@ $routes->get('/lpj', 'Home::lpj');
 $routes->get('/proposal', 'Home::proposal');
 $routes->get('/admin', 'Admin::login');
 // $routes->get('/ad-dashboard', 'Admin::dashboard');
+$routes->get('/admin/prodak', 'Prodak::index');
 $routes->get('/artikel/detail/(:any)', 'Artikel::detail/$1');
 
 /**

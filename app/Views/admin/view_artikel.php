@@ -137,28 +137,19 @@
 
             <!-- Nav Item - Program Dakwah Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>erisasi</a>
-                <a class="collapse-item" href="../../prodak/syiar">Syiar</a>
-                <a class="collapse-item" href="../../prodak/huda">Humas dan Media</a>
-                <a class="collapse-item" href="../../prodak/keputrian">Keputrian</a>
-    </div>
-    <span>Program Dakwah</span>
-    </a>
-    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../../prodak/lc">Learning Center</a>
-            <a class="collapse-item" href="../../prodak/kader">Kad
-        </div>
-        </li>
+                <a class="nav-link" href="<?php echo base_url('/admin/prodak') ?>" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Program Dakwah</span>
+                </a>
+            </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
 
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
 
         </ul>
         <!-- End of Sidebar -->

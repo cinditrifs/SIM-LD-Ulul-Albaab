@@ -109,19 +109,10 @@
 
             <!-- Nav Item - Program Dakwah Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link" href="<?php echo base_url('/admin/prodak') ?>" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Program Dakwah</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../prodak/lc">Learning Center</a>
-                        <a class="collapse-item" href="../prodak/kader">Kaderisasi</a>
-                        <a class="collapse-item" href="../prodak/syiar">Syiar</a>
-                        <a class="collapse-item" href="../prodak/huda">Humas dan Media</a>
-                        <a class="collapse-item" href="../prodak/keputrian">Keputrian</a>
-                    </div>
-                </div>
             </li>
 
             <!-- Divider -->

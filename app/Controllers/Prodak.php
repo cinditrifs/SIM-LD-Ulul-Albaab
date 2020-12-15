@@ -7,28 +7,8 @@ namespace App\Controllers;
 
 class Prodak extends BaseController
 {
-    public function huda()
+    public function index()
     {
-        return view('prodak/huda');
-    }
-
-    public function lc()
-    {
-        return view('prodak/lc');
-    }
-
-    public function kader()
-    {
-        return view('prodak/kader');
-    }
-
-    public function syiar()
-    {
-        return view('prodak/syiar');
-    }
-
-    public function keputrian()
-    {
-        return view('prodak/keputrian');
+        return view('prodak/prodak');
     }
 }

@@ -53,30 +53,33 @@
         <h5 style="font-family: 'Balsamiq Sans'; margin-top: 0px;">Kumpulan Program Dakwah LD Ulul Albaab 1441 H</h5>
         <hr color="teal" width="70%" style="margin-bottom:35px">
         <div class="row center-align">
+            <!-- disini fornya -->
             <div class="col s12 m4">
                 <div class="card" style="border-radius:15px">
-                    <div class="card-content">
-                        <img class="vertical-middle" src="<?php echo base_url('materialize/img/siskom.png') ?>" width="100%">
-                        <h5 style="font-family: 'Balsamiq Sans';">Studi Islam Komprehensif</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4">
-                <div class="card" style="border-radius:15px">
-                    <div class="card-content">
-                        <img class="vertical-middle" src="<?php echo base_url('materialize/img/mlt.png') ?>" width="100%">
+                    <div class="card-content activator">
+                        <img class="vertical-middle activator" src="<?php echo base_url('materialize/img/mlt.png') ?>" width="100%">
                         <h5 style="font-family: 'Balsamiq Sans';">Muslim Leadership Training</h5>
                     </div>
-                </div>
-            </div>
-            <div class="col s12 m4">
-                <div class="card" style="border-radius:15px">
-                    <div class="card-content">
-                        <img class="vertical-middle" src="<?php echo base_url('materialize/img/sedhan.png') ?>" width="100%">
-                        <h5 style="font-family: 'Balsamiq Sans';">Semarak Ramadhan</h5>
+                    <div class="card-reveal">
+                        <span class="card-title " style="font-family:'Kaushan Script';">Sholat Awal Waktu<i class="material-icons right">close</i></span>
+                        <p style="text-align: justify;">Rasulullah SAW juga pernah ditanya, amalan apakah yang paling afdhol. Beliau menjawab "Shalat di awal waktunya." (HR. Abu Daud)</p>
                     </div>
                 </div>
             </div>
+
+            <div class="col s12 m4">
+                <div class="card" style="border-radius:15px">
+                    <div class="card-content activator">
+                        <img class="vertical-middle activator" src="<?php echo base_url('materialize/img/mlt.png') ?>" width="100%">
+                        <h5 style="font-family: 'Balsamiq Sans';">Muslim Leadership Training</h5>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title " style="font-family:'Kaushan Script';">Sholat Awal Waktu<i class="material-icons right">close</i></span>
+                        <p style="text-align: justify;">Rasulullah SAW juga pernah ditanya, amalan apakah yang paling afdhol. Beliau menjawab "Shalat di awal waktunya." (HR. Abu Daud)</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -112,6 +115,84 @@
             </div>
         </div>
     </footer>
+    <!-- modal add -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Punggawa </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="container">
+                    <form class="ml-3 mt-3">
+
+                        <div class="form-group row">
+                            <label for="inputnama" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputprodi" class="col-sm-2 col-form-label">Prodi</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="inputdivisi" aria-placeholder="Pilih">
+                                    <option>Pendidikan Matematika</option>
+                                    <option>Matematika</option>
+                                    <option>Ilmu Komputer</option>
+                                    <option>Statistika</option>
+                                    <option>Pendidikan Fisika</option>
+                                    <option>Fisika</option>
+                                    <option>Pendidikan Kimia</option>
+                                    <option>Kimia</option>
+                                    <option>Pendidikan Biologi</option>
+                                    <option>Biologi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputprodi" class="col-sm-2 col-form-label">Angkatan</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="inputangkatan" aria-placeholder="Pilih">
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputdivisi" class="col-sm-2 col-form-label">Departemen</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="inputdivisi" aria-placeholder="Pilih">
+                                    <option>Mas'ul</option>
+                                    <option>Mas'ulah</option>
+                                    <option>Sekretaris</option>
+                                    <option>Bendahara</option>
+                                    <option>Ketua Departemen Kaderisasi</option>
+                                    <option>Kaderisasi</option>
+                                    <option>Ketua Departemen Huda</option>
+                                    <option>Huda</option>
+                                    <option>Ketua Departemen Syi'ar</option>
+                                    <option>Syi'ar</option>
+                                    <option>Ketua Departemen Learning Center</option>
+                                    <option>Learning Center</option>
+                                    <option>Keputrian</option>
+                                    <option>Ketua Departemen Keputrian</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" data-toggle="modal" data-target="#saveModal" class="btn  btn-success btn-block">Save</button>
+                        </div>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal add -->
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="<?php echo base_url('/materialize/js/materialize.min.js') ?>"></script>

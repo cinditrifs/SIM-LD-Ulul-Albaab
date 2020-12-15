@@ -7,15 +7,28 @@ use CodeIgniter\Model;
 class PunggawaModel extends Model
 {
     protected $table      = 'punggawa';
-    protected $primaryKey = 'id';
     protected $useTimestamps = true;
-    protected $allowedFields = ['nama', 'posistion', 'prodi'];
+    protected $allowedFields = ['nama', 'prodi', 'angkatan', 'departemen'];
 
-    public function getPunggawa($id = false)
-    {
-        if ($id == false) {
-            return $this->findAll();
-        }
-        return $this->where(['id' => $id])->first();
-    }
+    protected $validationRules    = [
+        'nama'     => 'required',
+        'prodi'    => 'required',
+        'angkatan'    => 'required',
+        'departemen' => 'required'
+    ];
+
+    protected $validationMessages = [
+        'nama'        => [
+            'required' => 'nama harus dimasukkan'
+        ],
+        'prodi'        => [
+            'required' => 'prodi buat harus dimasukkan'
+        ],
+        'angkatan'        => [
+            'required' => 'angkatan acara harus dimasukkan'
+        ],
+        'departemen'        => [
+            'required' => 'departemen untuk buat harus dimasukkan'
+        ]
+    ];
 }

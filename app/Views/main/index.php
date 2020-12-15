@@ -106,7 +106,7 @@
                     </div>
                     <div class="card-reveal">
                         <span class="card-title" style="font-family:'Kaushan Script';">Sholat Awal Waktu<i class="material-icons right">close</i></span>
-                        <p>Rasulullah SAW juga pernah ditanya, amalan apakah yang paling afdhol. Beliau menjawab "Shalat di awal waktunya." (HR. Abu Daud)</p>
+                        <p style="text-align: justify;">Rasulullah SAW juga pernah ditanya, amalan apakah yang paling afdhol. Beliau menjawab "Shalat di awal waktunya." (HR. Abu Daud)</p>
                     </div>
                 </div>
             </div>
