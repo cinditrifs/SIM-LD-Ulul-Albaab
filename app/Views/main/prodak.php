@@ -54,18 +54,20 @@
         <hr color="teal" width="70%" style="margin-bottom:35px">
         <div class="row center-align">
             <!-- disini fornya -->
-            <div class="col s12 m4">
-                <div class="card" style="border-radius:15px">
-                    <div class="card-content activator">
-                        <img class="vertical-middle activator" src="<?php echo base_url('materialize/img/mlt.png') ?>" width="100%">
-                        <h5 style="font-family: 'Balsamiq Sans';">Muslim Leadership Training</h5>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title " style="font-family:'Kaushan Script';">Sholat Awal Waktu<i class="material-icons right">close</i></span>
-                        <p style="text-align: justify;">Rasulullah SAW juga pernah ditanya, amalan apakah yang paling afdhol. Beliau menjawab "Shalat di awal waktunya." (HR. Abu Daud)</p>
+            <?php foreach ($prodak as $prodak) : ?>
+                <div class="col s12 m4">
+                    <div class="card" style="border-radius:15px">
+                        <div class="card-content activator">
+                            <img class="vertical-middle activator" src="/img/<?php echo $prodak['gambar']  ?>" width="100%">
+                            <h5 style="font-family: 'Balsamiq Sans';"><?= $prodak['nama_prodak'] ?></h5>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title " style="font-family:'Kaushan Script';"><?= $prodak['nama_prodak'] ?><i class="material-icons right">close</i></span>
+                            <p style="text-align: justify;"><?= $prodak['detail'] ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
 
             <div class="col s12 m4">
                 <div class="card" style="border-radius:15px">

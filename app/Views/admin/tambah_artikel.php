@@ -225,7 +225,10 @@
 
                     <!-- Form  -->
                     <!--Start Forms-->
-                    <form action="">
+                    <form action="<?php echo base_url('/artikel/save') ?>" method="POST">
+                        <!-- cross side force surgery -->
+                        <?= csrf_field() ?>
+
                         <div class="col-12 col-md-12">
                             <div class="card">
                                 <div class="card-body">
@@ -233,30 +236,48 @@
                                         <label class=" inputcover col-form-label text-md-right col-12 col-md-3 col-lg-3">Cover</label>
                                         <div class="col-sm-12 col-md-7">
                                             <div class="custom-file">
-                                                <input type="file" id="imgInp" class="custom-file-input">
+                                                <input name='gambar' type="file" id="imgInp" class="custom-file-input" autofocus>
                                                 <label class="custom-file-label" for="imgInp">Pilih sampul</label>
                                             </div>
                                             <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image" />
-
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                         <label class="inputjudul col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul">
-
+                                            <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul" required>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <textarea name="konten" id="konten" class="form-control summernote" cols="60" rows="60"></textarea>
+                                            <textarea name="konten" id="konten" class="form-control summernote" cols="60" rows="60" required></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                         <div>
                                             <button type="button" data-toggle="modal" data-target="#saveModal" class="btn  btn-success btn-block">Save</button>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Save Artikel</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Apakah anda yakin ingin menambah artikel baru ini?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-primary">Yes</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -266,29 +287,6 @@
 
                     <!-- end form -->
 
-
-
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Save Artikel</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    Apakah anda yakin ingin menambah artikel baru ini?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Yes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
             </div>

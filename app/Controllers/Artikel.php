@@ -31,6 +31,7 @@ class Artikel extends BaseController
     {
     }
 
+
     public function edit_artikel()
     {
         return view("admin/edit_artikel");

@@ -2,6 +2,7 @@
 
 use App\Models\HighlightModel;
 use App\Models\ArtikelModel;
+use App\Models\ProdakModel;
 
 namespace App\Controllers;
 
@@ -9,10 +10,13 @@ class Home extends BaseController
 {
 	protected $highlightModel;
 	protected $artikel;
+	protected $prodak;
 	public function __construct()
 	{
 		$this->highlightModel = new \App\Models\HighlightModel(); //bisa di taro di base controller
+		$this->prodak = new \App\Models\ProdakModel(); //bisa di taro di base controller
 		$this->artikel = new \App\Models\ArtikelModel(); //bisa di taro di base controller
+
 	}
 
 	public function index()
@@ -24,9 +28,14 @@ class Home extends BaseController
 		];
 		return view('main/index', $data);
 	}
+
 	public function prodak()
 	{
-		return view('main/prodak');
+		$prodak = $this->prodak->findAll();
+		$data = [
+			'prodak' => $prodak
+		];
+		return view('main/prodak', $data);
 	}
 
 	public function artikel()
