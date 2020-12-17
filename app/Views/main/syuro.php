@@ -60,44 +60,44 @@
 
     <!--Syuro-->
     <div class="container center-align">
+        <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="card green lighten-2" style="border-radius:10px; margin-top: 30px; font-family: 'Balsamiq Sans'; font-size: 24px">
+                <?= session()->getFlashdata('pesan'); ?>
+            </div>
+        <?php endif; ?>
         <div class="card" style="border-radius:15px; margin-top: 30px; margin-bottom: 30px;">
             <div class="card-content">
                 <h3 id="syuro" style="font-family: 'Bebas Neue'; margin-top: 0px;">Syuro</h3>
-                <p class="left-align">
-                    <label>Departemen :</label>
-                    <select class="browser-default">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="Dept. Kaderisasi">Dept. Kaderisasi</option>
-                        <option value="Dept. Syiar">Dept. Syiar</option>
-                        <option value="Dept. Learning Center">Dept. Learning Center</option>
-                        <option value="Dept. Quran Center">Dept. Quran Center</option>
-                        <option value="Dept. Huda">Dept. Huda</option>
-                        <option value="Dept. Maisyah">Dept. Maisyah</option>
-                        <option value="Dept. Keputrian">Dept. Keputrian</option>
-                    </select>
-                </p>
-                <div class="left-align">
-                    <label>Tanggal Kegiatan</label>
-                    <input id="tglsyuro" type="date" class="validate" required>
-                </div>
-                <div class="file-field input-field">
-                    <div class="btn-small waves-effect waves-effect" style="border-radius:10px">
-                        <span>Choose File</span>
-                        <input type="file" id="filesyuro" required>
+                <form action="/Sekre/syuro_save" method="post" enctype="multipart/form-data">
+                    <?= csrf_field(); ?>
+                    <p class="left-align">
+                        <label for="departemen">Departemen :</label>
+                        <select id="departemen" name="departemen" class="browser-default">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="Dept. Kaderisasi">Dept. Kaderisasi</option>
+                            <option value="Dept. Syiar">Dept. Syiar</option>
+                            <option value="Dept. Learning Center">Dept. Learning Center</option>
+                            <option value="Dept. Quran Center">Dept. Quran Center</option>
+                            <option value="Dept. Huda">Dept. Huda</option>
+                            <option value="Dept. Maisyah">Dept. Maisyah</option>
+                            <option value="Dept. Keputrian">Dept. Keputrian</option>
+                        </select>
+                    </p>
+                    <div class="left-align">
+                        <label for="tanggal">Tanggal Kegiatan</label>
+                        <input id="tanggal" name="tanggal" type="date" class="validate" required>
                     </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" value="Upload Syuro" required>
+                    <div class="file-field input-field">
+                        <div class="btn-small waves-effect waves-effect" style="border-radius:10px">
+                            <span fr="file">Choose File</span>
+                            <input type="file" id="file" name="file" required>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" value="Upload Syuro" required>
+                        </div>
                     </div>
-                </div>
-                <a class="waves-effect waves-light btn modal-trigger" type="submit" name="action" style="border-radius:10px;" href="#modal1">Submit<i class="material-icons right">send</i></a>
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h5>Data Berhasil di Input</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
-                    </div>
-                </div>
+                    <button class="btn waves-effect waves-light" style="border-radius:10px;" type="submit">Submit<i class="material-icons right">send</i></button>
+                </form>
             </div>
         </div>
     </div>

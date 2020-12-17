@@ -59,47 +59,47 @@
 
     <!--Presensi Kajian-->
     <div class="container center-align">
+        <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="card green lighten-2" style="border-radius:10px; margin-top: 30px; font-family: 'Balsamiq Sans'; font-size: 24px">
+                <?= session()->getFlashdata('pesan'); ?>
+            </div>
+        <?php endif; ?>
         <div class="card" style="border-radius:15px; margin-top: 30px; margin-bottom: 30px;">
             <div class="card-content">
                 <h3 id="presensi" style="font-family: 'Bebas Neue'; margin-top: 0px;">Presensi Kajian</h3>
-                <div class="input-field">
-                    <input id="kajian" type="text" class="validate" required>
-                    <label for="kajian">Nama Kegiatan</label>
-                </div>
-                <div class="input-field">
-                    <input id="tema" type="text" class="validate" required>
-                    <label for="tema">Tema</label>
-                </div>
-                <div class="input-field">
-                    <input id="pemateri" type="text" class="validate" required>
-                    <label for="pemateri">Pemateri</label>
-                </div>
-                <div class="left-align">
-                    <label>Tanggal Kegiatan</label>
-                    <input id="tglkajian" type="date" class="validate" required>
-                </div>
-                <div class="input-field">
-                    <label for="pesertakajian">Total Peserta</label>
-                    <input id="pesertakajian" type="number" class="validate" required>
-                </div>
-                <div class="file-field input-field">
-                    <div class="btn-small waves-effect waves-effect" style="border-radius:10px">
-                        <span>Choose File</span>
-                        <input type="file" id="filekajian" required>
+                <form action="/Sekre/presensi_save" method="post" enctype="multipart/form-data">
+                    <?= csrf_field(); ?>
+                    <div class="input-field">
+                        <label for="kegiatan">Nama Kegiatan</label>
+                        <input id="kegiatan" name="kegiatan" type="text" class="validate" required>
                     </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" value="Upload Presensi" required>
+                    <div class="input-field">
+                        <label for="tema">Tema</label>
+                        <input id="tema" name="tema" type="text" class="validate" required>
                     </div>
-                </div>
-                <a class="waves-effect waves-light btn modal-trigger" type="submit" name="action" style="border-radius:10px;" href="#modal1">Submit<i class="material-icons right">send</i></a>
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h5>Data Berhasil di Input</h5>
+                    <div class="input-field">
+                        <label for="pemateri">Pemateri</label>
+                        <input id="pemateri" name="pemateri" type="text" class="validate" required>
                     </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+                    <div class="left-align">
+                        <label for="tanggal_kegiatan">Tanggal Kegiatan</label>
+                        <input id="tanggal_kegiatan" name="tanggal_kegiatan" type="date" class="validate" required>
                     </div>
-                </div>
+                    <div class="input-field">
+                        <label for="peserta_ttl">Total Peserta</label>
+                        <input id="peserta_ttl" name="peserta_ttl" type="number" class="validate" required>
+                    </div>
+                    <div class="file-field input-field">
+                        <div class="btn-small waves-effect waves-effect" style="border-radius:10px">
+                            <span for="file">Choose File</span>
+                            <input type="file" id="file" name="file" required>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" value="Upload Presensi" required>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" style="border-radius:10px;" type="submit">Submit<i class="material-icons right">send</i></button>
+                </form>
             </div>
         </div>
     </div>

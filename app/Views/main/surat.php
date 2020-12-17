@@ -59,39 +59,39 @@
 
     <!--Surat Keluar-->
     <div class="container center-align">
+        <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="card green lighten-2" style="border-radius:10px; margin-top: 30px; font-family: 'Balsamiq Sans'; font-size: 24px">
+                <?= session()->getFlashdata('pesan'); ?>
+            </div>
+        <?php endif; ?>
         <div class="card" style="border-radius:15px; margin-top: 30px; margin-bottom: 30px;">
             <div class="card-content">
                 <h3 id="surat" style="font-family: 'Bebas Neue'; margin-top: 0px;">Surat Keluar</h3>
-                <div class="input-field">
-                    <label for="nomor">Nomor Surat</label>
-                    <input id="nomor" type="number" class="validate" required>
-                    <span class="helper-text left-align">contoh : 089/LDUA.e/SISKOM/Und/IX/2020</span>
-                </div>
-                <div class="left-align">
-                    <label>Tanggal Pembuatan</label>
-                    <input id="tglpembuatan" type="date" class="validate" required>
-                </div>
-                <div class="left-align">
-                    <label>Tanggal Acara</label>
-                    <input id="tglacara" type="date" class="validate" required>
-                </div>
-                <div class="input-field">
-                    <input id="ajukan" type="text" class="validate" required>
-                    <label for="ajukan">Diajukan untuk</label>
-                </div>
-                <div class="input-field">
-                    <input id="ket" type="text" class="validate">
-                    <label for="ket">Keterangan Surat</label>
-                </div>
-                <a class="waves-effect waves-light btn modal-trigger" type="submit" name="action" style="border-radius:10px;" href="#modal1">Submit<i class="material-icons right">send</i></a>
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h5>Data Berhasil di Input</h5>
+                <form action="/Sekre/surat_save" method="post">
+                    <?= csrf_field(); ?>
+                    <div class="input-field">
+                        <label for="nomor">Nomor Surat</label>
+                        <input id="nomor" name="nomor" type="text" class="validate" required>
+                        <span class="helper-text left-align">contoh : 089/LDUA.e/SISKOM/Und/IX/2020</span>
                     </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+                    <div class="left-align">
+                        <label for="tanggal_buat">Tanggal Pembuatan</label>
+                        <input id="tanggal_buat" name="tanggal_buat" type="date" class="validate" required>
                     </div>
-                </div>
+                    <div class="left-align">
+                        <label for="tanggal_acara">Tanggal Acara</label>
+                        <input id="tanggal_acara" name="tanggal_acara" type="date" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="untuk">Diajukan untuk</label>
+                        <input id="untuk" name="untuk" type="text" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="keterangan">Keterangan Surat</label>
+                        <input id="keterangan" name="keterangan" type="text" class="validate">
+                    </div>
+                    <button class="btn waves-effect waves-light" style="border-radius:10px;" type="submit">Submit<i class="material-icons right">send</i></button>
+                </form>
             </div>
         </div>
     </div>
