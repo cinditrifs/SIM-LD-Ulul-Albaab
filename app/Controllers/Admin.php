@@ -27,6 +27,7 @@ class Admin extends BaseController
         return view('admin/dashboard');
     }
 
+    // controller buat Punggawa
     public function punggawa()
     {
         $punggawa = $this->punggawa->findAll();
@@ -35,12 +36,17 @@ class Admin extends BaseController
         ];
         return view('admin/punggawa', $data);
     }
-
-    public function tambah_punggawa()
+    public function punggawa_save()
     {
-        return view('admin/tambah_punggawa');
+        $this->punggawa->save([
+            'nama' => $this->request->getVar('nama'),
+            'prodi' => $this->request->getVar('prodi'),
+            'angkatan' => $this->request->getVar('angkatan'),
+            'departemen' => $this->request->getVar('departemen'),
+        ]);
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        return redirect()->to('/admin/punggawa');
     }
-
 
     // controller buat highlight 
     public function highlight()

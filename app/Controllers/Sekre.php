@@ -7,7 +7,6 @@ use App\Models\KajianModel;
 use App\Models\LpjModel;
 use App\Models\ProposalModel;
 
-
 namespace App\Controllers;
 
 use Config\App;
@@ -140,5 +139,22 @@ class Sekre extends BaseController
             'proposal' => $proposal
         ];
         return view("sekre/proposal", $data);
+    }
+    public function proposal_save()
+    {
+        // ambil file
+        $fileProposal = $this->request->getFile('file');
+        // pindahkan file ke folder
+        $fileProposal->move('img');
+        //ambil nama file
+        $namaProposal = $fileProposal->getName();
+        $this->proposal->save([
+            'kegiatan' => $this->request->getVar('kegiatan'),
+            'tanggal_kegiatan' => $this->request->getVar('tanggal_kegiatan'),
+            'ketua_kegiatan' => $this->request->getVar('ketua_kegiatan'),
+            'file' => $namaProposal
+        ]);
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        return redirect()->to('/proposal');
     }
 }

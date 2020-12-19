@@ -20,4 +20,20 @@ class Prodak extends BaseController
         ];
         return view('prodak/prodak', $data);
     }
+    public function prodak_save()
+    {
+        // ambil file
+        $fileProdak = $this->request->getFile('gambar');
+        // pindahkan file ke folder
+        $fileProdak->move('img');
+        //ambil nama file
+        $namaProdak = $fileProdak->getName();
+        $this->prodak->save([
+            'nama_prodak' => $this->request->getVar('nama_prodak'),
+            'detail' => $this->request->getVar('detail'),
+            'gambar' => $namaProdak
+        ]);
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        return redirect()->to('/admin/prodak');
+    }
 }
