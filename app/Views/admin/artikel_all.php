@@ -250,33 +250,11 @@
                                     <th scope="row"><?= $i++; ?></th>
                                     <td><img src="/img/<?php echo $ar['gambar'] ?>" alt=""></td>
                                     <td><?= $ar['judul'] ?></td>
-                                    <!-- modal delete -->
-                                    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    Apakah anda yakin ingin menghapus artikel baru ini?
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <a href="/artikel/delete/<?= $ar['id']; ?>"><button type="button" class="btn btn-primary">Yes</button></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <td style="text-align: justify;"><?= substr($ar['konten'], 0, 500), "........" ?></td>
                                     <td class="tanggal"><?= $ar['created_at'] ?></td>
                                     <td>
                                         <a href="../artikel/detail/<?= $ar['slug'] ?>"><button type="button text-center" class="btn btn-info btn-sm">See Detail</button></a>
-                                        <a href=""><button type="button text-center" class="btn btn-warning btn-sm">Edit</button></a>
-                                        <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger btn-sm">Delete</button>
-
+                                        <a href="../artikel/edit.<?= $ar['slug'] ?>"><button type="button text-center" class="btn btn-warning btn-sm">Edit</button></a>
                                     </td>
 
                                 </tr>
