@@ -220,11 +220,23 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Program Dakwah LD Ulul Albaab</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
+                    <!-- Session -->
+                    <?php if (session()->getFlashdata('pesan')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <!-- Tambah Prodak -->
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">
+                            <a><button type="button" data-toggle="modal" data-target="#addModal" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Tambah Prodak</button></a>
+                        </h6>
                     </div>
 
                     <!-- Table of all artikel  -->
-
                     <table class="table table-bordered mt-3">
                         <thead class="">
                             <tr>
@@ -244,7 +256,6 @@
                                     <td><?= $prodak['nama_prodak'] ?></td>
                                     <td style="text-align: justify;"><?= $prodak['detail'] ?></td>
                                     <td>
-                                        <a href=""><button type="button text-center" class="btn btn-warning ">Edit</button></a>
                                         <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
@@ -316,7 +327,43 @@
             </div>
         </div>
 
-
+        <!-- modal add -->
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Tambah Punggawa </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container">
+                        <form class="ml-3 mt-3" action="/Prodak/prodak_save" method="post" enctype="multipart/form-data">
+                            <?= csrf_field(); ?>
+                            <div class="mb-3">
+                                <label for="gambar" class="form-label">Cover</label>
+                                <input class="form-control" type="file" id="gambar" name="gambar">
+                            </div>
+                            <div class="form-group row">
+                                <label for="nama_prodak" class="col-sm-2 col-form-label">Nama Prodak</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="nama_prodak" name="nama_prodak" placeholder="Nama Prodak">
+                                </div>
+                            </div>
+                            <div class="form-floating">
+                                <label for="detail">Detail</label>
+                                <textarea class="form-control" placeholder="Detail Program Dakwah" id="detail" name="detail" style="height: 100px"></textarea>
+                            </div>
+                            <div>
+                                <br><button type="submit" data-toggle="modal" data-target="#saveModal" class="btn btn-success btn-block">Save</button>
+                            </div>
+                        </form>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal add -->
 
         <!-- Bootstrap core JavaScript-->
         <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
