@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ArtikelModel extends Model
 {
     protected $table = 'artikel';
-    protected $allowedFields = ['judul', 'konten', 'gambar'];
+    protected $allowedFields = ['judul', 'konten', 'gambar', 'slug'];
     protected $useTimestamps = true;
 
     protected $validationRules    = [

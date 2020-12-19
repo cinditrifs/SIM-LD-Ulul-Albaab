@@ -227,7 +227,7 @@
                     <!--Start Forms-->
                     <form action="<?php echo base_url('/artikel/save') ?>" method="POST">
                         <!-- cross side force surgery -->
-                        <?= csrf_field() ?>
+                        <?= csrf_field(); ?>
 
                         <div class="col-12 col-md-12">
                             <div class="card">
@@ -239,7 +239,7 @@
                                                 <input name='gambar' type="file" id="imgInp" class="custom-file-input" autofocus>
                                                 <label class="custom-file-label" for="imgInp">Pilih sampul</label>
                                             </div>
-                                            <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image" />
+                                            <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image">
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
@@ -251,7 +251,7 @@
                                     <div class="form-group row mb-4">
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
                                         <div class="col-sm-12 col-md-7">
-                                            <textarea name="konten" id="konten" class="form-control summernote" cols="60" rows="60" required></textarea>
+                                            <textarea name="konten" id="konten" class="form-control summernote" cols="60" rows="40" required></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">

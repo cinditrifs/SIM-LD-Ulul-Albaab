@@ -29,6 +29,21 @@ class Artikel extends BaseController
 
     public function save()
     {
+
+
+        $slug = url_title($this->request->getVar('judul'), '-', true);
+        // dd($this->request->getVar());
+        // insert data base
+        $this->artikel->save([
+            'gambar' => $this->request->getVar('gambar'),
+            'judul' => $this->request->getVar('judul'),
+            'slug' => $slug,
+            'konten' => $this->request->getVar('konten')
+        ]);
+
+        session()->setFlashdata('pesan', 'Artikel Berhasil Ditambahkan');
+
+        return redirect()->to('/artikel/artikel');
     }
 
 
@@ -43,5 +58,15 @@ class Artikel extends BaseController
             'artikel' => $this->artikel->getArtikel($slug)
         ];
         return view("admin/view_artikel", $data);
+
+        if (empty($data['komik'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('judul tidak ditemukan');
+        }
+    }
+
+    public function delete($id)
+    {
+        $this->artikel->delete($id);
+        return redirect()->to('/artikel/artikel');
     }
 }
