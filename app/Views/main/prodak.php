@@ -68,20 +68,6 @@
                     </div>
                 </div>
             <?php endforeach; ?>
-
-            <div class="col s12 m4">
-                <div class="card" style="border-radius:15px">
-                    <div class="card-content activator">
-                        <img class="vertical-middle activator" src="<?php echo base_url('materialize/img/mlt.png') ?>" width="100%">
-                        <h5 style="font-family: 'Balsamiq Sans';">Muslim Leadership Training</h5>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title " style="font-family:'Kaushan Script';">Sholat Awal Waktu<i class="material-icons right">close</i></span>
-                        <p style="text-align: justify;">Rasulullah SAW juga pernah ditanya, amalan apakah yang paling afdhol. Beliau menjawab "Shalat di awal waktunya." (HR. Abu Daud)</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
