@@ -59,10 +59,16 @@
 
     <!--Proposal-->
     <div class="container center-align">
+        <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="card green lighten-2" style="border-radius:10px; margin-top: 30px; font-family: 'Balsamiq Sans'; font-size: 24px">
+                <?= session()->getFlashdata('pesan'); ?>
+            </div>
+        <?php endif; ?>
         <div class="card" style="border-radius:15px; margin-top: 30px; margin-bottom: 30px;">
             <div class="card-content">
                 <h3 id="proposal" style="font-family: 'Bebas Neue'; margin-top: 0px;">Proposal Kegiatan</h3>
-                <form>
+                <form action="/Sekre/proposal_save" method="post" enctype="multipart/form-data">
+                    <?= csrf_field(); ?>
                     <div class="input-field">
                         <label for="kegiatan">Nama Kegiatan</label>
                         <input id="kegiatan" name="kegiatan" type="text" class="validate" required>
