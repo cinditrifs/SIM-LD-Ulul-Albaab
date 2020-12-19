@@ -47,9 +47,9 @@ class Artikel extends BaseController
     }
 
 
-    public function edit_artikel()
+    public function edit_artikel($slug)
     {
-        return view("admin/edit_artikel");
+        return view("admin/edit_artikel", $slug);
     }
 
     public function detail($slug)
@@ -67,6 +67,8 @@ class Artikel extends BaseController
     public function delete($id)
     {
         $this->artikel->delete($id);
+        session()->setFlashdata('pesan', 'Artikel Berhasil Dihapus');
+
         return redirect()->to('/artikel/artikel');
     }
 }
