@@ -198,13 +198,19 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Daftar Punggawa</h1>
 
+                    <!-- Session -->
+                    <?php if (session()->getFlashdata('pesan')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                    <?php endif; ?>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">
                                 <a><button type="button" data-toggle="modal" data-target="#addModal" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Tambah Punggawa</button></a>
                             </h6>
-
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -227,18 +233,8 @@
                                                 <td><?= $p['departemen'] ?></td>
                                                 <td><?= $p['prodi'] ?></td>
                                                 <td><?= $p['angkatan'] ?></td>
-
                                             </tr>
                                         <?php endforeach; ?>
-                                    <tfoot>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Departemen</th>
-                                            <th>Prodi</th>
-                                            <th>Angkatan</th>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                             </div>
                         </div>
@@ -302,18 +298,18 @@
                     </button>
                 </div>
                 <div class="container">
-                    <form class="ml-3 mt-3">
-
+                    <form class="ml-3 mt-3" action="/Admin/punggawa_save" method="post">
+                        <?= csrf_field(); ?>
                         <div class="form-group row">
-                            <label for="inputnama" class="col-sm-2 col-form-label">Nama Lengkap</label>
+                            <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputprodi" class="col-sm-2 col-form-label">Prodi</label>
+                            <label for="prodi" class="col-sm-2 col-form-label">Prodi</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="inputdivisi" aria-placeholder="Pilih">
+                                <select class="form-control" id="prodi" name="prodi" aria-placeholder="Pilih">
                                     <option>Pendidikan Matematika</option>
                                     <option>Matematika</option>
                                     <option>Ilmu Komputer</option>
@@ -328,20 +324,20 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputprodi" class="col-sm-2 col-form-label">Angkatan</label>
+                            <label for="angkatan" class="col-sm-2 col-form-label">Angkatan</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="inputangkatan" aria-placeholder="Pilih">
+                                <select class="form-control" id="angkatan" name="angkatan" aria-placeholder="Pilih">
                                     <option>2017</option>
                                     <option>2018</option>
                                     <option>2019</option>
+                                    <option>2020</option>
                                 </select>
                             </div>
                         </div>
-
                         <div class="form-group row">
-                            <label for="inputdivisi" class="col-sm-2 col-form-label">Departemen</label>
+                            <label for="departemen" class="col-sm-2 col-form-label">Departemen</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="inputdivisi" aria-placeholder="Pilih">
+                                <select class="form-control" id="departemen" name="departemen" aria-placeholder="Pilih">
                                     <option>Mas'ul</option>
                                     <option>Mas'ulah</option>
                                     <option>Sekretaris</option>
@@ -360,7 +356,7 @@
                             </div>
                         </div>
                         <div>
-                            <button type="button" data-toggle="modal" data-target="#saveModal" class="btn  btn-success btn-block">Save</button>
+                            <button type="submit" data-toggle="modal" data-target="#saveModal" class="btn btn-success btn-block">Save</button>
                         </div>
                     </form>
                     <br>
@@ -369,7 +365,6 @@
         </div>
     </div>
     <!-- end modal add -->
-
 
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
