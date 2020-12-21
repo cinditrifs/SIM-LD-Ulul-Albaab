@@ -198,8 +198,14 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Rekapan Laporan Syuro</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
+
+                    <!-- Session -->
+                    <?php if (session()->getFlashdata('pesan')) : ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                    <?php endif; ?>
 
                     <!-- Table of Rekap Syuro  -->
                     <table class="table table-bordered mt-3">
