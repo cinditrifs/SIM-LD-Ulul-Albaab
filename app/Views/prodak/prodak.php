@@ -256,7 +256,8 @@
                                     <td><?= $prodak['nama_prodak'] ?></td>
                                     <td style="text-align: justify;"><?= $prodak['detail'] ?></td>
                                     <td>
-                                        <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger">Delete</button>
+                                        <a href="/prodak/prodak_delete/<?= $prodak['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
+                                        <!-- <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger">Delete</button> -->
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
