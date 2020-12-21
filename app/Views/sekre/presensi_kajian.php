@@ -226,7 +226,8 @@
                                     <td><?= $kajian['peserta_ttl'] ?></td>
                                     <td>
                                         <button type="button" class="btn btn-success btn-sm">Download</button>
-                                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                        <a href="/sekre/kajian_delete/<?= $kajian['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
+                                        <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button> -->
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

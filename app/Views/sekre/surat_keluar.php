@@ -222,8 +222,9 @@
                                     <td><?= date("d-F-Y", strtotime($sk['tanggal_acara'])) ?></td>
                                     <td><?= $sk['untuk'] ?></td>
                                     <td><?= $sk['keterangan'] ?></td>
-                                    <td>
-                                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button>
+                                    <td style="text-align: center;">
+                                        <a href="/sekre/surat_delete/<?= $sk['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
+                                        <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button> -->
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -247,8 +248,16 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Yes</button>
+                                <a href="/sekre/surat_delete"><button type="submit" class="btn btn-primary">Yes</button></a>
                             </div>
+                            <!-- <form action="/sekre/surat_keluar/
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <input type="hidden" name='_method' value='DELETE'>
+                                    <button type="button" class="btn btn-primary">Yes</button>
+                                </div>
+                            </form> -->
+
                         </div>
                     </div>
                 </div>

@@ -49,6 +49,13 @@ class Sekre extends BaseController
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
         return redirect()->to('/surat');
     }
+    public function surat_delete($id)
+    {
+        $this->suratkeluar->delete($id);
+        session()->setFlashdata('pesan', 'Surat Keluar Berhasil Dihapus');
+
+        return redirect()->to('/sekre/surat_keluar');
+    }
 
     // kajian
     public function presensi_kajian()
@@ -78,6 +85,13 @@ class Sekre extends BaseController
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
         return redirect()->to('/presensi');
     }
+    public function kajian_delete($id)
+    {
+        $this->kajian->delete($id);
+        session()->setFlashdata('pesan', 'Presensi Kajian Berhasil Dihapus');
+
+        return redirect()->to('/sekre/presensi_kajian');
+    }
 
     // syuro
     public function syuro()
@@ -103,6 +117,13 @@ class Sekre extends BaseController
         ]);
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
         return redirect()->to('/syuro');
+    }
+    public function syuro_delete($id)
+    {
+        $this->syuro->delete($id);
+        session()->setFlashdata('pesan', 'Laporan Syuro Berhasil Dihapus');
+
+        return redirect()->to('/sekre/syuro');
     }
 
     // lpj
@@ -130,6 +151,13 @@ class Sekre extends BaseController
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
         return redirect()->to('/lpj');
     }
+    public function lpj_delete($id)
+    {
+        $this->lpj->delete($id);
+        session()->setFlashdata('pesan', 'LPJ Berhasil Dihapus');
+
+        return redirect()->to('/sekre/lpj');
+    }
 
     // proposal
     public function proposal()
@@ -156,5 +184,12 @@ class Sekre extends BaseController
         ]);
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
         return redirect()->to('/proposal');
+    }
+    public function proposal_delete($id)
+    {
+        $this->proposal->delete($id);
+        session()->setFlashdata('pesan', 'File Proposal Berhasil Dihapus');
+
+        return redirect()->to('/sekre/proposal');
     }
 }
