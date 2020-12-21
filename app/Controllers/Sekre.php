@@ -28,7 +28,7 @@ class Sekre extends BaseController
         $this->proposal = new \App\Models\ProposalModel();
     }
 
-    // surat keluar
+    // SURAT KELUAR
     public function surat_keluar()
     {
         $suratkeluar = $this->suratkeluar->findAll();
@@ -46,18 +46,17 @@ class Sekre extends BaseController
             'untuk' => $this->request->getVar('untuk'),
             'keterangan' => $this->request->getVar('keterangan')
         ]);
-        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        session()->setFlashdata('pesan', 'Data Surat Keluar Berhasil Ditambahkan');
         return redirect()->to('/surat');
     }
     public function surat_delete($id)
     {
         $this->suratkeluar->delete($id);
         session()->setFlashdata('pesan', 'Surat Keluar Berhasil Dihapus');
-
         return redirect()->to('/sekre/surat_keluar');
     }
 
-    // kajian
+    // PRESENSI KAJIAN
     public function presensi_kajian()
     {
         $kajian = $this->kajian->findAll();
@@ -82,18 +81,17 @@ class Sekre extends BaseController
             'peserta_ttl' => $this->request->getVar('peserta_ttl'),
             'file' => $namaPresensi
         ]);
-        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        session()->setFlashdata('pesan', 'Data Presensi Kajian Berhasil Ditambahkan');
         return redirect()->to('/presensi');
     }
     public function kajian_delete($id)
     {
         $this->kajian->delete($id);
         session()->setFlashdata('pesan', 'Presensi Kajian Berhasil Dihapus');
-
         return redirect()->to('/sekre/presensi_kajian');
     }
 
-    // syuro
+    // LAPORAN SYURO
     public function syuro()
     {
         $syuro = $this->syuro->findAll();
@@ -115,18 +113,17 @@ class Sekre extends BaseController
             'tanggal' => $this->request->getVar('tanggal'),
             'file' => $namaSyuro
         ]);
-        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        session()->setFlashdata('pesan', 'Data Laporan Syuro Berhasil Ditambahkan');
         return redirect()->to('/syuro');
     }
     public function syuro_delete($id)
     {
         $this->syuro->delete($id);
         session()->setFlashdata('pesan', 'Laporan Syuro Berhasil Dihapus');
-
         return redirect()->to('/sekre/syuro');
     }
 
-    // lpj
+    // LPJ
     public function lpj()
     {
         $lpj = $this->lpj->findAll();
@@ -148,18 +145,17 @@ class Sekre extends BaseController
             'tanggal_kegiatan' => $this->request->getVar('tanggal_kegiatan'),
             'file' => $namalpj
         ]);
-        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        session()->setFlashdata('pesan', 'Data LPJ Berhasil Ditambahkan');
         return redirect()->to('/lpj');
     }
     public function lpj_delete($id)
     {
         $this->lpj->delete($id);
         session()->setFlashdata('pesan', 'LPJ Berhasil Dihapus');
-
         return redirect()->to('/sekre/lpj');
     }
 
-    // proposal
+    // PROPOSAL
     public function proposal()
     {
         $proposal = $this->proposal->findAll();
@@ -182,14 +178,13 @@ class Sekre extends BaseController
             'ketua_kegiatan' => $this->request->getVar('ketua_kegiatan'),
             'file' => $namaProposal
         ]);
-        session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
+        session()->setFlashdata('pesan', 'Data Proposal Berhasil Ditambahkan');
         return redirect()->to('/proposal');
     }
     public function proposal_delete($id)
     {
         $this->proposal->delete($id);
         session()->setFlashdata('pesan', 'File Proposal Berhasil Dihapus');
-
         return redirect()->to('/sekre/proposal');
     }
 }

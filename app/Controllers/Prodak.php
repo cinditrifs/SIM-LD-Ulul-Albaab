@@ -36,4 +36,10 @@ class Prodak extends BaseController
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
         return redirect()->to('/admin/prodak');
     }
+    public function prodak_delete($id)
+    {
+        $this->prodak->delete($id);
+        session()->setFlashdata('pesan', 'Program Dakwah Berhasil Dihapus');
+        return redirect()->to('/admin/prodak');
+    }
 }
