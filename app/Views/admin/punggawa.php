@@ -222,6 +222,7 @@
                                             <th>Departemen</th>
                                             <th>Prodi</th>
                                             <th>Angkatan</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -233,6 +234,7 @@
                                                 <td><?= $p['departemen'] ?></td>
                                                 <td><?= $p['prodi'] ?></td>
                                                 <td><?= $p['angkatan'] ?></td>
+                                                <td><a href="/admin/punggawa_delete/<?= $p['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a></td>
                                             </tr>
                                         <?php endforeach; ?>
                                 </table>

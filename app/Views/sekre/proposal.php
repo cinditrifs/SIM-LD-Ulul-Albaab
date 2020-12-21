@@ -222,7 +222,7 @@
                                     <td><?= $pro['tanggal_kegiatan'] ?></td>
                                     <td>
                                         <button type="button" class="btn btn-success">Download</button>
-                                        <a href="/sekre/lpj_delete/<?= $pro['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
+                                        <a href="/sekre/proposal_delete/<?= $pro['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
                                         <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button> -->
                                     </td>
                                 </tr>

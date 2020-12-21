@@ -47,6 +47,13 @@ class Admin extends BaseController
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
         return redirect()->to('/admin/punggawa');
     }
+    public function punggawa_delete($id)
+    {
+        $this->punggawa->delete($id);
+        session()->setFlashdata('pesan', 'Data Punggawa Berhasil Dihapus');
+
+        return redirect()->to('/admin/punggawa');
+    }
 
     // controller buat highlight 
     public function highlight()
