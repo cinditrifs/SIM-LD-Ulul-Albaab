@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Admin | Artikel</title>
+    <title> Admin | Edit Artikel</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url('/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
@@ -39,8 +39,10 @@
             font-size: 13px
         }
 
-        thead {
+        thead tr th {
             font-size: 15px;
+
+            text-align: center;
         }
     </style>
 
@@ -67,7 +69,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item ">
-                <a class="nav-link" href="../admin/dashboard">
+                <a class="nav-link" href="../../admin/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -84,8 +86,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../artikel/artikel">Semua Artikel</a>
-                        <a class="collapse-item" href="../artikel/tambah_artikel">Tambah Artikel</a>
+                        <a class="collapse-item" href="../../artikel/artikel">Semua Artikel</a>
+                        <a class="collapse-item" href="../../artikel/tambah_artikel">Tambah Artikel</a>
                     </div>
                 </div>
             </li>
@@ -101,11 +103,11 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../sekre/surat_keluar">Surat Keluar</a>
-                        <a class="collapse-item" href="../sekre/syuro">Laporan Syuro</a>
-                        <a class="collapse-item" href="../sekre/presensi_kajian">Presensi Kajian</a>
-                        <a class="collapse-item" href="../sekre/lpj">LPJ</a>
-                        <a class="collapse-item" href="../sekre/proposal">Proposal Kegiatan</a>
+                        <a class="collapse-item" href="../../sekre/surat_keluar">Surat Keluar</a>
+                        <a class="collapse-item" href="../../sekre/syuro">Laporan Syuro</a>
+                        <a class="collapse-item" href="../../sekre/presensi_kajian">Presensi Kajian</a>
+                        <a class="collapse-item" href="../../sekre/lpj">LPJ</a>
+                        <a class="collapse-item" href="../../sekre/proposal">Proposal Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -115,7 +117,7 @@
 
             <!-- Nav Item - Punggawa -->
             <li class="nav-item">
-                <a class="nav-link" href="../admin/punggawa">
+                <a class="nav-link" href="../../admin/punggawa">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Punggawa</span></a>
             </li>
@@ -125,7 +127,7 @@
 
             <!-- Nav Item - Highlight -->
             <li class="nav-item">
-                <a class="nav-link" href="../admin/highlight">
+                <a class="nav-link" href="../../admin/highlight">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Highlight</span></a>
             </li>
@@ -222,62 +224,91 @@
                     </div>
 
                     <!-- Form  -->
-                    <form class="ml-3 mt-3">
-                        <div class="form-group row">
-                            <label for="inputcover" class="col-sm-2 col-form-label">Cover</label>
-                            <div class="col-sm-10">
-                                <div class="custom-file">
-                                    <input type="file" id="imgInp" class="custom-file-input">
-                                    <label class="custom-file-label" for="imgInp">Update file</label>
+                    <!--Start Forms-->
+                    <form action=" /artikel/update/<?= $artikel['id'] ?>" method="POST">
+                        <!-- cross side force surgery -->
+                        <?= csrf_field(); ?>
+                        <input type="hidden" name="slug" value="<?= $artikel['slug'] ?>">
+                        <input type="hidden" name="id" value="<?php echo $artikel['id']; ?>">
+                        <div class="col-12 col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="form-group row mb-4">
+                                        <label class=" inputcover col-form-label text-md-right col-12 col-md-3 col-lg-3">Cover</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="custom-file">
+                                                <input name='gambar' type="file" id="imgInp" class="custom-file-input" autofocus>
+                                                <label class="custom-file-label" for="imgInp">Ubah Gambar</label>
+                                            </div>
+                                            <img style="width: 300px;" id="blah" src="/img/<?php echo $artikel['gambar'] ?>" alt="your image">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="inputjudul col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul" value="<?= $artikel['judul'] ?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
+                                        <div class="col-sm-12 col-md-7">
+                                            <textarea style="text-align: justify;" name="konten" id="konten" class="form-control summernote" cols="60" rows="40" required><?= $artikel['konten'] ?>"</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mb-4">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                        <div>
+                                            <button type="button" data-toggle="modal" data-target="#saveModal" class="btn  btn-success btn-block">Save</button>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Save Artikel</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Apakah anda yakin ingin mengubah artikel?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-primary">Yes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img style="width: 300px;" id="blah" src="../asset/artikel1.jpg" alt="your image" />
                             </div>
-
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputjudul" class="col-sm-2 col-form-label">Judul</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="judul" name="judul" value="Benarkah Isra Miraj itu terjadi hanya 1 Malam?">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputartikel" class="col-sm-2 col-form-label" value>Konten</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" aria-label="With textarea" style="height: 1000px;">
-                    </textarea>
-                            </div>
-                        </div>
-                        <div>
-                            <button type="button" data-toggle="modal" data-target="#saveModal" class="btn  btn-success btn-block">Save</button>
                         </div>
                     </form>
 
-                    <!-- end form -->
-
-
-
-
                     <!-- Modal -->
-                    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Save Artikel</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    Apakah anda yakin ingin menambah artikel baru ini?
+                                    Apakah anda yakin ingin menghapus artikel ini?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Yes</button>
+                                    <a href="/artikel/delete/<?= $artikel['id']; ?>"><button type="button" class="btn btn-primary">Yes</button></a>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- End View -->
 
             </div>
             <!-- End of Main Content -->
@@ -322,6 +353,28 @@
             </div>
         </div>
     </div>
+    <!-- modal delete -->
+    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Apakah anda yakin ingin menghapus artikel baru ini?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
@@ -331,7 +384,7 @@
     <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url('/js/sb-admin-2.min.js') ?>"></script>
+    <script src="<?php echo base_url() ?>/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
     <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
@@ -339,11 +392,14 @@
     <!-- Page level custom scripts -->
     <script src="<?php echo base_url('/js/demo/chart-area-demo.js') ?>"></script>
     <script src="<?php echo base_url('/js/demo/chart-pie-demo.js') ?>"></script>
-
-    <!-- Admin Js -->
     <script src="<?php echo base_url('/js/admin.js') ?>"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            tinymce.init({
+                selector: 'textarea'
+            });
+        });
+    </script>
 
 </body>
 

@@ -230,7 +230,7 @@
                             <h5 class="card-title"><?= $artikel['judul'] ?></h5>
                             <p class="card-text text-justify"><?= $artikel['konten'] ?>
                             </p>
-                            <a href="../artikel/edit_artikel"><button type="button" class="btn btn-primary">Edit</button></a>
+                            <a href="../../artikel/edit/<?= $artikel['slug'] ?>"><button type="button" class="btn btn-primary">Edit</button></a>
                             <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button>
                         </div>
 

@@ -45,7 +45,8 @@ $routes->get('/admin', 'Admin::login');
 // $routes->get('/ad-dashboard', 'Admin::dashboard');
 $routes->get('/admin/prodak', 'Prodak::index');
 $routes->get('/artikel/detail/(:any)', 'Artikel::detail/$1');
-
+$routes->get('/sekre/surat_keluar/(:num)', 'Sekre::surat_delete/$1');
+$routes->get('/artikel/edit/(:any)', 'Artikel::edit/$1');
 /**
  * --------------------------------------------------------------------
  * Additional Routing

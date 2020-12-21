@@ -254,7 +254,8 @@
                                     <td class="tanggal"><?= $ar['created_at'] ?></td>
                                     <td>
                                         <a href="../artikel/detail/<?= $ar['slug'] ?>"><button type="button text-center" class="btn btn-info btn-sm">See Detail</button></a>
-                                        <a href="../artikel/edit.<?= $ar['slug'] ?>"><button type="button text-center" class="btn btn-warning btn-sm">Edit</button></a>
+                                        <a href="../../artikel/edit/<?= $ar['slug'] ?>"><button type="button" class="btn btn-primary">Edit</button></a>
+
                                     </td>
 
                                 </tr>
@@ -300,8 +301,8 @@
                         </button>
                     </div>
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <div class="modal-footer ">
+                        <button class=" d-inline btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                         <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>

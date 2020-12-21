@@ -6,6 +6,8 @@ use App\Models\ArtikelModel;
 
 namespace App\Controllers;
 
+use CodeIgniter\Validation\Rules;
+
 class Artikel extends BaseController
 {
     protected $artikel;
@@ -29,11 +31,10 @@ class Artikel extends BaseController
 
     public function save()
     {
-
-
         $slug = url_title($this->request->getVar('judul'), '-', true);
         // dd($this->request->getVar());
         // insert data base
+
         $this->artikel->save([
             'gambar' => $this->request->getVar('gambar'),
             'judul' => $this->request->getVar('judul'),
@@ -46,10 +47,40 @@ class Artikel extends BaseController
         return redirect()->to('/artikel/artikel');
     }
 
-
-    public function edit_artikel($slug)
+    public function edit($slug)
     {
-        return view("admin/edit_artikel", $slug);
+        $data = [
+            'artikel' => $this->artikel->getArtikel($slug),
+        ];
+        return view("admin/edit_artikel", $data);
+    }
+
+    public function update($id)
+    {
+        // if (!$this->validate([
+        //     'judul' => [
+        //         'rules' => 'is_unique(artikel.judul)',
+        //         'error' => [
+        //             'is_unique' => 'sudah terdaftar'
+        //         ]
+        //     ]
+        // ])) {
+        //     $validation = \Config\Services::validation();
+        //     return redirect()->to('/artikel/edit_artikel');
+        // }
+
+        $slug = url_title($this->request->getVar('judul'), '-', true);
+        $this->artikel->save([
+            'id' => $id,
+            'gambar' => $this->request->getVar('gambar'),
+            'judul' => $this->request->getVar('judul'),
+            'slug' => $slug,
+            'konten' => $this->request->getVar('konten')
+        ]);
+
+        session()->setFlashdata('pesan', 'Artikel Berhasil Diubah');
+
+        return redirect()->to('/artikel/artikel');
     }
 
     public function detail($slug)
