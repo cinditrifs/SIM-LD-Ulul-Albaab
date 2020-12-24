@@ -220,12 +220,11 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Tambah Artikel</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
                     <!-- Form  -->
                     <!--Start Forms-->
-                    <form action="<?php echo base_url('/artikel/save') ?>" method="POST">
+                    <form action="<?php echo base_url('/artikel/save') ?>" method="POST" enctype="multipart/form-data">
                         <!-- cross side force surgery -->
                         <?= csrf_field(); ?>
 
@@ -236,20 +235,20 @@
                                         <label class=" inputcover col-form-label text-md-right col-12 col-md-3 col-lg-3">Cover</label>
                                         <div class="col-sm-12 col-md-7">
                                             <div class="custom-file">
-                                                <input name='gambar' type="file" id="imgInp" class="custom-file-input" autofocus>
-                                                <label class="custom-file-label" for="imgInp">Pilih sampul</label>
+                                                <input name='gambar' type="file" id="gambar" class="custom-file-input" autofocus>
+                                                <label class="custom-file-label" for="gambar">Pilih sampul</label>
                                             </div>
                                             <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image">
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label class="inputjudul col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
+                                        <label for="judul" class="inputjudul col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
                                         <div class="col-sm-12 col-md-7">
                                             <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul" required>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-4">
-                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
+                                        <label for="konten" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
                                         <div class="col-sm-12 col-md-7">
                                             <textarea name="konten" id="konten" class="form-control summernote" cols="60" rows="40" required></textarea>
                                         </div>
