@@ -34,16 +34,19 @@ class Artikel extends BaseController
         $slug = url_title($this->request->getVar('judul'), '-', true);
         // dd($this->request->getVar());
         // insert data base
-
+        // ambil file
+        $fileArtikel = $this->request->getFile('gambar');
+        // pindahkan file ke folder
+        $fileArtikel->move('img');
+        //ambil nama file
+        $namaArtikel = $fileArtikel->getName();
         $this->artikel->save([
-            'gambar' => $this->request->getVar('gambar'),
             'judul' => $this->request->getVar('judul'),
             'slug' => $slug,
-            'konten' => $this->request->getVar('konten')
+            'konten' => $this->request->getVar('konten'),
+            'gambar' => $namaArtikel
         ]);
-
         session()->setFlashdata('pesan', 'Artikel Berhasil Ditambahkan');
-
         return redirect()->to('/artikel/artikel');
     }
 
