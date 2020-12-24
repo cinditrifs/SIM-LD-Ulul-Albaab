@@ -232,13 +232,15 @@
                             </div>
                         <?php } ?>
 
-                        <form action="/admin/save_highlight" action="post" class="ml-3 mt-3" enctype="form">
+                        <form action="/admin/save_highlight" action="post" class="ml-3 mt-3" enctype="multipart/form-data">
+                            <!-- cross side force surgery -->
                             <?= csrf_field(); ?>
+
                             <div class="form-group row">
                                 <label for="inputcover" class="col-sm-2 col-form-label">Gambar</label>
                                 <div class="col-sm-10">
                                     <div class="custom-file">
-                                        <input type="file" id="imgInp" name="gambar" class="custom-file-input"></input>
+                                        <input type="file" id="gambar" name="gambar" class="custom-file-input" autofocus>
                                         <label class="custom-file-label" for="imgInp">Upload Highlight</label>
                                     </div>
                                     <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image" />
