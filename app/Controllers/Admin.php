@@ -83,9 +83,9 @@ class Admin extends BaseController
                     'gambar' => $this->request->getVar('gambar')
                 ]
             );
+        session()->setFlashdata('pesan', 'Highlight Berhasil Ditambahkan');
         return redirect()->to('/admin/highlight')->withInput();
     }
-
 
     public function tambah_highlight()
     {
