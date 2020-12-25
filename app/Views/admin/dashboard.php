@@ -160,7 +160,6 @@
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -180,7 +179,6 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
 
                 </nav>
@@ -206,7 +204,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Total Punggawa</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">89</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fa fa-users mr-3 2x text-gray-300"></i>
@@ -224,7 +222,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Jumlah Artikel</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalAr ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -244,7 +242,7 @@
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">1500</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $follower ?></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -263,8 +261,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                                Program Dakwah</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $prodak ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -274,8 +272,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
                 <!-- End of Main Content -->
 
@@ -329,14 +325,6 @@
 
         <!-- Custom scripts for all pages-->
         <script src="<?php echo base_url('/js/sb-admin-2.min.js'); ?>"></script>
-
-        <!-- Page level plugins -->
-        <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js'); ?>"></script>
-
-        <!-- Page level custom scripts -->
-        <script src="<?php echo base_url('/js/demo/chart-area-demo.js'); ?>"></script>
-        <script src="<?php echo base_url('/js/demo/chart-pie-demo.js'); ?>"></script>
-
 </body>
 
 </html>

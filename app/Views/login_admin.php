@@ -12,20 +12,37 @@
     <title>Admin Login</title>
     <!-- Style -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
         .container {
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 20%;
             transform: translate(-50%, -50%);
+        }
+
+        body {
+            background-image: url("img/background-admin.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .card {
+            box-shadow: none;
+        }
+
+        h5 {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-
     <div class="container">
-        <h5 style="text-align: center;">Login Admin Ulul Albaab</h5>
-        <div class="row">
+        <h5 style="text-align: center; font-family:'Fredoka One', cursive; ">Login Admin Ulul Albaab</h5><br>
+        <div class="row" style="font-family: 'Quicksand', sans-serif;">
             <div class="col s12 m4 offset-m4 center-align">
                 <div class="card" style="border-radius:15px">
                     <div class="card-content">
@@ -33,14 +50,13 @@
                         <form method="POST">
                             <div class="input-field">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input id="username" name="username" type="text" class="validate" required placeholder="username">
+                                <input id="username" name="username" type="text" class="validate" required placeholder="username" required>
                             </div>
                             <div class="input-field">
                                 <i class="material-icons prefix">lock</i>
-                                <input id="password" name="password" type="password" class="validate" required placeholder="password">
+                                <input id="password" name="password" type="password" class="validate" required placeholder="password" required>
                             </div>
                             <input type="button" class="waves-effect waves-light btn" style="border-radius:15px;" value="Login" id="submit" onclick="validate()" />
-
                         </form>
                     </div>
                 </div>

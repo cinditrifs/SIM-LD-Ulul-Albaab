@@ -208,9 +208,7 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
@@ -255,16 +253,11 @@
                                     <td>
                                         <a href="../artikel/detail/<?= $ar['slug'] ?>"><button type="button text-center" class="btn btn-info btn-sm">See Detail</button></a>
                                         <a href="../../artikel/edit/<?= $ar['slug'] ?>"><button type="button" class="btn btn-primary">Edit</button></a>
-
                                     </td>
-
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
-
-
-
                 </div>
                 <!-- End of Main Content -->
 
@@ -309,8 +302,6 @@
             </div>
         </div>
 
-
-
         <!-- Bootstrap core JavaScript-->
         <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
         <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
@@ -320,14 +311,6 @@
 
         <!-- Custom scripts for all pages-->
         <script src="<?php echo base_url() ?>/js/sb-admin-2.min.js"></script>
-
-        <!-- Page level plugins -->
-        <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
-
-        <!-- Page level custom scripts -->
-        <script src="<?php echo base_url('/js/demo/chart-area-demo.js') ?>"></script>
-        <script src="<?php echo base_url('/js/demo/chart-pie-demo.js') ?>"></script>
-
 </body>
 
 </html>

@@ -36,7 +36,6 @@
             height: 120px;
         }
     </style>
-
 </head>
 
 <body id="page-top">
@@ -179,7 +178,6 @@
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
-
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -199,7 +197,6 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
 
                 </nav>
@@ -268,19 +265,15 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
             <!-- End of Main Content -->
 
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Ulul Albaab 2020</span>
+                        <span>Copyright & Copy; Ulul Albaab 2020</span>
                     </div>
                 </div>
             </footer>
@@ -328,13 +321,6 @@
 
     <!-- Page level plugins -->
     <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="<?php echo base_url('/js/demo/chart-area-demo.js') ?>"></script>
-    <script src="<?php echo base_url('/js/demo/chart-pie-demo.js') ?>"></script>
-
-    <!-- Admin Js -->
-    <script src="<?php echo base_url('/js/admin.js') ?>"></script>
 
 </body>
 
