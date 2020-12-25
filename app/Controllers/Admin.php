@@ -58,6 +58,7 @@ class Admin extends BaseController
     // controller buat highlight 
     public function highlight()
     {
+        session();
         #variable gambar namanya slider
         $slider = $this->highlightModel->findAll();
         $data = [
@@ -90,5 +91,11 @@ class Admin extends BaseController
     public function tambah_highlight()
     {
         return view('admin/tambah_highlight');
+    }
+    public function highlight_delete($id)
+    {
+        $this->highlightModel->delete($id);
+        session()->setFlashdata('pesan', 'Highlight Berhasil Dihapus');
+        return redirect()->to('/admin/highlight');
     }
 }

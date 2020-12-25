@@ -60,29 +60,23 @@ class Artikel extends BaseController
 
     public function update($id)
     {
-        // if (!$this->validate([
-        //     'judul' => [
-        //         'rules' => 'is_unique(artikel.judul)',
-        //         'error' => [
-        //             'is_unique' => 'sudah terdaftar'
-        //         ]
-        //     ]
-        // ])) {
-        //     $validation = \Config\Services::validation();
-        //     return redirect()->to('/artikel/edit_artikel');
-        // }
-
         $slug = url_title($this->request->getVar('judul'), '-', true);
+        // dd($this->request->getVar());
+        // insert data base
+        // ambil file
+        $fileArtikel = $this->request->getFile('gambar');
+        // pindahkan file ke folder
+        $fileArtikel->move('img');
+        //ambil nama file
+        $namaArtikel = $fileArtikel->getName();
         $this->artikel->save([
             'id' => $id,
-            'gambar' => $this->request->getVar('gambar'),
             'judul' => $this->request->getVar('judul'),
             'slug' => $slug,
-            'konten' => $this->request->getVar('konten')
+            'konten' => $this->request->getVar('konten'),
+            'gambar' => $namaArtikel
         ]);
-
-        session()->setFlashdata('pesan', 'Artikel Berhasil Diubah');
-
+        session()->setFlashdata('pesan', 'Artikel Berhasil Diupdate');
         return redirect()->to('/artikel/artikel');
     }
 
