@@ -235,8 +235,8 @@
                                         <label class=" inputcover col-form-label text-md-right col-12 col-md-3 col-lg-3">Cover</label>
                                         <div class="col-sm-12 col-md-7">
                                             <div class="custom-file">
-                                                <input name='gambar' type="file" id="gambar" class="custom-file-input" autofocus>
-                                                <label class="custom-file-label" for="gambar">Pilih sampul</label>
+                                                <input name='gambar' type="file" id="imgInp" class="custom-file-input" autofocus>
+                                                <label class="custom-file-label" for="imgInp">Pilih sampul</label>
                                             </div>
                                             <img style="width: 300px;" id="blah" src="<?php echo base_url('/img/images.jpg') ?>" alt="your image">
                                         </div>

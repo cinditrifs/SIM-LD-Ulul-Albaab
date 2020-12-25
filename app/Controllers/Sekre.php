@@ -6,6 +6,8 @@ use App\Models\SyuroModel;
 use App\Models\KajianModel;
 use App\Models\LpjModel;
 use App\Models\ProposalModel;
+use CodeIgniter\HTTP\Response;
+use CodeIgniter\HTTP\DownloadResponse;
 
 namespace App\Controllers;
 
@@ -70,7 +72,7 @@ class Sekre extends BaseController
         // ambil file
         $filePresensi = $this->request->getFile('file');
         // pindahkan file ke folder
-        $filePresensi->move('img');
+        $filePresensi->move('upload');
         //ambil nama file
         $namaPresensi = $filePresensi->getName();
         $this->kajian->save([
@@ -105,7 +107,7 @@ class Sekre extends BaseController
         // ambil file
         $fileSyuro = $this->request->getFile('file');
         // pindahkan file ke folder
-        $fileSyuro->move('img');
+        $fileSyuro->move('upload');
         //ambil nama file
         $namaSyuro = $fileSyuro->getName();
         $this->syuro->save([
@@ -137,7 +139,7 @@ class Sekre extends BaseController
         // ambil file
         $filelpj = $this->request->getFile('file');
         // pindahkan file ke folder
-        $filelpj->move('img');
+        $filelpj->move('upload');
         //ambil nama file
         $namalpj = $filelpj->getName();
         $this->lpj->save([
@@ -154,6 +156,17 @@ class Sekre extends BaseController
         session()->setFlashdata('pesan', 'LPJ Berhasil Dihapus');
         return redirect()->to('/sekre/lpj');
     }
+    function lpj_download($file)
+    {
+        //get file info from database
+        // $filelpj = $this->request->getFile('file');
+        // get name 
+        // $namalpj = $filelpj->getName();
+        $filelpj = '/upload/' . $file;
+        return $this->response->download($filelpj, null);
+
+        // return $this->response->download($namalpj, $filelpj);
+    }
 
     // PROPOSAL
     public function proposal()
@@ -169,7 +182,7 @@ class Sekre extends BaseController
         // ambil file
         $fileProposal = $this->request->getFile('file');
         // pindahkan file ke folder
-        $fileProposal->move('img');
+        $fileProposal->move('upload');
         //ambil nama file
         $namaProposal = $fileProposal->getName();
         $this->proposal->save([

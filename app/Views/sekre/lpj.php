@@ -22,6 +22,10 @@
         tr * {
             color: black;
         }
+
+        table * {
+            vertical-align: middle;
+        }
     </style>
 
 </head>
@@ -202,7 +206,7 @@
 
                     <!-- Session -->
                     <?php if (session()->getFlashdata('pesan')) : ?>
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert alert-success" role="alert">
                             <?= session()->getFlashdata('pesan'); ?>
                         </div>
                     <?php endif; ?>
@@ -225,8 +229,8 @@
                                     <td><?= $lpj['kegiatan'] ?></td>
                                     <td><?= $lpj['tanggal_kegiatan'] ?></td>
                                     <td>
-                                        <button type="button" class="btn btn-success">Download</button>
-                                        <a href="/sekre/lpj_delete/<?= $lpj['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
+                                        <a href="/upload/<?= $lpj['file'] ?>" download="<?= $lpj['file'] ?>" class="btn btn-success">Download</a>
+                                        <a href="/sekre/lpj_delete/<?= $lpj['id']; ?>"><button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button></a>
                                         <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button> -->
                                     </td>
                                 </tr>

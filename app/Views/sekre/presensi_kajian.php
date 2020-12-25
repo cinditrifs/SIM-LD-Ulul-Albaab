@@ -231,7 +231,7 @@
                                     <td><?= $kajian['pemateri'] ?></td>
                                     <td><?= $kajian['peserta_ttl'] ?></td>
                                     <td>
-                                        <button type="button" class="btn btn-success btn-sm">Download</button>
+                                        <a href="/upload/<?= $kajian['file'] ?>" download="<?= $kajian['file'] ?>" class="btn btn-success">Download</a>
                                         <a href="/sekre/kajian_delete/<?= $kajian['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
                                         <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button> -->
                                     </td>

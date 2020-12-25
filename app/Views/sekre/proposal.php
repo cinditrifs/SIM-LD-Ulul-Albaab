@@ -227,7 +227,7 @@
                                     <td><?= $pro['ketua_kegiatan'] ?></td>
                                     <td><?= $pro['tanggal_kegiatan'] ?></td>
                                     <td>
-                                        <button type="button" class="btn btn-success">Download</button>
+                                        <a href="/upload/<?= $pro['file'] ?>" download="<?= $pro['file'] ?>" class="btn btn-success">Download</a>
                                         <a href="/sekre/proposal_delete/<?= $pro['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
                                         <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger">Delete</button> -->
                                     </td>

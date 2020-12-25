@@ -225,7 +225,7 @@
 
                     <!-- Form  -->
                     <!--Start Forms-->
-                    <form action=" /artikel/update/<?= $artikel['id'] ?>" method="POST">
+                    <form action=" /artikel/update/<?= $artikel['id'] ?>" method="POST" enctype="multipart/form-data">
                         <!-- cross side force surgery -->
                         <?= csrf_field(); ?>
                         <input type="hidden" name="slug" value="<?= $artikel['slug'] ?>">

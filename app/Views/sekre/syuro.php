@@ -225,7 +225,7 @@
                                     <td><?= $syuro['departemen'] ?></td>
                                     <td><?= date("d-F-Y", strtotime($syuro['tanggal'])) ?></td>
                                     <td>
-                                        <button type="button" class="btn btn-success">Download</button>
+                                        <a href="/upload/<?= $syuro['file'] ?>" download="<?= $syuro['file'] ?>" class="btn btn-success">Download</a>
                                         <a href="/sekre/syuro_delete/<?= $syuro['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
                                         <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger ">Delete</button> -->
                                     </td>

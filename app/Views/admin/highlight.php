@@ -25,9 +25,11 @@
             vertical-align: middle;
         }
 
-        tr th {
+        table * {
             color: black;
             vertical-align: middle;
+            align-items: center;
+            text-align: center;
         }
 
         .slider {
@@ -213,8 +215,12 @@
 
                     </div>
                     <a href="../admin/tambah_highlight"><button type="button" data-toggle="modal" data-target="#addModal" class=" btn btn-primary btn-sm mt-3"><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Tambah Highlight</button></a>
-
-
+                    <br>
+                    <?php if (session()->getFlashdata('pesan')) : ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= session()->getFlashdata('pesan'); ?>
+                        </div>
+                    <?php endif; ?>
                     <!-- Table of highlight  -->
                     <table class="table table-bordered mt-3">
                         <thead class=" bg-success">
@@ -231,7 +237,9 @@
                                     <th scope="row"><?= $i++; ?></th>
                                     <td><img class="rounded mx-auto d-block slider" src="/img/<?php echo $slider['gambar'] ?>" alt=""></td>
                                     <td class="text-center text-middle">
-                                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button></td>
+                                        <a href="/admin/highlight_delete/<?= $slider['id']; ?>"><button type="submit" class="btn btn-danger"> <i class="fa fa-trash" aria-hidden="true"></i> </button></a>
+
+                                        <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button></td> -->
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
