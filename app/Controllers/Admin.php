@@ -12,10 +12,14 @@ class Admin extends BaseController
 {
     protected $highlightModel;
     protected $punggawa;
+    protected $artikel;
+    protected $prodak;
     public function __construct()
     {
         $this->highlightModel = new \App\Models\HighlightModel(); //bisa di taro di base controller
         $this->punggawa = new \App\Models\PunggawaModel();
+        $this->artikel = new \App\Models\ArtikelModel();
+        $this->prodak = new \App\Models\ProdakModel();
     }
 
     public function login()
@@ -24,7 +28,31 @@ class Admin extends BaseController
     }
     public function dashboard()
     {
-        return view('admin/dashboard');
+        // ambil total instagram
+        $username = 'ululalbaab.unj';
+        $response = @file_get_contents("https://www.instagram.com/$username/?__a=1");
+        $data = json_decode($response, true);
+        $follower  = $data['graphql']['user']['edge_followed_by']['count'];
+
+        // ambil total punggawa 
+        $punggawa = $this->punggawa->countAll();
+        $total = $punggawa;
+
+        // ambil total artikel
+        $artikel = $this->artikel->countAll();
+        $totalAr = $artikel;
+
+        // ambil total prodak
+        $prodak = $this->prodak->countAll();
+        $prodak = $prodak;
+        $data = [
+            'follower' => $follower,
+            'total' => $total,
+            'totalAr' => $totalAr,
+            'prodak' => $prodak
+        ];
+
+        return view('admin/dashboard', $data);
     }
 
     // controller buat Punggawa
