@@ -96,25 +96,20 @@ class Admin extends BaseController
     }
     public function save_highlight()
     {
-        if (!$this->validate([
-            'gambar' => [
-                'rules' => 'uploaded[gambar]| max_size[gambar, 1024] | is_image[gambar] | mime_in[gambar, image/png, image/jpg, image/jpeg]',
-                'errors' => [
-                    'uploaded' => "pilih gambar terlebih dahulu",
-                    'max_size' => 'ukuran gambar tidak memenuhi',
-                    'is_image' => 'file bukan gambar',
-                    'mime_in' => "type file salah"
-                ]
+        // ambil file
+        $fileHighlight = $this->request->getFile('gambar');
+        // pindahkan file ke folder
+        $fileHighlight->move('img');
+        //ambil nama file
+        $namaHighlight = $fileHighlight->getName();
+        $this->highlightModel->save(
+            [
+                'gambar' => $namaHighlight
             ]
-        ]))
-            $this->highlightModel->save(
-                [
-                    'gambar' => $this->request->getVar('gambar')
-                ]
-            );
-        session()->setFlashdata('pesan', 'Highlight Berhasil Ditambahkan');
+        );
         return redirect()->to('/admin/highlight')->withInput();
     }
+
 
     public function tambah_highlight()
     {
