@@ -3,6 +3,7 @@
 use App\Models\PunggawaModel;
 use App\Models\HighlightModel;
 use CodeIgniter\codeIgniter;
+use App\Models\LogsModel;
 
 namespace App\Controllers;
 
@@ -14,12 +15,14 @@ class Admin extends BaseController
     protected $punggawa;
     protected $artikel;
     protected $prodak;
+    protected $logs;
     public function __construct()
     {
         $this->highlightModel = new \App\Models\HighlightModel(); //bisa di taro di base controller
         $this->punggawa = new \App\Models\PunggawaModel();
         $this->artikel = new \App\Models\ArtikelModel();
         $this->prodak = new \App\Models\ProdakModel();
+        $this->logs = new \App\Models\LogsModel();
     }
 
     public function login()
@@ -28,6 +31,7 @@ class Admin extends BaseController
     }
     public function dashboard()
     {
+        $this->logs->insertLogByRoute('/login_admin');
         // ambil total instagram
         $username = 'ululalbaab.unj';
         $response = @file_get_contents("https://www.instagram.com/$username/?__a=1");
@@ -66,6 +70,7 @@ class Admin extends BaseController
     }
     public function punggawa_save()
     {
+        $this->logs->insertLogByRoute('/admin/tambah_punggawa');
         $this->punggawa->save([
             'nama' => $this->request->getVar('nama'),
             'prodi' => $this->request->getVar('prodi'),
@@ -77,6 +82,7 @@ class Admin extends BaseController
     }
     public function punggawa_delete($id)
     {
+        $this->logs->insertLogByRoute('/admin/delete_punggawa/' . $id);
         $this->punggawa->delete($id);
         session()->setFlashdata('pesan', 'Data Punggawa Berhasil Dihapus');
 
@@ -96,6 +102,7 @@ class Admin extends BaseController
     }
     public function save_highlight()
     {
+        $this->logs->insertLogByRoute('/admin/tambah_highlight');
         // ambil file
         $fileHighlight = $this->request->getFile('gambar');
         // pindahkan file ke folder
@@ -109,14 +116,13 @@ class Admin extends BaseController
         );
         return redirect()->to('/admin/highlight')->withInput();
     }
-
-
     public function tambah_highlight()
     {
         return view('admin/tambah_highlight');
     }
     public function highlight_delete($id)
     {
+        $this->logs->insertLogByRoute('/admin/delete_highlight/' . $id);
         $this->highlightModel->delete($id);
         session()->setFlashdata('pesan', 'Highlight Berhasil Dihapus');
         return redirect()->to('/admin/highlight');

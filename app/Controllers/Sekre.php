@@ -20,6 +20,7 @@ class Sekre extends BaseController
     protected $kajian;
     protected $lpj;
     protected $proposal;
+    protected $logs;
 
     public function __construct()
     {
@@ -28,6 +29,7 @@ class Sekre extends BaseController
         $this->syuro = new \App\Models\SyuroModel();
         $this->lpj = new \App\Models\LpjModel();
         $this->proposal = new \App\Models\ProposalModel();
+        $this->logs = new \App\Models\LogsModel();
     }
 
     // SURAT KELUAR
@@ -41,6 +43,7 @@ class Sekre extends BaseController
     }
     public function surat_save()
     {
+        $this->logs->insertLogByRoute('/surat_save');
         $this->suratkeluar->save([
             'nomor' => $this->request->getVar('nomor'),
             'tanggal_buat' => $this->request->getVar('tanggal_buat'),
@@ -53,6 +56,7 @@ class Sekre extends BaseController
     }
     public function surat_delete($id)
     {
+        $this->logs->insertLogByRoute('/sekre/surat_delete/' . $id);
         $this->suratkeluar->delete($id);
         session()->setFlashdata('pesan', 'Surat Keluar Berhasil Dihapus');
         return redirect()->to('/sekre/surat_keluar');
@@ -69,6 +73,7 @@ class Sekre extends BaseController
     }
     public function presensi_save()
     {
+        $this->logs->insertLogByRoute('/presensi_save');
         // ambil file
         $filePresensi = $this->request->getFile('file');
         // pindahkan file ke folder
@@ -88,6 +93,7 @@ class Sekre extends BaseController
     }
     public function kajian_delete($id)
     {
+        $this->logs->insertLogByRoute('/sekere/kajian_delete/' . $id);
         $this->kajian->delete($id);
         session()->setFlashdata('pesan', 'Presensi Kajian Berhasil Dihapus');
         return redirect()->to('/sekre/presensi_kajian');
@@ -104,6 +110,7 @@ class Sekre extends BaseController
     }
     public function syuro_save()
     {
+        $this->logs->insertLogByRoute('/syuro_save');
         // ambil file
         $fileSyuro = $this->request->getFile('file');
         // pindahkan file ke folder
@@ -120,6 +127,7 @@ class Sekre extends BaseController
     }
     public function syuro_delete($id)
     {
+        $this->logs->insertLogByRoute('/sekre/syuro_delete/' . $id);
         $this->syuro->delete($id);
         session()->setFlashdata('pesan', 'Laporan Syuro Berhasil Dihapus');
         return redirect()->to('/sekre/syuro');
@@ -136,6 +144,7 @@ class Sekre extends BaseController
     }
     public function lpj_save()
     {
+        $this->logs->insertLogByRoute('/lpj_save');
         // ambil file
         $filelpj = $this->request->getFile('file');
         // pindahkan file ke folder
@@ -152,6 +161,7 @@ class Sekre extends BaseController
     }
     public function lpj_delete($id)
     {
+        $this->logs->insertLogByRoute('/admin/lpj_delete/' . $id);
         $this->lpj->delete($id);
         session()->setFlashdata('pesan', 'LPJ Berhasil Dihapus');
         return redirect()->to('/sekre/lpj');
@@ -179,6 +189,7 @@ class Sekre extends BaseController
     }
     public function proposal_save()
     {
+        $this->logs->insertLogByRoute('/proposal_save');
         // ambil file
         $fileProposal = $this->request->getFile('file');
         // pindahkan file ke folder
@@ -196,6 +207,7 @@ class Sekre extends BaseController
     }
     public function proposal_delete($id)
     {
+        $this->logs->insertLogByRoute('/sekre/proposal_delete/' . $id);
         $this->proposal->delete($id);
         session()->setFlashdata('pesan', 'File Proposal Berhasil Dihapus');
         return redirect()->to('/sekre/proposal');

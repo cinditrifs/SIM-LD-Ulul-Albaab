@@ -19,8 +19,14 @@
     <link href="<?php echo base_url('css/sb-admin-2.min.css') ?>" rel="stylesheet">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
         tr * {
             color: black;
+        }
+
+        .container-fluid {
+            font-family: 'Quicksand', sans-serif;
         }
 
         table * {
@@ -200,7 +206,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-2 mt-2">
                         <h1 class="h3 mb-0 text-gray-800">Rekapan LPJ</h1>
                     </div>
 
@@ -214,7 +220,7 @@
                     <!-- Table of Rekap LPJ  -->
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered mt-3 ">
+                            <table class="table table-bordered ">
                                 <thead class="bg-primary">
                                     <tr class="text-center" style="vertical-align: middle;">
                                         <th scope="col">No</th>

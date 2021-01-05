@@ -19,8 +19,14 @@
     <link href="<?php echo base_url('css/sb-admin-2.min.css') ?>" rel="stylesheet">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
         tr * {
             color: black;
+        }
+
+        .container-fluid {
+            font-family: 'Quicksand', sans-serif;
         }
     </style>
 
@@ -210,7 +216,7 @@
                     <!-- Table of Rekap Syuro  -->
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered mt-3">
+                            <table class="table table-bordered">
                                 <thead class="bg-primary">
                                     <tr class="text-center" style="vertical-align: middle;">
                                         <th scope="col">No</th>

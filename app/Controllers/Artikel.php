@@ -4,6 +4,7 @@ use CodeIgniter\codeIgniter;
 use App\Models\ArtikelModel;
 
 
+
 namespace App\Controllers;
 
 use CodeIgniter\Validation\Rules;
@@ -11,9 +12,11 @@ use CodeIgniter\Validation\Rules;
 class Artikel extends BaseController
 {
     protected $artikel;
+    protected $logs;
     public function __construct()
     {
         $this->artikel = new \App\Models\ArtikelModel(); //bisa di taro di base controller
+        $this->logs = new \App\Models\LogsModel();
     }
     public function artikel()
     {
@@ -31,6 +34,7 @@ class Artikel extends BaseController
 
     public function save()
     {
+        $this->logs->insertLogByRoute('/admin/save_artikel');
         $slug = url_title($this->request->getVar('judul'), '-', true);
         // dd($this->request->getVar());
         // insert data base
@@ -60,6 +64,7 @@ class Artikel extends BaseController
 
     public function update($id)
     {
+        $this->logs->insertLogByRoute('/admin/edit_artikel/' . $id);
         $slug = url_title($this->request->getVar('judul'), '-', true);
         // dd($this->request->getVar());
         // insert data base
@@ -94,6 +99,7 @@ class Artikel extends BaseController
 
     public function delete($id)
     {
+        $this->logs->insertLogByRoute('/admin/delete_artikel/' . $id);
         $this->artikel->delete($id);
         session()->setFlashdata('pesan', 'Artikel Berhasil Dihapus');
 

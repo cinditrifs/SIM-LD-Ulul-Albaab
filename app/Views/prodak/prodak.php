@@ -218,7 +218,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <div class="d-sm-flex align-items-center justify-content-between">
                         <h1 class="h3 mb-0 text-gray-800">Program Dakwah LD Ulul Albaab</h1>
                     </div>
 
@@ -230,7 +230,7 @@
                     <?php endif; ?>
 
                     <!-- Tambah Prodak -->
-                    <div class="card-header py-3">
+                    <div class="card-header">
                         <h6 class="m-0 font-weight-bold text-primary">
                             <a><button type="button" data-toggle="modal" data-target="#addModal" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Tambah Prodak</button></a>
                         </h6>
@@ -239,7 +239,7 @@
                     <!-- Table of all artikel  -->
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered mt-3">
+                            <table class="table table-bordered">
                                 <thead class="">
                                     <tr>
                                         <th scope="col">No</th>

@@ -206,13 +206,9 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <div class="d-sm-flex align-items-center justify-content-between">
                         <h1 class="h3 mb-0 text-gray-800">Highlight</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-
                     </div>
-                    <a href="../admin/tambah_highlight"><button type="button" data-toggle="modal" data-target="#addModal" class=" btn btn-primary btn-sm mt-3"><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Tambah Highlight</button></a>
-                    <br>
                     <?php if (session()->getFlashdata('pesan')) : ?>
                         <div class="alert alert-success" role="alert">
                             <?= session()->getFlashdata('pesan'); ?>
@@ -220,9 +216,11 @@
                     <?php endif; ?>
                     <!-- Table of highlight  -->
                     <div class="card-body">
+                        <a href="../admin/tambah_highlight"><button type="button" data-toggle="modal" data-target="#addModal" class=" btn btn-primary btn-sm mb-2"><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Tambah Highlight</button></a>
+
                         <div class="table-responsive">
-                            <table class="table table-bordered mt-3">
-                                <thead class=" bg-success">
+                            <table class="table table-bordered">
+                                <thead class=" bg-primary">
                                     <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Gambar</th>
