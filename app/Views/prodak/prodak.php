@@ -237,151 +237,153 @@
                     </div>
 
                     <!-- Table of all artikel  -->
-                    <table class="table table-bordered mt-3">
-                        <thead class="">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Cover</th>
-                                <th scope="col">Nama Prodak</th>
-                                <th scope="col">Detail</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $i = 1; ?>
-                            <?php foreach ($prodak as $prodak) : ?>
-                                <tr>
-                                    <th scope="row"><?= $i++; ?></th>
-                                    <td><img src="/img/<?php echo $prodak['gambar'] ?>" alt=""></td>
-                                    <td><?= $prodak['nama_prodak'] ?></td>
-                                    <td style="text-align: justify;"><?= $prodak['detail'] ?></td>
-                                    <td>
-                                        <a href="/prodak/prodak_delete/<?= $prodak['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
-                                        <!-- <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger">Delete</button> -->
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-
-                </div>
-                <!-- End of Main Content -->
-
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Ulul Albaab 2020</span>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered mt-3">
+                                <thead class="">
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Cover</th>
+                                        <th scope="col">Nama Prodak</th>
+                                        <th scope="col">Detail</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $i = 1; ?>
+                                    <?php foreach ($prodak as $prodak) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $i++; ?></th>
+                                            <td><img src="/img/<?php echo $prodak['gambar'] ?>" alt=""></td>
+                                            <td><?= $prodak['nama_prodak'] ?></td>
+                                            <td style="text-align: justify;"><?= $prodak['detail'] ?></td>
+                                            <td>
+                                                <a href="/prodak/prodak_delete/<?= $prodak['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
+                                                <!-- <button data-toggle="modal" data-target="#saveModal" type="button text-center" class="btn btn-danger">Delete</button> -->
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                    <!-- End of Main Content -->
 
-            </div>
-            <!-- End of Content Wrapper -->
-
-        </div>
-        <!-- End of Page Wrapper -->
-
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- modal delete -->
-        <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Apakah anda yakin ingin menghapus artikel baru ini?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Yes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- modal add -->
-        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Tambah Punggawa </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="container">
-                        <form class="ml-3 mt-3" action="/Prodak/prodak_save" method="post" enctype="multipart/form-data">
-                            <?= csrf_field(); ?>
-                            <div class="mb-3">
-                                <label for="gambar" class="form-label">Cover</label>
-                                <input class="form-control" type="file" id="gambar" name="gambar">
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; Ulul Albaab 2020</span>
                             </div>
-                            <div class="form-group row">
-                                <label for="nama_prodak" class="col-sm-2 col-form-label">Nama Prodak</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="nama_prodak" name="nama_prodak" placeholder="Nama Prodak">
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+
+                </div>
+                <!-- End of Content Wrapper -->
+
+            </div>
+            <!-- End of Page Wrapper -->
+
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal delete -->
+            <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Apakah anda yakin ingin menghapus artikel baru ini?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- modal add -->
+            <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Punggawa </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="container">
+                            <form class="ml-3 mt-3" action="/Prodak/prodak_save" method="post" enctype="multipart/form-data">
+                                <?= csrf_field(); ?>
+                                <div class="mb-3">
+                                    <label for="gambar" class="form-label">Cover</label>
+                                    <input class="form-control" type="file" id="gambar" name="gambar">
                                 </div>
-                            </div>
-                            <div class="form-floating">
-                                <label for="detail">Detail</label>
-                                <textarea class="form-control" placeholder="Detail Program Dakwah" id="detail" name="detail" style="height: 100px"></textarea>
-                            </div>
-                            <div>
-                                <br><button type="submit" data-toggle="modal" data-target="#saveModal" class="btn btn-success btn-block">Save</button>
-                            </div>
-                        </form>
-                        <br>
+                                <div class="form-group row">
+                                    <label for="nama_prodak" class="col-sm-2 col-form-label">Nama Prodak</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nama_prodak" name="nama_prodak" placeholder="Nama Prodak">
+                                    </div>
+                                </div>
+                                <div class="form-floating">
+                                    <label for="detail">Detail</label>
+                                    <textarea class="form-control" placeholder="Detail Program Dakwah" id="detail" name="detail" style="height: 100px"></textarea>
+                                </div>
+                                <div>
+                                    <br><button type="submit" data-toggle="modal" data-target="#saveModal" class="btn btn-success btn-block">Save</button>
+                                </div>
+                            </form>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- end modal add -->
+            <!-- end modal add -->
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
-        <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+            <!-- Bootstrap core JavaScript-->
+            <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
+            <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="<?php echo base_url() ?>/js/sb-admin-2.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="<?php echo base_url() ?>/js/sb-admin-2.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
+            <!-- Page level plugins -->
+            <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="<?php echo base_url('/js/demo/chart-area-demo.js') ?>"></script>
-        <script src="<?php echo base_url('/js/demo/chart-pie-demo.js') ?>"></script>
+            <!-- Page level custom scripts -->
+            <script src="<?php echo base_url('/js/demo/chart-area-demo.js') ?>"></script>
+            <script src="<?php echo base_url('/js/demo/chart-pie-demo.js') ?>"></script>
 
 </body>
 

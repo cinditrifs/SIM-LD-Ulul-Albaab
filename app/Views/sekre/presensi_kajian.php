@@ -196,7 +196,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <div class="d-sm-flex align-items-center justify-content-between ">
                         <h1 class="h3 mb-0 text-gray-800">Rekapan Presensi Kajian</h1>
                     </div>
 
@@ -208,120 +208,121 @@
                     <?php endif; ?>
 
                     <!-- Table of Rekap presensi kajian  -->
-                    <table class="table table-bordered mt-3">
-                        <thead class="bg-success">
-                            <tr class="text-center" vertical-align: middle;">
-                                <th scope="col">No</th>
-                                <th scope="col">Nama Kegiatan</th>
-                                <th scope="col">Waktu </th>
-                                <th scope="col">Tema</th>
-                                <th scope="col">Pemateri</th>
-                                <th scope="col">Peserta</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $i = 1; ?>
-                            <?php foreach ($kajian as $kajian) : ?>
-                                <tr class="">
-                                    <th scope="row"><?= $i++ ?></th>
-                                    <td><?= $kajian['kegiatan'] ?></td>
-                                    <td><?= $kajian['tanggal_kegiatan'] ?></td>
-                                    <td><?= $kajian['tema'] ?></td>
-                                    <td><?= $kajian['pemateri'] ?></td>
-                                    <td><?= $kajian['peserta_ttl'] ?></td>
-                                    <td>
-                                        <a href="/upload/<?= $kajian['file'] ?>" download="<?= $kajian['file'] ?>" class="btn btn-success">Download</a>
-                                        <a href="/sekre/kajian_delete/<?= $kajian['id']; ?>"><button type="submit" class="btn btn-danger">Delete</button></a>
-                                        <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button> -->
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered mt-3">
+                                <thead class="bg-primary">
+                                    <tr class="text-center" style="vertical-align: middle;">
+                                        <th scope="col">No</th>
+                                        <th scope="col">Nama Kegiatan</th>
+                                        <th scope="col">Waktu </th>
+                                        <th scope="col">Tema</th>
+                                        <th scope="col">Pemateri</th>
+                                        <th scope="col">Peserta</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $i = 1; ?>
+                                    <?php foreach ($kajian as $kajian) : ?>
+                                        <tr class="">
+                                            <th scope="row"><?= $i++ ?></th>
+                                            <td><?= $kajian['kegiatan'] ?></td>
+                                            <td><?= $kajian['tanggal_kegiatan'] ?></td>
+                                            <td><?= $kajian['tema'] ?></td>
+                                            <td><?= $kajian['pemateri'] ?></td>
+                                            <td><?= $kajian['peserta_ttl'] ?></td>
+                                            <td>
+                                                <a href="/upload/<?= $kajian['file'] ?>" download="<?= $kajian['file'] ?>" class="btn btn-success btn-sm">Download</a>
+                                                <a href="/sekre/kajian_delete/<?= $kajian['id']; ?>"><button type="submit" class="btn btn-danger btn-sm">Delete</button></a>
+                                                <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button> -->
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                            <!-- End of table Rekap presensi kajian-->
+                        </div>
+                    </div>
 
-
-                        </tbody>
-                    </table>
-                    <!-- End of table Rekap presensi kajian-->
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Apakah anda yakin ingin menghapus presensi kajian ini?
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Yes</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete Artikel</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apakah anda yakin ingin menghapus presensi kajian ini?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Yes</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Modal -->
+
                 </div>
-                <!-- Modal -->
+                <!-- End of Main Content -->
+
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Ulul Albaab 2020</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
+            <!-- End of Content Wrapper -->
 
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Ulul Albaab 2020</span>
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
-    <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
+        <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url('/js/sb-admin-2.min.js') ?>"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="<?php echo base_url('/js/sb-admin-2.min.js') ?>"></script>
 
-    <!-- Admin Js -->
-    <script src="<?php echo base_url('/js/admin.js') ?>"></script>
+        <!-- Admin Js -->
+        <script src="<?php echo base_url('/js/admin.js') ?>"></script>
 
 </body>
 

@@ -229,88 +229,88 @@
                     <?php endif; ?>
                     <!-- end session -->
                     <!-- Table of all artikel  -->
-
-                    <table class="table table-bordered mt-3">
-                        <thead class="">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Cover</th>
-                                <th scope="col">Judul Artikel</th>
-                                <th scope="col">Konten</th>
-                                <th scope="col">Created at</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $i = 1; ?>
-                            <?php foreach ($artikel as $ar) : ?>
-                                <tr>
-                                    <th scope="row"><?= $i++; ?></th>
-                                    <td><img src="/img/<?php echo $ar['gambar'] ?>" alt=""></td>
-                                    <td><?= $ar['judul'] ?></td>
-                                    <td style="text-align: justify;"><?= substr($ar['konten'], 0, 500), "........" ?></td>
-                                    <td class="tanggal"><?= $ar['created_at'] ?></td>
-                                    <td>
-                                        <a href="../artikel/detail/<?= $ar['slug'] ?>"><button type="button text-center" class="btn btn-info btn-sm">See Detail</button></a>
-                                        <a href="../../artikel/edit/<?= $ar['slug'] ?>"><button type="button" class="btn btn-primary">Edit</button></a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- End of Main Content -->
-
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Ulul Albaab 2020</span>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered mt-3">
+                                <thead class="">
+                                    <tr>
+                                        <th scope="col" style="width: 5%;">No</th>
+                                        <th scope="col" style="width: 15%;">Cover</th>
+                                        <th scope="col" style="width: 15%;">Judul Artikel</th>
+                                        <th scope="col" style="width: 50%;">Konten</th>
+                                        <th scope="col" style="width: 15%;">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $i = 1; ?>
+                                    <?php foreach ($artikel as $ar) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $i++; ?></th>
+                                            <td><img src="/img/<?php echo $ar['gambar'] ?>" alt=""></td>
+                                            <td><?= $ar['judul'] ?></td>
+                                            <td style="text-align: justify;"><?= substr($ar['konten'], 0, 500), "........" ?></td>
+                                            <td>
+                                                <a href="../artikel/detail/<?= $ar['slug'] ?>"><button type="button text-center" class="btn btn-info btn-sm">See Detail</button></a>
+                                                <a href="../../artikel/edit/<?= $ar['slug'] ?>"><button type="button" class="btn btn-primary btn-sm">Edit</button></a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </footer>
-                <!-- End of Footer -->
+                    <!-- End of Main Content -->
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; Ulul Albaab 2020</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
+
+                </div>
+                <!-- End of Content Wrapper -->
 
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Page Wrapper -->
 
-        </div>
-        <!-- End of Page Wrapper -->
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer ">
-                        <button class=" d-inline btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer ">
+                            <button class=" d-inline btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="login.html">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
-        <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+            <!-- Bootstrap core JavaScript-->
+            <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
+            <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="<?php echo base_url() ?>/js/sb-admin-2.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="<?php echo base_url() ?>/js/sb-admin-2.min.js"></script>
 </body>
 
 </html>

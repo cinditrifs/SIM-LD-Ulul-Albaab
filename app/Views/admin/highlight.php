@@ -219,108 +219,110 @@
                         </div>
                     <?php endif; ?>
                     <!-- Table of highlight  -->
-                    <table class="table table-bordered mt-3">
-                        <thead class=" bg-success">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Gambar</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $i = 1; ?>
-                            <?php foreach ($slider as $slider) : ?>
-                                <tr>
-                                    <th scope="row"><?= $i++; ?></th>
-                                    <td><img class="rounded mx-auto d-block slider" src="/img/<?php echo $slider['gambar'] ?>" alt=""></td>
-                                    <td class="text-center text-middle">
-                                        <a href="/admin/highlight_delete/<?= $slider['id']; ?>"><button type="submit" class="btn btn-danger"> <i class="fa fa-trash" aria-hidden="true"></i> </button></a>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered mt-3">
+                                <thead class=" bg-success">
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Gambar</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $i = 1; ?>
+                                    <?php foreach ($slider as $slider) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $i++; ?></th>
+                                            <td><img class="rounded mx-auto d-block slider" src="/img/<?php echo $slider['gambar'] ?>" alt=""></td>
+                                            <td class="text-center text-middle">
+                                                <a href="/admin/highlight_delete/<?= $slider['id']; ?>"><button type="submit" class="btn btn-danger"> <i class="fa fa-trash" aria-hidden="true"></i> </button></a>
 
-                                        <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button></td> -->
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                    <!-- End of highlight -->
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Delete Highlight</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Apakah anda yakin ingin menghapus highlight yang dipilih?
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Yes</button>
+                                                <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-danger btn-sm">Delete</button></td> -->
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                            <!-- End of highlight -->
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete Highlight</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apakah anda yakin ingin menghapus highlight yang dipilih?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Yes</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- End of Main Content -->
+                <!-- End of Main Content -->
 
-            <br><br><br><br><br><br><br><br><br><br><br><br>
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright & Copy; Ulul Albaab 2020</span>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright & Copy; Ulul Albaab 2020</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
-    <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="<?php echo base_url('/vendor/jquery/jquery.min.js') ?>"></script>
+        <script src="<?php echo base_url('/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="<?php echo base_url('/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url('/js/sb-admin-2.min.js') ?>"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="<?php echo base_url('/js/sb-admin-2.min.js') ?>"></script>
 
-    <!-- Page level plugins -->
-    <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
+        <!-- Page level plugins -->
+        <script src="<?php echo base_url('/vendor/chart.js/Chart.min.js') ?>"></script>
 
 </body>
 
