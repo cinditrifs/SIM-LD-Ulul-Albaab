@@ -6,44 +6,37 @@
 
 <h3 align="center"> Branch ini berisi codingan dari sistem LDUA FMIPA UNJ </h3>
 
-# Team F IMK 
+## Team F IMK 
 
 - Afny (1313618001)
 - Nilatil Moena (1313618002)
 - Cindi Tri Fitikasari (1313618025)
 
-# Link Assignment 3
+### Link Assignment 3
 
 Akses Assignment 3 [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/Assignment%203)
 
-# Site Deployment Link
+### Site Deployment Link
 
 -link website admin https://ldua.000webhostapp.com/admin
-
 Username : admin 
-
 Password : admin
 
--link website user https://ldua.000webhostapp.com/
-
--link kesekretariatan https://ldua.000webhostapp.com/sekret
-
+- link website user https://ldua.000webhostapp.com/
+- link kesekretariatan https://ldua.000webhostapp.com/sekret
 Username kesekretariatan : sekreldua 
-
 Password : sekreldua
 
-# Final Project Report
+### Final Project Report
 
 link final report [laporan akhir](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf)
 
 
-# Video Conference & Feedback
+### Video Conference & Feedback
 
-Sekretaris https://youtu.be/QjRzFL3hvh8
-
-Admin https://youtu.be/ydjEeuYwFao
-
-Feedback [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Kepuasan%20Fixed%20User%20Terhadap%20Website%20LDUA.pdf)
+- Sekretaris https://youtu.be/QjRzFL3hvh8
+- Admin https://youtu.be/ydjEeuYwFao
+- Feedback [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Kepuasan%20Fixed%20User%20Terhadap%20Website%20LDUA.pdf)
 
 ### User
 
