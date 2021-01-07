@@ -5,14 +5,44 @@
 <h1 align="center"> Sistem Informasi Manajemen </br> Lembaga Dakwah Ulul Albaab FMIPA UNJ  </h1> 
 <h3 align="center"> Dibuat untuk memenuhi tugas matakuliah Interaksi manusia dan komputer </h3>
 
-# Team F IMK Assignment 3 
+<p align="center"> 
+    <img src="https://lh3.googleusercontent.com/-4qN8pQI9YS0/X6_pYgIPgyI/AAAAAAAAAyc/VVllxpXBXCM3nBzxohxDEqPBigXZTsHwQCNcBGAsYHQ/2.%2BProgram%2BDakwah.png"></img>
+</p>
+
+# Team F IMK
 - Afny (1313618001)
 - Nilatil Moena (1313618002)
 - Cindi Tri Fitikasari (1313618025)
 
-<p align="center"> 
-    <img src="https://lh3.googleusercontent.com/-4qN8pQI9YS0/X6_pYgIPgyI/AAAAAAAAAyc/VVllxpXBXCM3nBzxohxDEqPBigXZTsHwQCNcBGAsYHQ/2.%2BProgram%2BDakwah.png"></img>
-</p>
+# Site Deployment Link
+link website user https://ldua.000webhostapp.com/
+
+link kesekretariatan https://ldua.000webhostapp.com/sekret
+
+Username : sekreldua 
+
+Password : sekreldua
+
+link website admin https://ldua.000webhostapp.com/admin
+
+Username : admin 
+
+Password : admin
+
+# Final Project Report
+
+https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf
+
+# Video Conference & Feedback
+
+Sekretaris https://youtu.be/QjRzFL3hvh8
+
+Admin https://youtu.be/ydjEeuYwFao
+
+Feedback [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Kepuasan%20Fixed%20User%20Terhadap%20Website%20LDUA.pdf)
+
+# Link assignment 3
+https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/Assignment%203
 
 
 # Permasalahan 📚
