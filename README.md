@@ -34,7 +34,7 @@ Password : sekreldua
 
 ### Final Project Report
 
-link final report [laporan akhir](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf)
+link final report [laporan akhir](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20Report.pdf)
 
 
 ### Video Conference & Feedback
