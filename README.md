@@ -5,13 +5,15 @@
 <h1 align="center"> Sistem Informasi Manajemen </br> Lembaga Dakwah Ulul Albaab FMIPA UNJ  </h1> 
 <h3 align="center"> Branch ini berisi codingan dari sistem LDUA FMIPA UNJ </h3>
 
-# Team F IMK Assignment 3
+# Team F IMK 
 
 - Afny (1313618001)
 - Nilatil Moena (1313618002)
 - Cindi Tri Fitikasari (1313618025)
 
 # Spesifikasi Kebutuhan Sistem ✏️
+
+# Final Project Report
 
 ### User
 
@@ -78,4 +80,4 @@ Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest
 
 # Report Writing
 
-# Final Project Report
+
