@@ -12,22 +12,32 @@
 - Cindi Tri Fitikasari (1313618025)
 
 # Link assignment 3
+
 https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/Assignment%203
 
-# Final Project Report
-link https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf
-
 # Site Deployment Link
+
 link website admin https://ldua.000webhostapp.com/admin
+
 Username : admin 
+
 Password : admin
 
 link website user https://ldua.000webhostapp.com/admin
+
 Username kesekretariatan :sekreldua 
+
 Password : sekreldua
 
-# Video Conference and feedback
+# Final Project Report
+
+https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf
+
+
+# Video Conference 
+
 sekretaris https://youtu.be/QjRzFL3hvh8
+
 Admin https://youtu.be/ydjEeuYwFao
 
 ### User
