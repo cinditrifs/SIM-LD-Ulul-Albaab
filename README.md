@@ -13,7 +13,7 @@
 
 # Link Assignment 3
 
-[link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/Assignment%203)
+Akses Assignment 3 [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/Assignment%203)
 
 # Site Deployment Link
 
