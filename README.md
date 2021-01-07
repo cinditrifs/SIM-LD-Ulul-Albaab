@@ -30,8 +30,7 @@ Username : admin
 Password : admin
 
 # Final Project Report
-
-https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf
+Report final project [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20Report.pdf)
 
 # Video Conference & Feedback
 
