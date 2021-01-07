@@ -23,7 +23,7 @@ Username : admin
 
 Password : admin
 
-link website user https://ldua.000webhostapp.com/admin
+link website user https://ldua.000webhostapp.com/
 
 Username kesekretariatan :sekreldua 
 
