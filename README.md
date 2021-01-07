@@ -11,9 +11,9 @@
 - Nilatil Moena (1313618002)
 - Cindi Tri Fitikasari (1313618025)
 
-# Link assignment 3
+# Link Assignment 3
 
-https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/Assignment%203
+[link]https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/Assignment%203
 
 # Site Deployment Link
 
@@ -23,7 +23,7 @@ Username : admin
 
 Password : admin
 
-link website user https://ldua.000webhostapp.com/
+link website user https://ldua.000webhostapp.com/admin
 
 Username kesekretariatan :sekreldua 
 
@@ -31,14 +31,16 @@ Password : sekreldua
 
 # Final Project Report
 
-https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf
+link [laporan akhir](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf)
 
 
-# Video Conference 
+# Video Conference & Feedback
 
 sekretaris https://youtu.be/QjRzFL3hvh8
 
 Admin https://youtu.be/ydjEeuYwFao
+
+feedback [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Kepuasan%20Fixed%20User%20Terhadap%20Website%20LDUA.pdf)
 
 ### User
 
