@@ -3,6 +3,7 @@
 </p>
 
 <h1 align="center"> Sistem Informasi Manajemen </br> Lembaga Dakwah Ulul Albaab FMIPA UNJ  </h1> 
+
 <h3 align="center"> Branch ini berisi codingan dari sistem LDUA FMIPA UNJ </h3>
 
 # Team F IMK 
@@ -17,30 +18,32 @@ Akses Assignment 3 [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/
 
 # Site Deployment Link
 
-link website admin https://ldua.000webhostapp.com/admin
+-link website admin https://ldua.000webhostapp.com/admin
 
 Username : admin 
 
 Password : admin
 
-link website user https://ldua.000webhostapp.com/admin
+-link website user https://ldua.000webhostapp.com/
 
-Username kesekretariatan :sekreldua 
+-link kesekretariatan https://ldua.000webhostapp.com/sekret
+
+Username kesekretariatan : sekreldua 
 
 Password : sekreldua
 
 # Final Project Report
 
-link [laporan akhir](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf)
+link final report [laporan akhir](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf)
 
 
 # Video Conference & Feedback
 
-sekretaris https://youtu.be/QjRzFL3hvh8
+Sekretaris https://youtu.be/QjRzFL3hvh8
 
 Admin https://youtu.be/ydjEeuYwFao
 
-feedback [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Kepuasan%20Fixed%20User%20Terhadap%20Website%20LDUA.pdf)
+Feedback [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Kepuasan%20Fixed%20User%20Terhadap%20Website%20LDUA.pdf)
 
 ### User
 
