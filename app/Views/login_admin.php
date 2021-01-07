@@ -15,12 +15,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 20%;
-            transform: translate(-50%, -50%);
-        }
+
 
         body {
             background-image: url("img/background-admin.png");
@@ -40,12 +35,12 @@
 </head>
 
 <body>
-    <div class="container">
-        <h5 style="text-align: center; font-family:'Fredoka One', cursive; ">Login Admin Ulul Albaab</h5><br>
-        <div class="row" style="font-family: 'Quicksand', sans-serif;">
-            <div class="col s12 m4 offset-m4 center-align">
-                <div class="card" style="border-radius:15px">
-                    <div class="card-content">
+    <div class="row center align">
+        <div class="col s12 m5" style="margin-top: 10%; ">
+            <div class="container center-align">
+                <h5 style="text-align: center; font-family:'Fredoka One', cursive; ">Login Admin Ulul Albaab</h5><br>
+                <div class="card center-align" style="border-radius:15px ; font-family: 'Quicksand', sans-serif;">
+                    <div class="card-content center-align">
                         <img class="vertical-middle" src="img/logo.png" alt="Logo" width="50%">
                         <form method="POST">
                             <div class="input-field">
@@ -62,6 +57,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 
     <!--JavaScript at end of body for optimized loading-->

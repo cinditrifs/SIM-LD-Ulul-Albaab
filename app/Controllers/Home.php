@@ -32,6 +32,7 @@ class Home extends BaseController
 	public function index()
 	{
 		$this->logs->insertLogByRoute('/');
+		$this->logs->insertLogByRoute('/');
 		#variable gambar namanya slider
 		$slider = $this->highlightModel->findAll();
 		$data = [

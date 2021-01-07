@@ -51,7 +51,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item ">
-                <a class="nav-link" href="../admin/dashboard">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -68,8 +68,8 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../artikel/artikel">Semua Artikel</a>
-                        <a class="collapse-item" href="../artikel/tambah_artikel">Tambah Artikel</a>
+                        <a class="collapse-item" href="#">Semua Artikel</a>
+                        <a class="collapse-item" href="#">Tambah Artikel</a>
                     </div>
                 </div>
             </li>
@@ -85,11 +85,11 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../sekre/surat_keluar">Surat Keluar</a>
-                        <a class="collapse-item" href="../sekre/syuro">Laporan Syuro</a>
-                        <a class="collapse-item" href="../sekre/presensi_kajian">Presensi Kajian</a>
-                        <a class="collapse-item" href="../sekre/lpj">LPJ</a>
-                        <a class="collapse-item" href="../sekre/proposal">Proposal Kegiatan</a>
+                        <a class="collapse-item" href="#">Surat Keluar</a>
+                        <a class="collapse-item" href="#">Laporan Syuro</a>
+                        <a class="collapse-item" href="#">Presensi Kajian</a>
+                        <a class="collapse-item" href="#">LPJ</a>
+                        <a class="collapse-item" href="#">Proposal Kegiatan</a>
                     </div>
                 </div>
             </li>
@@ -99,7 +99,7 @@
 
             <!-- Nav Item - Punggawa -->
             <li class="nav-item">
-                <a class="nav-link" href="../admin/punggawa">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Punggawa</span></a>
             </li>
@@ -109,7 +109,7 @@
 
             <!-- Nav Item - Highlight -->
             <li class="nav-item">
-                <a class="nav-link" href="../admin/highlight">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Highlight</span></a>
             </li>
@@ -119,7 +119,7 @@
 
             <!-- Nav Item - Program Dakwah Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('/admin/prodak') ?>" aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link" href="#" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Program Dakwah</span>
                 </a>
