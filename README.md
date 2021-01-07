@@ -18,13 +18,18 @@ Akses Assignment 3 [link](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/
 
 ### Site Deployment Link
 
--link website admin https://ldua.000webhostapp.com/admin
-Username : admin 
+- link website admin https://ldua.000webhostapp.com/admin
+
+Username : admin
+
 Password : admin
 
 - link website user https://ldua.000webhostapp.com/
+
 - link kesekretariatan https://ldua.000webhostapp.com/sekret
+
 Username kesekretariatan : sekreldua 
+
 Password : sekreldua
 
 ### Final Project Report
