@@ -11,9 +11,24 @@
 - Nilatil Moena (1313618002)
 - Cindi Tri Fitikasari (1313618025)
 
-# Spesifikasi Kebutuhan Sistem ✏️
+# Link assignment 3
+https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/Assignment%203
 
 # Final Project Report
+link https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/blob/main/Final%20Project%20IMK%20.pdf
+
+# Site Deployment Link
+link website admin https://ldua.000webhostapp.com/admin
+Username : admin 
+Password : admin
+
+link website user https://ldua.000webhostapp.com/admin
+Username kesekretariatan :sekreldua 
+Password : sekreldua
+
+# Video Conference and feedback
+sekretaris https://youtu.be/QjRzFL3hvh8
+Admin https://youtu.be/ydjEeuYwFao
 
 ### User
 
@@ -75,9 +90,3 @@
 Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest dapat melihat menu home, program dakwah atikel juga menu kesekretariatan. Di menu home terdapat pilihan untuk melakukan donasi. [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/diagram/activity-diagram)
 ![User Guesst](https://user-images.githubusercontent.com/55974755/99150298-0c7f9500-26c6-11eb-8f9e-7dc64d2faf04.png)
 ![Donasi](https://user-images.githubusercontent.com/55974755/99150351-8ca5fa80-26c6-11eb-9428-bb759b64b8e9.png)
-
-# Mini Report
-
-# Report Writing
-
-
