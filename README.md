@@ -73,3 +73,9 @@
 Dalam hal ini user ketika memasuki website Ulul Albaab, user yakni sebagai guest dapat melihat menu home, program dakwah atikel juga menu kesekretariatan. Di menu home terdapat pilihan untuk melakukan donasi. [See more](https://github.com/cinditrifs/SIM-LD-Ulul-Albaab/tree/main/diagram/activity-diagram)
 ![User Guesst](https://user-images.githubusercontent.com/55974755/99150298-0c7f9500-26c6-11eb-8f9e-7dc64d2faf04.png)
 ![Donasi](https://user-images.githubusercontent.com/55974755/99150351-8ca5fa80-26c6-11eb-9428-bb759b64b8e9.png)
+
+# Mini Report
+
+# Report Writing
+
+# Final Project Report
